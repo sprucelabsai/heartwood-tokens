@@ -1,13 +1,19 @@
 {
   "name": "heartwood-tokens",
   "version": "1.0.0",
-  "description": "This example code is bare-bones to show you what this framework can do. If you have the style-dictionary module installed globally, just cd into this directory and run: ```bash style-dictionary build ```",
+  "description": "Design tokens for the Heartwood design system",
   "main": "build.js",
+  "files": [
+    "build",
+    "properties"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./build.js"
+    "build": "node ./build.js",
+    "clean": "rm -rf build",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Spruce Labs",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.11",
