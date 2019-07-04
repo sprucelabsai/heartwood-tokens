@@ -1,0 +1,8 @@
+{
+    "border": {
+        "radius": {
+            "button": { "value": "4px" },
+            "input": { "value": "4px" }
+        }
+    }
+}

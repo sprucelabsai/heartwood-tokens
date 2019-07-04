@@ -1,0 +1,9 @@
+{
+    "c": {
+        "secondary": { "value": "#5a5ae6"},
+        "secondary-light": { "value": "#8388f0"},
+        "secondary-lighter": { "value": "#E7E7FA"},
+        "secondary-dark": { "value": "#4136ba"},
+        "secondary-darker": { "value": "#26223B"}
+    }
+}

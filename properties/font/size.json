@@ -1,0 +1,22 @@
+{
+    "font": {
+        "size": {
+            "label": { "value": "0.6875rem" },
+            "legal": { "value": "0.75rem" },
+            "ui": { "value": "0.875rem" },
+            "body": { "value": "1rem" },
+            "heading": {
+                "sm":  { "value": "1.125rem" },
+                "md": { "value": "1.25rem" },
+                "lg": { "value": "1.5rem" },
+                "xl": { "value": "1.75rem" }
+            },
+            "display": {
+                "sm":  { "value": "3.75rem" },
+                "md": { "value": "4.25rem" },
+                "lg": { "value": "4.75rem" },
+                "xl": { "value": "5.25rem" }
+            }
+        }
+    }
+}

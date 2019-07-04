@@ -1,0 +1,5 @@
+{
+    "layer": {
+        "floating": { "value": "0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05) "}
+    }
+}

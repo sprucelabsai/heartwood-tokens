@@ -1,0 +1,8 @@
+{
+    "font": {
+        "family": {
+            "primary": { "value": "'Source Sans Pro', 'Roboto', 'Helvetica Neue'" },
+            "label": { "value": "'Source Code Pro', Courier, monospace" }
+        }
+    }
+}

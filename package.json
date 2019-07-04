@@ -1,0 +1,16 @@
+{
+  "name": "heartwood-tokens",
+  "version": "1.0.0",
+  "description": "This example code is bare-bones to show you what this framework can do. If you have the style-dictionary module installed globally, just cd into this directory and run: ```bash style-dictionary build ```",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "style-dictionary": "^2.8.1"
+  }
+}
