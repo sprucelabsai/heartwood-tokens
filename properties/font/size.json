@@ -16,6 +16,22 @@
                 "md": { "value": "4.25rem" },
                 "lg": { "value": "4.75rem" },
                 "xl": { "value": "5.25rem" }
+            },
+            "h": {
+                "6": { "value": "1.25rem" },
+                "5": { "value": "1.5rem" },
+                "4": { "value": "1.75rem" },
+                "3": { "value": "2rem" },
+                "2": { "value": "2.25rem" },
+                "1": { "value": "2.625rem" }
+            },
+            "big-h": {
+                "6": { "value": "3rem" },
+                "5": { "value": "3.375rem" },
+                "4": { "value": "3.75rem" },
+                "3": { "value": "4.25rem" },
+                "2": { "value": "4.75rem" },
+                "1": { "value": "5.25rem" }
             }
         }
     }
