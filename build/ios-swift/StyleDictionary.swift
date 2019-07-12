@@ -3,7 +3,7 @@
 // StyleDictionary.swift
 //
 // Do not edit directly
-// Generated on Thu, 04 Jul 2019 01:35:50 GMT
+// Generated on Fri, 05 Jul 2019 15:43:39 GMT
 //
 
 
@@ -61,11 +61,23 @@ public class StyleDictionary {
     static let cWhite = #ffffff
     static let fontFamilyLabel = "'Source Code Pro', Courier, monospace"
     static let fontFamilyPrimary = "'Source Sans Pro', 'Roboto', 'Helvetica Neue'"
+    static let fontSizeBigH1 = "5.25rem"
+    static let fontSizeBigH2 = "4.75rem"
+    static let fontSizeBigH3 = "4.25rem"
+    static let fontSizeBigH4 = "3.75rem"
+    static let fontSizeBigH5 = "3.375rem"
+    static let fontSizeBigH6 = "3rem"
     static let fontSizeBody = "1rem"
     static let fontSizeDisplayLg = "4.75rem"
     static let fontSizeDisplayMd = "4.25rem"
     static let fontSizeDisplaySm = "3.75rem"
     static let fontSizeDisplayXl = "5.25rem"
+    static let fontSizeH1 = "2.625rem"
+    static let fontSizeH2 = "2.25rem"
+    static let fontSizeH3 = "2rem"
+    static let fontSizeH4 = "1.75rem"
+    static let fontSizeH5 = "1.5rem"
+    static let fontSizeH6 = "1.25rem"
     static let fontSizeHeadingLg = "1.5rem"
     static let fontSizeHeadingMd = "1.25rem"
     static let fontSizeHeadingSm = "1.125rem"

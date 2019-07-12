@@ -35,4 +35,13 @@ StyleDictionary.registerFormat({
     }
 })
 
+StyleDictionary.registerFormat({
+  name: 'json/flat-dash',
+  formatter: function(dictionary) {
+    return '{\n' + _.map(dictionary.allProperties, function(prop) {
+      return `  "${prop.path.join('-')}": ${JSON.stringify(prop.value)}`;
+    }).join(',\n') + '\n}';
+  }
+})
+
 StyleDictionary.buildAllPlatforms()

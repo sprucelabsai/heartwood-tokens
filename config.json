@@ -104,7 +104,7 @@
       "buildPath": "build/json/",
       "files": [{
         "destination": "dictionary.json",
-        "format": "json"
+        "format": "json/flat-dash"
       }]
     }
   }
