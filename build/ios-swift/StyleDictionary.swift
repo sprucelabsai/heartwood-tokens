@@ -3,7 +3,7 @@
 // StyleDictionary.swift
 //
 // Do not edit directly
-// Generated on Fri, 05 Jul 2019 15:43:39 GMT
+// Generated on Fri, 12 Jul 2019 22:31:54 GMT
 //
 
 
@@ -12,6 +12,10 @@ import UIKit
 public class StyleDictionary {
     static let borderRadiusButton = 4px
     static let borderRadiusInput = 4px
+    static let breakpointLarge = 1000px
+    static let breakpointMedium = 750px
+    static let breakpointSmall = 500px
+    static let breakpointXLarge = 1200px
     static let cBg = #f9fafc
     static let cBgLight = #ffffff
     static let cBlack = #0a0c10
@@ -89,9 +93,18 @@ public class StyleDictionary {
     static let fontWeightMedium = "500"
     static let fontWeightNormal = "400"
     static let layerFloating = 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.05) 
+    static let layoutWidthBase = 45rem
+    static let layoutWidthTight = 30rem
+    static let layoutWidthWide = 65rem
     static let lineHeightLoose = 1.5
     static let lineHeightTight = 1.125
     static let lineHeight = 1.25
+    static let spacingBase = 1rem
+    static let spacingExtraLoose = 2rem
+    static let spacingExtraTight = 0.25rem
+    static let spacingLoose = 1.25rem
+    static let spacingNone = 0
+    static let spacingTight = 0.5rem
     static let tapHeight = 3rem
     static let tapHeightSmall = 2.25rem
 }

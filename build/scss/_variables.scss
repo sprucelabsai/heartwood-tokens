@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 05 Jul 2019 15:43:39 GMT
+ * Generated on Fri, 12 Jul 2019 22:31:54 GMT
  */
 
 $border-radius-button: 4px !default;
@@ -52,6 +52,19 @@ $c-ui-critical-lighter: #FFE6E6 !default;
 $c-ui-critical-dark: #980F12 !default;
 $c-ui-critical-darker: #5D0603 !default;
 $c-ui-input-autofill: #e0edf8 !default;
+$breakpoint-small: 500px !default;
+$breakpoint-medium: 750px !default;
+$breakpoint-large: 1000px !default;
+$breakpoint-x-large: 1200px !default;
+$layout-width-tight: 30rem !default;
+$layout-width-base: 45rem !default;
+$layout-width-wide: 65rem !default;
+$spacing-none: 0 !default;
+$spacing-extra-tight: 0.25rem !default;
+$spacing-tight: 0.5rem !default;
+$spacing-base: 1rem !default;
+$spacing-loose: 1.25rem !default;
+$spacing-extra-loose: 2rem !default;
 $tap-height: 3rem !default;
 $tap-height-small: 2.25rem !default;
 $font-family-primary: 'Source Sans Pro', 'Roboto', 'Helvetica Neue' !default;

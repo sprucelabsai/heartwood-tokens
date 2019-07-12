@@ -1,0 +1,7 @@
+{
+    "layout-width": {
+        "tight": { "value": "30rem" },
+        "base": { "value": "45rem" },
+        "wide": { "value": "65rem" }
+    }
+}
