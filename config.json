@@ -7,6 +7,10 @@
       "files": [{
         "destination": "_variables.scss",
         "format": "scss/defaults"
+      }, {
+        "filter": "isColor",
+        "destination": "_colors.scss",
+        "format": "scss/defaults"
       }]
     },
     "android": {

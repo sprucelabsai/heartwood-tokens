@@ -44,4 +44,11 @@ StyleDictionary.registerFormat({
   }
 })
 
+StyleDictionary.registerFilter({
+  name: 'isColor',
+  matcher: function(prop) {
+    return prop.attributes.category === 'c'
+  }
+})
+
 StyleDictionary.buildAllPlatforms()
