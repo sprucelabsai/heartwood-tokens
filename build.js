@@ -60,9 +60,17 @@ StyleDictionary.registerFormat({
           b: b / 255
         }
       }
+      const figmaPaintStyle = {
+        paints: [
+          {
+            type: 'SOLID',
+            visible: true,
+            ...figmaPaint
+          }
+        ]
+      }
       if (color.isValid()) {
-        console.log(color.toRgb())
-        return `  "${prop.path.join('-')}": ${JSON.stringify(figmaPaint)}`;
+        return `  "${prop.path.join(' / ')}": ${JSON.stringify(figmaPaintStyle)}`;
       }
     }).join(',\n') + '\n}';
   }
