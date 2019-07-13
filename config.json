@@ -110,6 +110,15 @@
         "destination": "dictionary.json",
         "format": "json/flat-dash"
       }]
+    },
+    "figma": {
+      "transformGroup": "js",
+      "buildPath": "build/figma/",
+      "files": [{
+        "filter": "isColor",
+        "destination": "color.json",
+        "format": "figma/color"
+      }]
     }
   }
 }

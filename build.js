@@ -1,5 +1,6 @@
 const StyleDictionary = require('style-dictionary').extend(__dirname + '/config.json');
-_  = require('lodash'),
+const _  = require('lodash')
+const tinycolor = require('tinycolor2')
 
   
 
@@ -40,6 +41,29 @@ StyleDictionary.registerFormat({
   formatter: function(dictionary) {
     return '{\n' + _.map(dictionary.allProperties, function(prop) {
       return `  "${prop.path.join('-')}": ${JSON.stringify(prop.value)}`;
+    }).join(',\n') + '\n}';
+  }
+})
+
+StyleDictionary.registerFormat({
+  name: 'figma/color',
+  formatter: function(dictionary) {
+    return '{\n' + _.map(dictionary.allProperties, function(prop) {
+      const color = tinycolor(prop.value)
+      const colorRgb = color.toRgb();
+      const { r, g, b, a } = colorRgb
+      const figmaPaint = {
+        opacity: a,
+        color: {
+          r: r / 255,
+          g: g / 255,
+          b: b / 255
+        }
+      }
+      if (color.isValid()) {
+        console.log(color.toRgb())
+        return `  "${prop.path.join('-')}": ${JSON.stringify(figmaPaint)}`;
+      }
     }).join(',\n') + '\n}';
   }
 })
