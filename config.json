@@ -8,7 +8,11 @@
         "destination": "_variables.scss",
         "format": "scss/variables"
       }, {
-        "filter": "isColor",
+        "filter": {
+          "attributes": {
+            "category": "color"
+          }
+        },
         "destination": "_colors.scss",
         "format": "scss/defaults"
       }]
