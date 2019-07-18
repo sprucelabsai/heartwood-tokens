@@ -2,7 +2,19 @@ const StyleDictionary = require('style-dictionary').extend(__dirname + '/config.
 const _  = require('lodash')
 const tinycolor = require('tinycolor2')
 
-  
+StyleDictionary.registerTransform({
+  name: 'font/size/pxToRem',
+  type: 'value',
+  matcher: prop => prop.attributes.category === 'font' && prop.attributes.type === 'size',
+  transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
+})
+
+StyleDictionary.registerTransformGroup({
+  name: 'heartwood/scss',
+  transforms: [
+    'attribute/cti','name/cti/kebab','time/seconds','content/icon','font/size/pxToRem','color/css'
+  ]
+})
 
 StyleDictionary.registerFormat({
     name: 'scss/defaults',
@@ -79,7 +91,7 @@ StyleDictionary.registerFormat({
 StyleDictionary.registerFilter({
   name: 'isColor',
   matcher: function(prop) {
-    return prop.attributes.category === 'c'
+    return prop.attributes.category === 'color'
   }
 })
 

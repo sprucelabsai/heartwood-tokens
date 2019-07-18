@@ -1,6 +1,6 @@
 {
-    "c": {
-        "border": { "value": "{c.grey.02.value}"},
-        "border-light": { "value": "{c.grey.01.value}"}
+    "color": {
+        "border": { "value": "{color.grey.02.value}"},
+        "border-light": { "value": "{color.grey.01.value}"}
     }
 }

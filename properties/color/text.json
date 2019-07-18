@@ -1,8 +1,8 @@
 {
-  "c": {
-    "text": { "value": "{c.grey.09.value}" },
-    "text-light": { "value": "{c.grey.07.value}" },
-    "text-placeholder": { "value": "{c.grey.05.value}" },
-    "text-icon": { "value": "{c.grey.05.value}" }
+  "color": {
+    "text": { "value": "{color.grey.09.value}" },
+    "text-light": { "value": "{color.grey.07.value}" },
+    "text-placeholder": { "value": "{color.grey.05.value}" },
+    "text-icon": { "value": "{color.grey.05.value}" }
   }
 }

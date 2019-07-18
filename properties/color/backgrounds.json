@@ -1,6 +1,6 @@
 {
-    "c": {
-        "bg": { "value": "{c.off-white.value}" },
-        "bg-light": { "value": "{c.white.value}"}
+    "color": {
+        "bg": { "value": "{color.off-white.value}" },
+        "bg-light": { "value": "{color.white.value}"}
     }
 }

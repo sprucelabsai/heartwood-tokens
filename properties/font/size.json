@@ -1,37 +1,37 @@
 {
     "font": {
         "size": {
-            "label": { "value": "0.6875rem" },
-            "legal": { "value": "0.75rem" },
-            "ui": { "value": "0.875rem" },
-            "body": { "value": "1rem" },
+            "label": { "value": 11 },
+            "legal": { "value": 12 },
+            "ui": { "value": 14 },
+            "body": { "value": 16 },
             "heading": {
-                "sm":  { "value": "1.125rem" },
-                "md": { "value": "1.25rem" },
-                "lg": { "value": "1.5rem" },
-                "xl": { "value": "1.75rem" }
+                "sm":  { "value": 18 },
+                "md": { "value": 20 },
+                "lg": { "value": 24 },
+                "xl": { "value": 28 }
             },
             "display": {
-                "sm":  { "value": "3.75rem" },
-                "md": { "value": "4.25rem" },
-                "lg": { "value": "4.75rem" },
-                "xl": { "value": "5.25rem" }
+                "sm":  { "value": 60 },
+                "md": { "value": 68 },
+                "lg": { "value": 76 },
+                "xl": { "value": 84 }
             },
             "h": {
-                "6": { "value": "1.25rem" },
-                "5": { "value": "1.5rem" },
-                "4": { "value": "1.75rem" },
-                "3": { "value": "2rem" },
-                "2": { "value": "2.25rem" },
-                "1": { "value": "2.625rem" }
+                "6": { "value": 20 },
+                "5": { "value": 24 },
+                "4": { "value": 28 },
+                "3": { "value": 32 },
+                "2": { "value": 36 },
+                "1": { "value": 42 }
             },
             "big-h": {
-                "6": { "value": "3rem" },
-                "5": { "value": "3.375rem" },
-                "4": { "value": "3.75rem" },
-                "3": { "value": "4.25rem" },
-                "2": { "value": "4.75rem" },
-                "1": { "value": "5.25rem" }
+                "6": { "value": 48 },
+                "5": { "value": 60 },
+                "4": { "value": 60 },
+                "3": { "value": 68 },
+                "2": { "value": 76 },
+                "1": { "value": 84 }
             }
         }
     }

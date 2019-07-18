@@ -2,11 +2,11 @@
   "source": ["properties/**/*.json"],
   "platforms": {
     "scss": {
-      "transformGroup": "scss",
+      "transformGroup": "heartwood/scss",
       "buildPath": "build/scss/",
       "files": [{
         "destination": "_variables.scss",
-        "format": "scss/defaults"
+        "format": "scss/variables"
       }, {
         "filter": "isColor",
         "destination": "_colors.scss",
