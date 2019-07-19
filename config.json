@@ -5,15 +5,28 @@
       "transformGroup": "heartwood/scss",
       "buildPath": "build/scss/",
       "files": [{
-        "destination": "_variables.scss",
+        "destination": "_type.scss",
+        "filter": {
+          "attributes": {
+            "category": "font"
+          }
+        },
         "format": "scss/variables"
       }, {
+        "destination": "_colors.scss",
         "filter": {
           "attributes": {
             "category": "color"
           }
         },
-        "destination": "_colors.scss",
+        "format": "scss/defaults"
+      }, {
+        "destination": "_dimension.scss",
+        "filter": {
+          "attributes": {
+            "category": "spacing"
+          }
+        },
         "format": "scss/defaults"
       }]
     },
