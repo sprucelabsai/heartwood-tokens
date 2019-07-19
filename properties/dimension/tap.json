@@ -1,6 +1,8 @@
 {
-    "tap": {
-        "height": { "value": "3rem" },
-        "height-small": { "value": "2.25rem" }
+    "dimension": {
+        "tap-height": {
+            "base": { "value": 48 },
+            "small": { "value": 36 }
+        }
     }
 }

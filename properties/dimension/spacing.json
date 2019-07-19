@@ -1,10 +1,12 @@
 {
-    "spacing": {
-        "none": { "value": "0" },
-        "extra-tight": { "value": "0.25rem" },
-        "tight": { "value": "0.5rem" },
-        "base": { "value": "1rem" },
-        "loose": { "value": "1.25rem" },
-        "extra-loose": { "value": "2rem" }
+    "dimension": {
+        "spacing": {
+            "none": { "value": 0 },
+            "extra-tight": { "value": 4 },
+            "tight": { "value": 8 },
+            "base": { "value": 16 },
+            "loose": { "value": 20 },
+            "extra-loose": { "value": 32 }
+        }
     }
 }
