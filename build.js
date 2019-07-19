@@ -10,7 +10,7 @@ const  {fileHeader, variablesWithPrefix, scssIndex } = require('./helpers')
 StyleDictionary.registerTransform({
   name: 'size/pxToRem',
   type: 'value',
-  matcher: prop => (prop.attributes.category === 'font' && prop.attributes.type === 'size') || prop.attributes.category === 'dimension',
+  matcher: prop => (prop.attributes.category === 'font' && prop.attributes.type === 'size') || prop.attributes.category === 'dimension' || (prop.attributes.category === 'border' && prop.attributes.type === 'radius'),
   transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
 })
 
