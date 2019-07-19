@@ -17,7 +17,16 @@ const fileHeader = options => {
     return strProp;
     }).filter(function(strVal) { return !!strVal }).join('\n');
 
+const scssIndex = categories => {
+  let str = ''
+  categories.forEach(category => {
+    str += `@import '_${category}';\n`;
+  })
+  return str
+}
+
 module.exports = {
     fileHeader,
-    variablesWithPrefix
+    variablesWithPrefix,
+    scssIndex
 }

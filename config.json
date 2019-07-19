@@ -5,13 +5,13 @@
       "transformGroup": "heartwood/scss",
       "buildPath": "build/scss/",
       "files": [{
-        "destination": "_type.scss",
+        "destination": "_font.scss",
         "filter": {
           "attributes": {
             "category": "font"
           }
         },
-        "format": "scss/variables"
+        "format": "scss/defaults"
       }, {
         "destination": "_colors.scss",
         "filter": {
@@ -24,10 +24,29 @@
         "destination": "_dimension.scss",
         "filter": {
           "attributes": {
-            "category": "spacing"
+            "category": "dimension"
           }
         },
         "format": "scss/defaults"
+      }, {
+        "destination": "_layer.scss",
+        "filter": {
+          "attributes": {
+            "category": "layer"
+          }
+        },
+        "format": "scss/defaults"
+      }, {
+        "destination": "_border.scss",
+        "filter": {
+          "attributes": {
+            "category": "border"
+          }
+        },
+        "format": "scss/defaults"
+      }, {
+        "destination": "index.scss",
+        "format": "scss/index"
       }]
     },
     "android": {

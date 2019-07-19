@@ -2,15 +2,15 @@ const StyleDictionary = require('style-dictionary').extend(__dirname + '/config.
 const _  = require('lodash')
 const tinycolor = require('tinycolor2')
 
-const  {fileHeader, variablesWithPrefix } = require('./helpers')
+const  {fileHeader, variablesWithPrefix, scssIndex } = require('./helpers')
 
 /**
  * Transforms
  */
 StyleDictionary.registerTransform({
-  name: 'font/size/pxToRem',
+  name: 'size/pxToRem',
   type: 'value',
-  matcher: prop => prop.attributes.category === 'font' && prop.attributes.type === 'size',
+  matcher: prop => (prop.attributes.category === 'font' && prop.attributes.type === 'size') || prop.attributes.category === 'dimension',
   transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
 })
 
@@ -27,7 +27,7 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerTransformGroup({
   name: 'heartwood/scss',
   transforms: [
-    'attribute/cti','name/cti/kebab','time/seconds','content/icon','font/size/pxToRem','font/family/css','color/css'
+    'attribute/cti','name/cti/kebab','time/seconds','content/icon','size/pxToRem','font/family/css','color/css'
   ]
 })
 
@@ -37,9 +37,13 @@ StyleDictionary.registerTransformGroup({
 StyleDictionary.registerFormat({
     name: 'scss/defaults',
     formatter: function(dictionary) {
-
         return fileHeader(this.options) + variablesWithPrefix('$', dictionary.allProperties);
     }
+})
+
+StyleDictionary.registerFormat({
+  name: 'scss/index',
+  formatter: dictionary => scssIndex(Object.keys(dictionary.properties))
 })
 
 StyleDictionary.registerFormat({
