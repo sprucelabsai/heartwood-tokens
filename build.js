@@ -14,13 +14,20 @@ StyleDictionary.registerTransform({
   transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
 })
 
+StyleDictionary.registerTransform({
+  name: 'font/family/css',
+  type: 'value',
+  matcher: prop => prop.attributes.category === 'font' && prop.attributes.type === 'family',
+  transformer: prop => prop.original.fallback ?  prop.original.value + ', '  + prop.original.fallback : prop.original.value
+})
+
 /**
  * Transform Groups
  */
 StyleDictionary.registerTransformGroup({
   name: 'heartwood/scss',
   transforms: [
-    'attribute/cti','name/cti/kebab','time/seconds','content/icon','font/size/pxToRem','color/css'
+    'attribute/cti','name/cti/kebab','time/seconds','content/icon','font/size/pxToRem','font/family/css','color/css'
   ]
 })
 

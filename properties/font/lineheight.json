@@ -1,5 +1,5 @@
 {
-    "line-height": { "value": "1.25" },
-    "line-height-tight": { "value": "1.125" },
-    "line-height-loose": { "value": "1.5" }
+    "line-height": { "value": 1.25 },
+    "line-height-tight": { "value": 1.125 },
+    "line-height-loose": { "value": 1.5 }
 }
