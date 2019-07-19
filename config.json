@@ -1,5 +1,5 @@
 {
-  "source": ["properties/**/*.json"],
+  "source": ["properties/**/*.json", "properties/**/*.js"],
   "platforms": {
     "scss": {
       "transformGroup": "heartwood/scss",
