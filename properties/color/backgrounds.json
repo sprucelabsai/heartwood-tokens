@@ -1,6 +1,8 @@
 {
     "color": {
-        "bg": { "value": "{color.off-white.value}" },
-        "bg-light": { "value": "{color.white.value}"}
+        "bg": {
+            "base": { "value": "{color.greyscale.off-white.value}" },
+            "light": { "value": "{color.greyscale.white.value}"}
+        }
     }
 }

@@ -1,9 +1,11 @@
 {
     "color": {
-        "primary": { "value": "#1953CB" },
-        "primary-light": { "value": "#3873D7" },
-        "primary-lighter": { "value": "#E1EAF9" },
-        "primary-dark": { "value": "#072E99" },
-        "primary-darker": { "value": "#00125D" }
+        "primary": {
+            "base": { "value": "#1953CB" },
+            "light": { "value": "#3873D7" },
+            "lighter": { "value": "#E1EAF9" },
+            "dark": { "value": "#072E99" },
+            "darker": { "value": "#00125D" }
+        }
     }
 }

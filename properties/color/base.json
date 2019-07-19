@@ -1,7 +1,8 @@
 {
   "color": {
-    "black": { "value": "#0a0c10"},
-    "grey": {
+    "greyscale": {
+      "white": { "value": "#ffffff"},
+      "off-white": { "value": "#f9fafc"},
       "00": { "value": "#F0F2F7"},
       "01": { "value": "#e5e7eb"},
       "02": { "value": "#cccfd6"},
@@ -11,9 +12,8 @@
       "06": { "value": "#69707d"},
       "07": { "value": "#525966"},
       "08": { "value": "#3e4552"},
-      "09": { "value": "#2c323d"}
-    },
-    "off-white": { "value": "#f9fafc"},
-    "white": { "value": "#ffffff"}
+      "09": { "value": "#2c323d"},
+      "black": { "value": "#0a0c10"}
+    }
   }
 }

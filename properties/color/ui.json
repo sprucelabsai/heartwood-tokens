@@ -1,22 +1,31 @@
 {
     "color": {
         "ui": {
-            "online": { "value": "#00B2A4" },
-            "online-light": { "value": "#6FD0C9" },
-            "online-lighter": { "value": "#DAF2F0" },
-            "online-dark": { "value": "#0D7171" },
-            "online-darker": { "value": "#0F373A" },
-            "warn": { "value": "#FFA600" },
-            "warn-light": { "value": "#FBCB70" },
-            "warn-lighter": { "value": "#FDF1DB" },
-            "warn-dark": { "value": "#B43F00" },
-            "warn-darker": { "value": "#690000" },
-            "critical": { "value": "#CB2431" },
-            "critical-light": { "value": "#EE525E" },
-            "critical-lighter": { "value": "#FFE6E6" },
-            "critical-dark": { "value": "#980F12" },
-            "critical-darker": { "value": "#5D0603" },
-            "input-autofill": { "value": "#e0edf8"}
+            "online": {
+                "base": { "value": "#00B2A4" },
+                "light": { "value": "#6FD0C9" },
+                "lighter": { "value": "#DAF2F0" },
+                "dark": { "value": "#0D7171" },
+                "darker": { "value": "#0F373A" }
+
+            },
+            "warn": {
+                "base": { "value": "#FFA600" },
+                "light": { "value": "#FBCB70" },
+                "lighter": { "value": "#FDF1DB" },
+                "dark": { "value": "#B43F00" },
+                "darker": { "value": "#690000" }
+            },
+            "critical": {
+                "base": { "value": "#CB2431" },
+                "light": { "value": "#EE525E" },
+                "lighter": { "value": "#FFE6E6" },
+                "dark": { "value": "#980F12" },
+                "darker": { "value": "#5D0603" }
+            },
+            "input": {
+                "autofill": { "value": "#e0edf8"}
+            }
         }
     }
 }

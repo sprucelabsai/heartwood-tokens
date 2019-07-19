@@ -1,8 +1,10 @@
 {
   "color": {
-    "text": { "value": "{color.grey.09.value}" },
-    "text-light": { "value": "{color.grey.07.value}" },
-    "text-placeholder": { "value": "{color.grey.05.value}" },
-    "text-icon": { "value": "{color.grey.05.value}" }
+    "text": {
+      "base": { "value": "{color.greyscale.09.value}" },
+      "light": { "value": "{color.greyscale.07.value}" },
+      "placeholder": { "value": "{color.greyscale.05.value}" },
+      "icon": { "value": "{color.greyscale.05.value}" }
+    }
   }
 }
