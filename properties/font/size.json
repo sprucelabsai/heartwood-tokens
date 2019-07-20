@@ -1,37 +1,26 @@
 {
     "font": {
         "size": {
-            "label": { "value": 11 },
-            "legal": { "value": 12 },
-            "ui": { "value": 14 },
-            "body": { "value": 16 },
-            "heading": {
-                "sm":  { "value": 18 },
-                "md": { "value": 20 },
-                "lg": { "value": 24 },
-                "xl": { "value": 28 }
+            "legal": {
+                "value": "{size.typescale.1.value}"
             },
-            "display": {
-                "sm":  { "value": 60 },
-                "md": { "value": 68 },
-                "lg": { "value": 76 },
-                "xl": { "value": 84 }
+            "ui": {
+                "value": "{size.typescale.2.value}"
             },
-            "h": {
-                "6": { "value": 20 },
-                "5": { "value": 24 },
-                "4": { "value": 28 },
-                "3": { "value": 32 },
-                "2": { "value": 36 },
-                "1": { "value": 42 }
+            "body": {
+                "value": "{size.typescale.3.value}"
             },
-            "big-h": {
-                "6": { "value": 48 },
-                "5": { "value": 60 },
-                "4": { "value": 60 },
-                "3": { "value": 68 },
-                "2": { "value": 76 },
-                "1": { "value": 84 }
+            "h4": {
+                "value": "{size.typescale.5.value}"
+            },
+            "h3": {
+                "value": "{size.typescale.6.value}"
+            },
+            "h2": {
+                "value": "{size.typescale.7.value}"
+            },
+            "h1": {
+                "value": "{size.typescale.8.value}"
             }
         }
     }

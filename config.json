@@ -1,5 +1,8 @@
 {
-  "source": ["properties/**/*.json", "properties/**/*.js"],
+  "source": [
+    "properties/**/*.json",
+    "properties/**/*.js"
+  ],
   "platforms": {
     "scss": {
       "transformGroup": "heartwood/scss",
@@ -12,7 +15,18 @@
               "category": "font"
             }
           },
-          "format": "scss/defaults"
+          "format": "scss/map-deep",
+          "mapName": "heartwood-type"
+        },
+        {
+          "destination": "_size.scss",
+          "filter": {
+            "attributes": {
+              "category": "size"
+            }
+          },
+          "format": "scss/map-flat",
+          "mapName": "heartwood-typescale"
         },
         {
           "destination": "_colors.scss",
