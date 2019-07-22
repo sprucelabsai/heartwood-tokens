@@ -67,6 +67,5 @@ const iconArray = diretoryTreeToObj(iconDir, (err, res) => {
     };
 
     const resultsObj = arrayToJson(res)
-    console.log(resultsObj)
     fs.writeFileSync('./properties/assets/icons.json', resultsObj)
 })
