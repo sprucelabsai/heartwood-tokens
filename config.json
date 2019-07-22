@@ -15,7 +15,7 @@
               "category": "font"
             }
           },
-          "format": "scss/map-deep",
+          "format": "scss/defaults",
           "mapName": "heartwood-type"
         },
         {
@@ -25,11 +25,11 @@
               "category": "size"
             }
           },
-          "format": "scss/map-flat",
+          "format": "scss/defaults",
           "mapName": "heartwood-typescale"
         },
         {
-          "destination": "_colors.scss",
+          "destination": "_color.scss",
           "filter": {
             "attributes": {
               "category": "color"
