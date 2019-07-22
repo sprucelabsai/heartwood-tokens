@@ -8,7 +8,8 @@
     "properties"
   ],
   "scripts": {
-    "build": "node ./build.js",
+    "icons": "node ./icons.js",
+    "build": "npm run icons && node ./build.js",
     "clean": "rm -rf build",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
