@@ -1,7 +1,7 @@
 {
     "font": {
         "size": {
-            "legal": {
+            "label": {
                 "value": "{size.typescale.1.value}"
             },
             "ui": {
