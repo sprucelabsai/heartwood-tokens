@@ -1,11 +1,11 @@
 {
     "color": {
         "primary": {
-            "base": { "value": "#1953CB" },
-            "light": { "value": "#3873D7" },
-            "lighter": { "value": "#E1EAF9" },
+            "base": { "value": "#1948CB" },
+            "light": { "value": "#4A70D9" },
+            "lighter": { "value": "#E1E7F9" },
             "dark": { "value": "#072E99" },
-            "darker": { "value": "#00125D" }
+            "darker": { "value": "#00195D" }
         }
     }
 }

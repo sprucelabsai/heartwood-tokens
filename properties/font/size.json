@@ -1,37 +1,35 @@
 {
     "font": {
         "size": {
-            "label": { "value": 11 },
-            "legal": { "value": 12 },
-            "ui": { "value": 14 },
-            "body": { "value": 16 },
+            "label": { "value": "{size.font.01.value}" },
+            "ui": { "value": "{size.font.02.value}" },
+            "body": { "value": "{size.font.03.value}" },
+            "subheading": {
+                "small": { "value": "{size.font.04.value}" },
+                "large": {
+                    "mobile": { "value": "{size.font.05.value}" }, 
+                    "desktop": { "value": "{size.font.06.value}" }
+                }
+            },
             "heading": {
-                "sm":  { "value": 18 },
-                "md": { "value": 20 },
-                "lg": { "value": 24 },
-                "xl": { "value": 28 }
+                "small": {
+                    "mobile": { "value": "{size.font.05.value}" },
+                    "desktop": { "value": "{size.font.06.value}" }
+                },
+                "large": {
+                    "mobile": { "value": "{size.font.06.value}" },
+                    "desktop": { "value": "{size.font.07.value}" }
+                }
             },
-            "display": {
-                "sm":  { "value": 60 },
-                "md": { "value": 68 },
-                "lg": { "value": 76 },
-                "xl": { "value": 84 }
-            },
-            "h": {
-                "6": { "value": 20 },
-                "5": { "value": 24 },
-                "4": { "value": 28 },
-                "3": { "value": 32 },
-                "2": { "value": 36 },
-                "1": { "value": 42 }
-            },
-            "big-h": {
-                "6": { "value": 48 },
-                "5": { "value": 60 },
-                "4": { "value": 60 },
-                "3": { "value": 68 },
-                "2": { "value": 76 },
-                "1": { "value": 84 }
+            "title": {
+                "small": {
+                    "mobile": { "value": "{size.font.07.value}" },
+                    "desktop": { "value": "{size.font.08.value}" }
+                },
+                "large": {
+                    "mobile": { "value": "{size.font.09.value}" },
+                    "desktop": { "value": "{size.font.10.value}" }
+                }
             }
         }
     }

@@ -1,8 +1,8 @@
 {
     "color": {
         "border": {
-            "base": { "value": "{color.greyscale.02.value}"},
-            "light": { "value": "{color.greyscale.01.value}"}
+            "base": { "value": "{color.greyscale.01.value}"},
+            "dark": { "value": "{color.greyscale.02.value}"}
         }
     }
 }

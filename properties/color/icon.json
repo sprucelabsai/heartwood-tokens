@@ -1,0 +1,7 @@
+{
+    "color": {
+        "icon": {
+            "base": { "value": "{color.greyscale.05.value}" }
+        }
+    }
+}
