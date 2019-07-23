@@ -20,7 +20,9 @@ const fileHeader = options => {
 const scssIndex = categories => {
   let str = ''
   categories.forEach(category => {
-    str += `@import '_${category}';\n`;
+    if (category !== 'size') {
+      str += `@import '_${category}';\n`;
+    }
   })
   return str
 }

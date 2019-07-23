@@ -15,7 +15,7 @@
           "format": "scss/defaults"
         },
         {
-          "destination": "_colors.scss",
+          "destination": "_color.scss",
           "filter": {
             "attributes": {
               "category": "color"
