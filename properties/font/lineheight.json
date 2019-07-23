@@ -1,9 +1,36 @@
 {
     "font": {
         "line-height": {
-            "base": { "value": 1.25 },
-            "tight": { "value": 1.125 },
-            "loose": { "value": 1.5 }
+            "label": { "value": 16 },
+            "ui": { "value": 16 },
+            "body": { "value": 22 },
+            "subheading": {
+                "small": { "value": 22 },
+                "large": {
+                    "mobile": { "value": 24 }, 
+                    "desktop": { "value": 28 }
+                }
+            },
+            "heading": {
+                "small": {
+                    "mobile": { "value": 24 },
+                    "desktop": { "value": 28 }
+                },
+                "large": {
+                    "mobile": { "value": 24 },
+                    "desktop": { "value": 28 }
+                }
+            },
+            "title": {
+                "small": {
+                    "mobile": { "value": 28 },
+                    "desktop": { "value": 32 }
+                },
+                "large": {
+                    "mobile": { "value": 26 },
+                    "desktop": { "value": 44 }
+                }
+            }
         }
     }
 }
