@@ -40,7 +40,7 @@ const sassMultiMap = ({mapPrefix, properties}) => {
           if (val.attributes.subitem) {
             key += `-${val.attributes.subitem}`
           }
-          return `'${key}': ${val.attributes.type === 'family' ? `"${val.value}"` : val.value}`
+          return `'${key}': ${val.attributes.type === 'family' ? `#{${val.value}}` : val.value}`
         }).join(',\n')}
       ) !default;`
 

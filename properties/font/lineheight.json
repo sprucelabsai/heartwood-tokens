@@ -27,7 +27,7 @@
                     "desktop": { "value": 32 }
                 },
                 "large": {
-                    "mobile": { "value": 26 },
+                    "mobile": { "value": 36 },
                     "desktop": { "value": 44 }
                 }
             }
