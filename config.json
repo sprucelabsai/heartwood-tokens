@@ -172,6 +172,16 @@
           "format": "json/flat-dash"
         }
       ]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
+      "files": [
+        {
+          "destination": "dictionary.js",
+          "format": "javascript/object"
+        }
+      ]
     }
   }
 }
