@@ -21,8 +21,17 @@ const fileHeader = options => {
 
 const sassMultiMap = ({mapPrefix, properties}) => {
   const types = _.groupBy(properties, property => property.attributes.type)
+  const fileComment = `/**
+* Do not edit directly
+* Generated on ${new Date().toUTCString()}
+*/
 
-  return Object.keys(types).map(key => {
+`
+  const defaults = properties.map(prop => {
+    return `$${prop.name}: ${prop.value} !default;`
+  })
+
+  return fileComment + defaults.join('\n') + '\n\n' + Object.keys(types).map(key => {
     const type = types[key];
     const groupedItems = _.groupBy(type, item => item.attributes.state)
 
@@ -34,15 +43,14 @@ const sassMultiMap = ({mapPrefix, properties}) => {
         mapName += `-${groupKey}`
       }
       
-      return `${mapName}: (
-        ${group.map(val => {
+      return `${mapName}: (${group.map(val => {
           let key = val.attributes.item;
           if (val.attributes.subitem) {
             key += `-${val.attributes.subitem}`
           }
-          return `'${key}': ${val.attributes.type === 'family' ? `#{${val.value}}` : val.value}`
-        }).join(',\n')}
-      ) !default;`
+          return `
+  '${key}': $${val.name}`}).join(',')}
+);`
 
       
     }).join('\n\n')
