@@ -12,7 +12,8 @@
               "category": "font"
             }
           },
-          "format": "scss/map-multi"
+          "format": "scss/map-multi",
+          "mapPrefix": "type"
         },
         {
           "destination": "_color.scss",

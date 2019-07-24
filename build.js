@@ -48,7 +48,7 @@ StyleDictionary.registerFormat({
 StyleDictionary.registerFormat({
     name: 'scss/map-multi',
     formatter: function(dictionary) {
-        return sassMultiMap({properties: dictionary.allProperties});
+        return sassMultiMap({mapPrefix: this.mapPrefix || '', properties: dictionary.allProperties});
     }
 })
 

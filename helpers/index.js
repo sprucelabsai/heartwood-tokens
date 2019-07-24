@@ -22,22 +22,31 @@ const fileHeader = options => {
 const sassMultiMap = ({mapPrefix, properties}) => {
   const types = _.groupBy(properties, property => property.attributes.type)
 
-  return Object.keys(types).map(typeKey => {
-    const type = types[typeKey];
-    console.log(typeKey)
+  return Object.keys(types).map(key => {
+    const type = types[key];
+    const groupedItems = _.groupBy(type, item => item.attributes.state)
 
-    return '$' + typeKey + '-' + (mapPrefix || 'tokens') + ': (\n' + type.map(val => {
-      console.log(val)
-      return `'${val.attributes.item}': ${val.value},`
-    }).join('\n') + '\n);'
+
+    return Object.keys(groupedItems).map(groupKey => {
+      const group = groupedItems[groupKey];
+      let mapName = `$${mapPrefix || 'tokens'}-${key}`;
+      if (groupKey !== 'undefined') {
+        mapName += `-${groupKey}`
+      }
+      
+      return `${mapName}: (
+        ${group.map(val => {
+          let key = val.attributes.item;
+          if (val.attributes.subitem) {
+            key += `-${val.attributes.subitem}`
+          }
+          return `'${key}': ${val.attributes.type === 'family' ? `"${val.value}"` : val.value}`
+        }).join(',\n')}
+      );`
+
+      
+    }).join('\n\n')
   }).join('\n\n')
-
-  // return '$' + (mapPrefix || 'tokens') + ': (\n' + properties.map(prop => {
-  //   console.log (prop);
-  //   return prop.name;
-  // }).join('\n') + '\n);'
-
-  return JSON.stringify(types)
 }
 
 const scssIndex = categories => {
