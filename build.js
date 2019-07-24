@@ -58,6 +58,17 @@ StyleDictionary.registerFormat({
 })
 
 StyleDictionary.registerFormat({
+  name: 'scss/theme',
+  formatter: dictionary => `
+/**
+ * Edit values to override the base theme
+ */
+
+${dictionary.allProperties.map(prop => `$${prop.name}: ${prop.value};`).join('\n')}
+`
+})
+
+StyleDictionary.registerFormat({
   name: 'json/flat-dash',
   formatter: function(dictionary) {
     return '{\n' + _.map(dictionary.allProperties, function(prop) {

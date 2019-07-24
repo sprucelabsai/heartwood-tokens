@@ -54,6 +54,9 @@
         {
           "destination": "index.scss",
           "format": "scss/index"
+        }, {
+          "destination": "_theme.scss",
+          "format": "scss/theme"
         }
       ]
     },

@@ -64,6 +64,12 @@ const scssIndex = categories => {
       str += `@import '_${category}';\n`;
     }
   })
+  str += `
+/**
+* Uncomment to pull in theme overrides
+*/
+// @import '_theme';
+ `
   return str
 }
 
