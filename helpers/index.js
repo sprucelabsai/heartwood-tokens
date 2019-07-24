@@ -42,7 +42,7 @@ const sassMultiMap = ({mapPrefix, properties}) => {
           }
           return `'${key}': ${val.attributes.type === 'family' ? `"${val.value}"` : val.value}`
         }).join(',\n')}
-      );`
+      ) !default;`
 
       
     }).join('\n\n')
