@@ -12,7 +12,7 @@
               "category": "font"
             }
           },
-          "format": "scss/defaults"
+          "format": "scss/map-multi"
         },
         {
           "destination": "_color.scss",

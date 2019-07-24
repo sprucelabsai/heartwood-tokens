@@ -1,3 +1,5 @@
+const _ = require('lodash')
+
 const fileHeader = options => {
     const showFileHeader = (options) ? options.showFileHeader : true;
     let str = '';
@@ -17,6 +19,27 @@ const fileHeader = options => {
     return strProp;
     }).filter(function(strVal) { return !!strVal }).join('\n');
 
+const sassMultiMap = ({mapPrefix, properties}) => {
+  const types = _.groupBy(properties, property => property.attributes.type)
+
+  return Object.keys(types).map(typeKey => {
+    const type = types[typeKey];
+    console.log(typeKey)
+
+    return '$' + typeKey + '-' + (mapPrefix || 'tokens') + ': (\n' + type.map(val => {
+      console.log(val)
+      return `'${val.attributes.item}': ${val.value},`
+    }).join('\n') + '\n);'
+  }).join('\n\n')
+
+  // return '$' + (mapPrefix || 'tokens') + ': (\n' + properties.map(prop => {
+  //   console.log (prop);
+  //   return prop.name;
+  // }).join('\n') + '\n);'
+
+  return JSON.stringify(types)
+}
+
 const scssIndex = categories => {
   let str = ''
   categories.forEach(category => {
@@ -30,5 +53,6 @@ const scssIndex = categories => {
 module.exports = {
     fileHeader,
     variablesWithPrefix,
-    scssIndex
+    scssIndex,
+    sassMultiMap
 }
