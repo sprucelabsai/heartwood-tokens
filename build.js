@@ -2,7 +2,7 @@ const StyleDictionary = require('style-dictionary').extend(__dirname + '/config.
 const _  = require('lodash')
 const tinycolor = require('tinycolor2')
 
-const  {fileHeader, variablesWithPrefix, scssIndex, sassMultiMap } = require('./helpers')
+const  {fileHeader, variablesWithPrefix, scssIndex, sassMultiMap } = require('./formatters')
 
 /**
  * Transforms
