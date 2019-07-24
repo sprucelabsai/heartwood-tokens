@@ -179,7 +179,7 @@
       "files": [
         {
           "destination": "dictionary.js",
-          "format": "javascript/object"
+          "format": "javascript/module"
         }
       ]
     }
