@@ -1,0 +1,15 @@
+{
+    "color": {
+        "code-text": {
+            "base": { "value": "#ffffff" },
+            "red": { "value": "#F07971" },
+            "orange": { "value": "#F78C6C" },
+            "yellow": { "value": "#FFCE6B" },
+            "green": { "value": "#C3E88D" },
+            "blue": { "value": "#9BEDED" },
+            "indigo": { "value": "#82A3FF" },
+            "violet": { "value": "#CD92EA" },
+            "grey": { "value": "#B0B5C1" }
+        }
+    }
+}
