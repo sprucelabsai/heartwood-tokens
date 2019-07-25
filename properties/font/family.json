@@ -8,6 +8,10 @@
             "label": {
                 "value": "'Source Code Pro'",
                 "fallback": "Courier, monospace"
+            },
+            "code": {
+                "value": "'Source Code Pro'",
+                "fallback": "Courier, monospace"
             }
         }
     }
