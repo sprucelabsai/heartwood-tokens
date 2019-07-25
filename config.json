@@ -22,7 +22,8 @@
               "category": "color"
             }
           },
-          "format": "scss/defaults"
+          "format": "scss/map-multi",
+          "mapPrefix": "colors"
         },
         {
           "destination": "_dimension.scss",
