@@ -8,6 +8,76 @@ const  {fileHeader, variablesWithPrefix, scssIndex, sassMultiMap } = require('./
  * Transforms
  */
 StyleDictionary.registerTransform({
+  name: 'name/bem',
+  type: 'name',
+  transformer: (prop, options) => {
+    // Get the properties
+    const { attributes } = prop;
+    const category = typeof attributes.category !== 'undefined' ? attributes.category : null
+    const type = typeof attributes.type !== 'undefined' ? attributes.type : null
+    const item = typeof attributes.item !== 'undefined' ? attributes.item : null
+    const subitem = typeof attributes.subitem !== 'undefined' ? attributes.subitem : null
+    const state = typeof attributes.state !== 'undefined' ? attributes.state : null
+
+    // Map categories to prefixes
+    const catPrefixes = {
+      color: 'c',
+      'background-color': 'bg',
+      'text-color': 'tc',
+      layer: 'layer',
+      'font-weight': 'fw',
+      'font-size': 'fs',
+      'font-style': 'fstyle',
+      'breakpoint': 'bp',
+      'line-height': 'lh',
+      border: 'border',
+      'border-radius': 'br',
+      dimension: 'dim',
+      size: 'sz',
+      layout: 'l',
+      margin: 'm',
+      'margin-x': 'mx',
+      'margin-y': 'my',
+      'margin-top': 'mt',
+      'margin-right': 'mr',
+      'margin-bottom': 'mb',
+      'margin-left': 'ml',
+      padding: 'p',
+      'padding-x': 'px',
+      'padding-y': 'py',
+      'padding-top': 'pt',
+      'padding-right': 'pr',
+      'padding-bottom': 'pb',
+      'padding-left': 'pl',
+    }
+
+    // Reformat the category name to be shorter
+    const newCat = catPrefixes[category] || category
+
+    // Build the name
+    let newName = newCat;
+
+    if (type && type !== 'base') {
+      newName += `-${type}`
+    }
+
+    if (item) {
+      newName += `__${item}`
+    }
+
+    if (subitem) {
+      newName += `_${subitem}`
+    }
+
+    if (state) {
+      newName += `--${state}`
+    }
+
+    return newName
+  }
+})
+
+StyleDictionary.registerTransform({
   name: 'size/pxToRem',
   type: 'value',
   matcher: prop =>
@@ -15,7 +85,7 @@ StyleDictionary.registerTransform({
     prop.attributes.category === 'font-size' ||
     prop.attributes.category === 'line-height' ||
     prop.attributes.category === 'dimension' ||
-    (prop.attributes.category === 'border' && prop.attributes.type === 'radius'),
+    prop.attributes.category === 'border-radius',
   transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
 })
 
@@ -32,7 +102,7 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerTransformGroup({
   name: 'heartwood/scss',
   transforms: [
-    'attribute/cti','name/cti/kebab','time/seconds','content/icon','size/pxToRem','font/family/css','color/css'
+    'attribute/cti','name/bem','time/seconds','content/icon','size/pxToRem','font/family/css','color/css'
   ]
 })
 
@@ -109,6 +179,13 @@ StyleDictionary.registerFormat({
   }
 })
 
+/**
+ * Filters
+ */
+StyleDictionary.registerFilter({
+  name: 'omit',
+  matcher: prop => prop.attributes.category !== 'size'
+})
 
 /**
  * Build command

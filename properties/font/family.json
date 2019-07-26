@@ -1,5 +1,9 @@
 {
     "font-family": {
+            "meta": {
+                "prefix": "ff",
+                "description": "test"
+            },
             "sans": {
                 "value": "'Source Sans Pro'",
                 "fallback": "'Roboto', 'Helvetica', sans-serif"

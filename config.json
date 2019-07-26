@@ -7,6 +7,7 @@
       "files": [
         {
           "destination": "_tokens.scss",
+          "filter": "omit",
           "format": "scss/defaults"
         }
       ]
