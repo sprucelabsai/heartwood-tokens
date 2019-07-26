@@ -1,7 +1,12 @@
 {
-    "color": {
-        "code-text": {
-            "base": { "value": "#ffffff" },
+    "text-color": {
+        "copy": {
+            "base": { "value": "{color.greyscale.9.value}" },
+            "light": { "value": "{color.greyscale.7.value}" },
+            "lighter": { "value": "{color.greyscale.5.value}" }
+        },
+        "code": {
+            "base": { "value": "#fff" },
             "red": { "value": "#F07971" },
             "orange": { "value": "#F78C6C" },
             "yellow": { "value": "#FFCE6B" },

@@ -6,6 +6,10 @@
       "buildPath": "build/scss/",
       "files": [
         {
+          "destination": "_tokens.scss",
+          "format": "scss/defaults"
+        },
+        {
           "destination": "_font.scss",
           "filter": {
             "attributes": {

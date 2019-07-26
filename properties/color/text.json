@@ -1,9 +1,0 @@
-{
-  "color": {
-    "text": {
-      "base": { "value": "{color.greyscale.09.value}" },
-      "light": { "value": "{color.greyscale.07.value}" },
-      "placeholder": { "value": "{color.greyscale.05.value}" }
-    }
-  }
-}

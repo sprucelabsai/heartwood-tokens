@@ -1,9 +1,0 @@
-{
-    "color": {
-        "bg": {
-            "base": { "value": "#F9FAFC" },
-            "light": { "value": "#ffffff"},
-            "dark": { "value": "{color.greyscale.00.value}" }
-        }
-    }
-}
