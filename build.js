@@ -107,6 +107,11 @@ StyleDictionary.registerTransformGroup({
   ]
 })
 
+StyleDictionary.registerTransformGroup({
+  name: 'heartwood/js',
+  transforms: [ 'attribute/cti', 'name/bem', 'size/px', 'color/hex']
+})
+
 /**
  * Formats
  */

@@ -76,7 +76,7 @@
       ]
     },
     "js": {
-      "transformGroup": "js",
+      "transformGroup": "heartwood/js",
       "buildPath": "build/js/",
       "files": [
         {
