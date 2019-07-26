@@ -6,59 +6,5 @@
         "medium": { "value": "{spacing.4.value}" },
         "large": { "value": "{spacing.5.value}" },
         "xlarge": { "value": "{spacing.7.value}" }
-    },
-
-    "padding-x": {
-        "0": { "value": 0 },
-        "xsmall": { "value": "{spacing.1.value}" },
-        "small": { "value": "{spacing.2.value}" },
-        "medium": { "value": "{spacing.4.value}" },
-        "large": { "value": "{spacing.5.value}" },
-        "xlarge": { "value": "{spacing.7.value}" }
-    },
-
-    "padding-y": {
-        "0": { "value": 0 },
-        "xsmall": { "value": "{spacing.1.value}" },
-        "small": { "value": "{spacing.2.value}" },
-        "medium": { "value": "{spacing.4.value}" },
-        "large": { "value": "{spacing.5.value}" },
-        "xlarge": { "value": "{spacing.7.value}" }
-    },
-
-    "padding-top": {
-        "0": { "value": 0 },
-        "xsmall": { "value": "{spacing.1.value}" },
-        "small": { "value": "{spacing.2.value}" },
-        "medium": { "value": "{spacing.4.value}" },
-        "large": { "value": "{spacing.5.value}" },
-        "xlarge": { "value": "{spacing.7.value}" }
-    },
-
-    "padding-right": {
-        "0": { "value": 0 },
-        "xsmall": { "value": "{spacing.1.value}" },
-        "small": { "value": "{spacing.2.value}" },
-        "medium": { "value": "{spacing.4.value}" },
-        "large": { "value": "{spacing.5.value}" },
-        "xlarge": { "value": "{spacing.7.value}" }
-    },
-
-    "padding-bottom": {
-        "0": { "value": 0 },
-        "xsmall": { "value": "{spacing.1.value}" },
-        "small": { "value": "{spacing.2.value}" },
-        "medium": { "value": "{spacing.4.value}" },
-        "large": { "value": "{spacing.5.value}" },
-        "xlarge": { "value": "{spacing.7.value}" }
-    },
-
-    "padding-left": {
-        "0": { "value": 0 },
-        "xsmall": { "value": "{spacing.1.value}" },
-        "small": { "value": "{spacing.2.value}" },
-        "medium": { "value": "{spacing.4.value}" },
-        "large": { "value": "{spacing.5.value}" },
-        "xlarge": { "value": "{spacing.7.value}" }
     }
 }
