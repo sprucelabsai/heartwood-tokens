@@ -1,6 +1,6 @@
 {
     "background-color": {
-        "light": {
+        "base": {
             "base": { "value": "#F9FAFC" },
             "light": { "value": "#fff" },
             "dark": { "value": "{color.greyscale.0.value}" }

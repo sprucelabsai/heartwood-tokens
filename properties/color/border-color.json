@@ -1,6 +1,6 @@
 {
     "border-color": {
-        "light": {
+        "base": {
             "base": { "value": "{color.greyscale.1.value}" },
             "bold": { "value": "{color.greyscale.2.value}" }
         },
