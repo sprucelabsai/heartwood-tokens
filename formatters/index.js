@@ -43,6 +43,7 @@ const sassMultiMap = ({mapPrefix, properties}) => {
     return `${mapName}: (${items.map(item => {
       const { attributes } = item;
       let name = attributes.type;
+
       if (typeof attributes.item !== 'undefined') {
         if (attributes.type === 'base') {
           name = attributes.item;
@@ -52,6 +53,7 @@ const sassMultiMap = ({mapPrefix, properties}) => {
           name += `-${attributes.item}`
         }
       }
+      
       if (typeof attributes.subitem !== 'undefined') {
         name += `__${attributes.subitem}`
       }

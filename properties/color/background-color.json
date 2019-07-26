@@ -5,8 +5,8 @@
             "light": { "value": "#fff" },
             "dark": { "value": "{color.greyscale.0.value}" }
         },
-        "dark": {
-            "base": { "value": "#242932" },
+        "night": {
+            "base": { "value": "#15181E" },
             "light": { "value": "{color.greyscale.8.value}" },
             "dark": { "value": "{color.greyscale.10.value}" }
         }
