@@ -1,18 +1,28 @@
 {
-    "font": {
-        "family": {
-            "primary": {
+    "font-family": {
+            "sans": {
                 "value": "'Source Sans Pro'",
                 "fallback": "'Roboto', 'Helvetica', sans-serif"
             },
-            "label": {
+            "serif": {
+                "value": "'Source Sans Pro'",
+                "fallback": "'Roboto', 'Helvetica', sans-serif"
+            },
+            "mono": {
                 "value": "'Source Code Pro'",
                 "fallback": "Courier, monospace"
             },
+            "base": {
+                "value": "{font-family.sans.value}",
+                "fallback": "{font-family.sans.fallback}"
+            },
+            "label": {
+                "value": "{font-family.mono.value}",
+                "fallback": "{font-family.mono.fallback}"
+            },
             "code": {
-                "value": "'Source Code Pro'",
-                "fallback": "Courier, monospace"
+                "value": "{font-family.mono.value}",
+                "fallback": "{font-family.mono.fallback}"
             }
-        }
     }
 }

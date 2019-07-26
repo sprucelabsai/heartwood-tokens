@@ -1,0 +1,23 @@
+{
+    "font-size": {
+        "base": {
+            "label": { "value": "{size.font.1.value}" },
+            "code": { "value": "{size.font.1.value}" },
+            "ui": { "value": "{size.font.2.value}" },
+            "body": { "value": "{size.font.3.value}" },
+            "subheading-small": { "value": "{size.font.4.value}" },
+            "subheading-large": { "value": "{size.font.5.value}" },
+            "heading-small": { "value": "{size.font.5.value}" },
+            "heading-large": { "value": "{size.font.6.value}" },
+            "title-small": { "value": "{size.font.7.value}" },
+            "title-large": { "value": "{size.font.9.value}" }
+        },
+        "desktop": {
+            "subheading-large": { "value": "{size.font.6.value}" },
+            "heading-small": { "value": "{size.font.6.value}" },
+            "heading-large": { "value": "{size.font.7.value}" },
+            "title-small": { "value": "{size.font.8.value}" },
+            "title-large": { "value": "{size.font.10.value}" }
+        }
+    }
+}

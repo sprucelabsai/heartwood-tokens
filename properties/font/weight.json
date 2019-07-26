@@ -1,8 +1,6 @@
 {
-    "font": {
-        "weight": {
-            "normal": { "value": "400" },
-            "bold": { "value": "600" }
-        }
+    "font-weight": {
+        "normal": { "value": "400" },
+        "bold": { "value": "600" }
     }
 }

@@ -8,60 +8,6 @@
         {
           "destination": "_tokens.scss",
           "format": "scss/defaults"
-        },
-        {
-          "destination": "_font.scss",
-          "filter": {
-            "attributes": {
-              "category": "font"
-            }
-          },
-          "format": "scss/map-multi",
-          "mapPrefix": "type"
-        },
-        {
-          "destination": "_color.scss",
-          "filter": {
-            "attributes": {
-              "category": "color"
-            }
-          },
-          "format": "scss/map-multi",
-          "mapPrefix": "colors"
-        },
-        {
-          "destination": "_dimension.scss",
-          "filter": {
-            "attributes": {
-              "category": "dimension"
-            }
-          },
-          "format": "scss/defaults"
-        },
-        {
-          "destination": "_layer.scss",
-          "filter": {
-            "attributes": {
-              "category": "layer"
-            }
-          },
-          "format": "scss/defaults"
-        },
-        {
-          "destination": "_border.scss",
-          "filter": {
-            "attributes": {
-              "category": "border"
-            }
-          },
-          "format": "scss/defaults"
-        },
-        {
-          "destination": "index.scss",
-          "format": "scss/index"
-        }, {
-          "destination": "_theme.scss",
-          "format": "scss/theme"
         }
       ]
     },
@@ -76,56 +22,6 @@
         {
           "destination": "colors.xml",
           "format": "android/colors"
-        }
-      ]
-    },
-    "ios": {
-      "transformGroup": "ios",
-      "buildPath": "build/ios/",
-      "files": [
-        {
-          "destination": "StyleDictionaryColor.h",
-          "format": "ios/colors.h",
-          "className": "StyleDictionaryColor",
-          "type": "StyleDictionaryColorName",
-          "filter": {
-            "attributes": {
-              "category": "color"
-            }
-          }
-        },
-        {
-          "destination": "StyleDictionaryColor.m",
-          "format": "ios/colors.m",
-          "className": "StyleDictionaryColor",
-          "type": "StyleDictionaryColorName",
-          "filter": {
-            "attributes": {
-              "category": "color"
-            }
-          }
-        },
-        {
-          "destination": "StyleDictionarySize.h",
-          "format": "ios/static.h",
-          "className": "StyleDictionarySize",
-          "type": "float",
-          "filter": {
-            "attributes": {
-              "category": "size"
-            }
-          }
-        },
-        {
-          "destination": "StyleDictionarySize.m",
-          "format": "ios/static.m",
-          "className": "StyleDictionarySize",
-          "type": "float",
-          "filter": {
-            "attributes": {
-              "category": "size"
-            }
-          }
         }
       ]
     },

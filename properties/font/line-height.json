@@ -1,0 +1,23 @@
+{
+    "line-height": {
+        "base": {
+            "label": { "value": "{size.font.3.value}" },
+            "code": { "value": "{size.font.3.value}" },
+            "ui": { "value": "{size.font.3.value}" },
+            "body": { "value": "{size.font.6.value}" },
+            "subheading-small": { "value": "{size.font.6.value}" },
+            "subheading-large": { "value": "{size.font.7.value}" },
+            "heading-small": { "value": "{size.font.7.value}" },
+            "heading-large": { "value": "{size.font.7.value}" },
+            "title-small": { "value": "{size.font.8.value}" },
+            "title-large": { "value": 36 }
+        },
+        "desktop": {
+            "subheading-large": { "value": "{size.font.8.value}" },
+            "heading-small": { "value": "{size.font.8.value}" },
+            "heading-large": { "value": "{size.font.8.value}" },
+            "title-small": { "value": "{size.font.9.value}" },
+            "title-large": { "value": 42 }
+        }
+    }
+}

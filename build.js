@@ -12,7 +12,8 @@ StyleDictionary.registerTransform({
   type: 'value',
   matcher: prop =>
     prop.attributes.category === 'size' ||
-    (prop.attributes.category === 'font' && prop.attributes.type !== 'weight' && prop.attributes.type !== 'family') ||
+    prop.attributes.category === 'font-size' ||
+    prop.attributes.category === 'line-height' ||
     prop.attributes.category === 'dimension' ||
     (prop.attributes.category === 'border' && prop.attributes.type === 'radius'),
   transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
@@ -21,7 +22,7 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerTransform({
   name: 'font/family/css',
   type: 'value',
-  matcher: prop => prop.attributes.category === 'font' && prop.attributes.type === 'family',
+  matcher: prop => prop.attributes.category === 'font-family' || (prop.attributes.category === 'font' && prop.attributes.type === 'family'),
   transformer: prop => prop.original.fallback ?  prop.original.value + ', '  + prop.original.fallback : prop.original.value
 })
 
