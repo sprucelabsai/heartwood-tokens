@@ -21,7 +21,7 @@ const fileHeader = options => {
     }).filter(function(strVal) { return !!strVal }).join('\n');
 
 const sassMultiMap = ({mapPrefix, properties}) => {
-  const types = _.groupBy(properties, property => property.attributes.type)
+  const categories = _.groupBy(properties, property => property.attributes.category)
   const fileComment = `/**
 * Do not edit directly
 * Generated on ${new Date().toUTCString()}
@@ -32,29 +32,34 @@ const sassMultiMap = ({mapPrefix, properties}) => {
     return `$${prop.name}: ${prop.value} !default;`
   })
 
-  return fileComment + defaults.join('\n') + '\n\n' + Object.keys(types).map(key => {
-    const type = types[key];
+  return fileComment + defaults.join('\n') + '\n\n' + Object.keys(categories).map(key => {
+    const type = categories[key];
+    // console.log(key)
     const groupedItems = _.groupBy(type, item => item.attributes.state)
-
-
-    return Object.keys(groupedItems).map(groupKey => {
-      const group = groupedItems[groupKey];
-      let mapName = `$${mapPrefix || 'tokens'}-${key}`;
-      if (groupKey !== 'undefined') {
-        mapName += `-${groupKey}`
+    const items = type;
+    const mapName = `$${mapPrefix || 'tokens'}-${key}`;
+    
+    return `${mapName}: (${items.map(item => {
+      const { attributes } = item;
+      let name = attributes.type;
+      if (typeof attributes.item !== 'undefined') {
+        if (attributes.item === 'base') {
+          name = `${attributes.type}`
+        } else {
+          name += `-${attributes.item}`
+        }
       }
-      
-      return `${mapName}: (${group.map(val => {
-          let key = val.attributes.item;
-          if (val.attributes.subitem) {
-            key += `-${val.attributes.subitem}`
-          }
-          return `
-  '${key}': $${val.name}`}).join(',')}
-);`
+      if (typeof attributes.subitem !== 'undefined') {
+        name += `__${attributes.subitem}`
+      }
+      if (typeof attributes.state !== 'undefined') {
+        name += `--${attributes.state}`
+      }
 
-      
-    }).join('\n\n')
+      return `
+  '${name}': $${item.name}`
+  })}
+);`
   }).join('\n\n')
 }
 

@@ -61,11 +61,11 @@ StyleDictionary.registerTransform({
       newName += `-${type}`
     }
 
-    if (item) {
+    if (item && item !== 'base') {
       newName += `__${item}`
     }
 
-    if (subitem) {
+    if (subitem && subitem) {
       newName += `_${subitem}`
     }
 
