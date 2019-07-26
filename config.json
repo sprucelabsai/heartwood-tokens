@@ -7,7 +7,6 @@
       "files": [
         {
           "destination": "_tokens.scss",
-          "filter": "omit",
           "format": "scss/map-multi",
           "mapPrefix": "hw"
         }

@@ -1,5 +1,5 @@
 {
-    "dimension": {
+    "layout": {
         "breakpoint": {
             "small": { "value": 500 },
             "medium": { "value": 750 },

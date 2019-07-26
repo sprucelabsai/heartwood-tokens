@@ -1,0 +1,64 @@
+{
+    "margin": {
+        "0": { "value": 0 },
+        "xsmall": { "value": "{spacing.1.value}" },
+        "small": { "value": "{spacing.2.value}" },
+        "medium": { "value": "{spacing.4.value}" },
+        "large": { "value": "{spacing.5.value}" },
+        "xlarge": { "value": "{spacing.7.value}" }
+    },
+
+    "margin-x": {
+        "0": { "value": 0 },
+        "xsmall": { "value": "{spacing.1.value}" },
+        "small": { "value": "{spacing.2.value}" },
+        "medium": { "value": "{spacing.4.value}" },
+        "large": { "value": "{spacing.5.value}" },
+        "xlarge": { "value": "{spacing.7.value}" }
+    },
+
+    "margin-y": {
+        "0": { "value": 0 },
+        "xsmall": { "value": "{spacing.1.value}" },
+        "small": { "value": "{spacing.2.value}" },
+        "medium": { "value": "{spacing.4.value}" },
+        "large": { "value": "{spacing.5.value}" },
+        "xlarge": { "value": "{spacing.7.value}" }
+    },
+
+    "margin-top": {
+        "0": { "value": 0 },
+        "xsmall": { "value": "{spacing.1.value}" },
+        "small": { "value": "{spacing.2.value}" },
+        "medium": { "value": "{spacing.4.value}" },
+        "large": { "value": "{spacing.5.value}" },
+        "xlarge": { "value": "{spacing.7.value}" }
+    },
+
+    "margin-right": {
+        "0": { "value": 0 },
+        "xsmall": { "value": "{spacing.1.value}" },
+        "small": { "value": "{spacing.2.value}" },
+        "medium": { "value": "{spacing.4.value}" },
+        "large": { "value": "{spacing.5.value}" },
+        "xlarge": { "value": "{spacing.7.value}" }
+    },
+
+    "margin-bottom": {
+        "0": { "value": 0 },
+        "xsmall": { "value": "{spacing.1.value}" },
+        "small": { "value": "{spacing.2.value}" },
+        "medium": { "value": "{spacing.4.value}" },
+        "large": { "value": "{spacing.5.value}" },
+        "xlarge": { "value": "{spacing.7.value}" }
+    },
+
+    "margin-left": {
+        "0": { "value": 0 },
+        "xsmall": { "value": "{spacing.1.value}" },
+        "small": { "value": "{spacing.2.value}" },
+        "medium": { "value": "{spacing.4.value}" },
+        "large": { "value": "{spacing.5.value}" },
+        "xlarge": { "value": "{spacing.7.value}" }
+    }
+}

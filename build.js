@@ -33,7 +33,7 @@ StyleDictionary.registerTransform({
       border: 'border',
       'border-radius': 'br',
       dimension: 'dim',
-      size: 'sz',
+      size: 'size',
       layout: 'l',
       margin: 'm',
       'margin-x': 'mx',
@@ -82,9 +82,10 @@ StyleDictionary.registerTransform({
   type: 'value',
   matcher: prop =>
     prop.attributes.category === 'size' ||
+    prop.attributes.category === 'layout' ||
     prop.attributes.category === 'font-size' ||
     prop.attributes.category === 'line-height' ||
-    prop.attributes.category === 'dimension' ||
+    prop.attributes.category === 'spacing' ||
     prop.attributes.category === 'border-radius',
   transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
 })

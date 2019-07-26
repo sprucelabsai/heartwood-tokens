@@ -22,6 +22,9 @@ const fileHeader = options => {
 
 const sassMultiMap = ({mapPrefix, properties}) => {
   const categories = _.groupBy(properties, property => property.attributes.category)
+  
+  // Filter because we don't need maps for simple properties like margin and padding
+  const catArray = Object.keys(categories)
   const fileComment = `/**
 * Do not edit directly
 * Generated on ${new Date().toUTCString()}
@@ -32,7 +35,7 @@ const sassMultiMap = ({mapPrefix, properties}) => {
     return `$${prop.name}: ${prop.value} !default;`
   })
 
-  return fileComment + defaults.join('\n') + '\n\n' + Object.keys(categories).map(key => {
+  return fileComment + defaults.join('\n') + '\n\n' + catArray.map(key => {
     const type = categories[key];
     const items = type;
     const mapName = `$${mapPrefix || 'tokens'}-${key}`;
