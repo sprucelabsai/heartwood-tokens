@@ -80,7 +80,7 @@
       "buildPath": "build/js/",
       "files": [
         {
-          "destination": "dictionary.js",
+          "destination": "scss.js",
           "format": "javascript/module"
         }
       ]
