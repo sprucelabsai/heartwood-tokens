@@ -2,7 +2,7 @@ const StyleDictionary = require('style-dictionary').extend(__dirname + '/config.
 const _  = require('lodash')
 const tinycolor = require('tinycolor2')
 
-const  {fileHeader, variablesWithPrefix, scssIndex, sassMultiMap } = require('./formatters')
+const  {fileHeader, variablesWithPrefix, sassMultiMap } = require('./formatters')
 
 /**
  * Transforms
@@ -121,11 +121,6 @@ StyleDictionary.registerFormat({
     formatter: function(dictionary) {
         return sassMultiMap({mapPrefix: this.mapPrefix || '', properties: dictionary.allProperties});
     }
-})
-
-StyleDictionary.registerFormat({
-  name: 'scss/index',
-  formatter: dictionary => scssIndex(Object.keys(dictionary.properties))
 })
 
 StyleDictionary.registerFormat({

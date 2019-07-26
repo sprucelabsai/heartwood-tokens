@@ -34,8 +34,6 @@ const sassMultiMap = ({mapPrefix, properties}) => {
 
   return fileComment + defaults.join('\n') + '\n\n' + Object.keys(categories).map(key => {
     const type = categories[key];
-    // console.log(key)
-    const groupedItems = _.groupBy(type, item => item.attributes.state)
     const items = type;
     const mapName = `$${mapPrefix || 'tokens'}-${key}`;
     
@@ -63,25 +61,8 @@ const sassMultiMap = ({mapPrefix, properties}) => {
   }).join('\n\n')
 }
 
-const scssIndex = categories => {
-  let str = ''
-  categories.forEach(category => {
-    if (category !== 'size') {
-      str += `@import '_${category}';\n`;
-    }
-  })
-  str += `
-/**
-* Uncomment to pull in theme overrides
-*/
-// @import '_theme';
- `
-  return str
-}
-
 module.exports = {
     fileHeader,
     variablesWithPrefix,
-    scssIndex,
     sassMultiMap
 }
