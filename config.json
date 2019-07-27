@@ -1,5 +1,8 @@
 {
-  "source": ["properties/**/*.json", "properties/**/*.js"],
+  "source": [
+    "properties/**/*.json",
+    "properties/**/*.js"
+  ],
   "platforms": {
     "scss": {
       "transformGroup": "heartwood/scss",
@@ -9,6 +12,11 @@
           "destination": "_tokens.scss",
           "format": "scss/map-multi",
           "mapPrefix": "hw"
+        },
+        {
+          "destination": "../js/scss.js",
+          "format": "javascript/module",
+          "filter": "omit"
         }
       ]
     },
@@ -76,11 +84,11 @@
       ]
     },
     "js": {
-      "transformGroup": "heartwood/js",
+      "transformGroup": "js",
       "buildPath": "build/js/",
       "files": [
         {
-          "destination": "dictionary.js",
+          "destination": "tokens.js",
           "format": "javascript/module"
         }
       ]

@@ -2,7 +2,7 @@ const StyleDictionary = require('style-dictionary').extend(__dirname + '/config.
 const _ = require('lodash')
 const tinycolor = require('tinycolor2')
 
-const { fileHeader, variablesWithPrefix, sassMultiMap } = require('./formatters')
+const { fileHeader, variablesWithPrefix, sassMultiMap, sassVarName } = require('./formatters')
 
 /**
  * Transforms
@@ -87,7 +87,13 @@ StyleDictionary.registerTransform({
     prop.attributes.category === 'line-height' ||
     prop.attributes.category === 'spacing' ||
     prop.attributes.category === 'border-radius',
-  transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
+  transformer: prop => {
+    if (prop.original.value === 0) {
+      return "0"
+    }
+
+    return (parseInt(prop.original.value) / 16).toString() + 'rem'
+  }
 })
 
 StyleDictionary.registerTransform({
@@ -108,7 +114,7 @@ StyleDictionary.registerTransformGroup({
 })
 
 StyleDictionary.registerTransformGroup({
-  name: 'heartwood/js',
+  name: 'heartwood/js-scss',
   transforms: ['attribute/cti', 'name/bem', 'size/px', 'color/hex']
 })
 
