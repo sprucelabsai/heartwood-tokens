@@ -36,19 +36,7 @@ StyleDictionary.registerTransform({
       size: 'size',
       layout: 'l',
       margin: 'm',
-      'margin-x': 'mx',
-      'margin-y': 'my',
-      'margin-top': 'mt',
-      'margin-right': 'mr',
-      'margin-bottom': 'mb',
-      'margin-left': 'ml',
-      padding: 'p',
-      'padding-x': 'px',
-      'padding-y': 'py',
-      'padding-top': 'pt',
-      'padding-right': 'pr',
-      'padding-bottom': 'pb',
-      'padding-left': 'pl',
+      padding: 'p'
     }
 
     // Reformat the category name to be shorter
