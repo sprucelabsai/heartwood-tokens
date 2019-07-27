@@ -7,14 +7,6 @@
             "bold": {
                 "value": "{color.greyscale.2.value}"
             }
-        },
-        "night": {
-            "base": {
-                "value": "{color.greyscale.3.value}"
-            },
-            "bold": {
-                "value": "{color.greyscale.1.value}"
-            }
         }
     }
 }
