@@ -1,13 +1,16 @@
 {
-    "button": {
-        "solid": {
+    "components": {
+        "button": {
             "primary": {
                 "text-color": {
+                    "value": "#fff"
+                },
+                "text-opacity": {
                     "default": {
-                        "value": "#fff"
+                        "value": "1"
                     },
                     "disabled": {
-                        "value": "hsla(0,0,100,0.8)"
+                        "value": "0.8"
                     }
                 },
                 "background-color": {
@@ -21,11 +24,14 @@
             },
             "destructive": {
                 "text-color": {
+                    "value": "#fff"
+                },
+                "text-opacity": {
                     "default": {
-                        "value": "#fff"
+                        "value": "1"
                     },
                     "disabled": {
-                        "value": "hsla(0,0,100,0.8)"
+                        "value": "0.8"
                     }
                 },
                 "background-color": {

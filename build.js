@@ -182,6 +182,11 @@ StyleDictionary.registerFilter({
   matcher: prop => prop.attributes.category !== 'size'
 })
 
+StyleDictionary.registerFilter({
+  name: 'tokens',
+  matcher: prop => prop.attributes.category !== 'components'
+})
+
 /**
  * Build command
  */

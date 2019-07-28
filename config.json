@@ -11,7 +11,18 @@
         {
           "destination": "_tokens.scss",
           "format": "scss/map-multi",
-          "mapPrefix": "hw"
+          "mapPrefix": "hw",
+          "filter": "tokens"
+        },
+        {
+          "destination": "_components.scss",
+          "format": "scss/map-multi",
+          "mapPrefix": "hw",
+          "filter": {
+            "attributes": {
+              "category": "components"
+            }
+          }
         },
         {
           "destination": "../js/scss.js",
