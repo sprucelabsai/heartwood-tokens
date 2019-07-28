@@ -18,16 +18,17 @@
           "destination": "_components.scss",
           "format": "scss/map-multi",
           "mapPrefix": "hw",
-          "filter": {
-            "attributes": {
-              "category": "components"
-            }
-          }
+          "filter": "components"
         },
         {
-          "destination": "../js/scss.js",
+          "destination": "../js/tokens-scss.js",
           "format": "javascript/module",
-          "filter": "omit"
+          "filter": "tokens"
+        },
+        {
+          "destination": "../js/components-scss.js",
+          "format": "javascript/module",
+          "filter": "components"
         }
       ]
     },
