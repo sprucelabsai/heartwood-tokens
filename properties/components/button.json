@@ -1,0 +1,42 @@
+{
+    "button": {
+        "solid": {
+            "primary": {
+                "text-color": {
+                    "default": {
+                        "value": "#fff"
+                    },
+                    "disabled": {
+                        "value": "rgba(255,255,255,0.8)"
+                    }
+                },
+                "background-color": {
+                    "default": {
+                        "value": "{color.primary.base.value}"
+                    },
+                    "hover": {
+                        "value": "{color.primary.light.value}"
+                    }
+                }
+            },
+            "destructive": {
+                "text-color": {
+                    "default": {
+                        "value": "#fff"
+                    },
+                    "disabled": {
+                        "value": "rgba(255,255,255,0.8)"
+                    }
+                },
+                "background-color": {
+                    "default": {
+                        "value": "{color.critical.base.value}"
+                    },
+                    "hover": {
+                        "value": "{color.critical.light.value}"
+                    }
+                }
+            }
+        }
+    }
+}
