@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import Layout from '../layouts/Layout/Layout'
-import './Index.scss'
+import './index.scss'
 
 interface IndexPageProps {
 	data: {

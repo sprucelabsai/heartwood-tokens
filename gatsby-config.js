@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    name: `Hello Typescript World!`,
-    tagline: `Gatsby + SASS + Typescript = 💪`
+    name: `Heartwood Tokens`,
+    tagline: `Design tokens for the Heartwood Design System`
   },  
   plugins: [
     `gatsby-plugin-sass`,
