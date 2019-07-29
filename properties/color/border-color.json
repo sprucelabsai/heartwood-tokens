@@ -1,12 +1,10 @@
 {
     "border-color": {
         "base": {
-            "base": {
-                "value": "{color.greyscale.1.value}"
-            },
-            "bold": {
-                "value": "{color.greyscale.2.value}"
-            }
+            "value": "{color.greyscale.1.value}"
+        },
+        "bold": {
+            "value": "{color.greyscale.2.value}"
         }
     }
 }
