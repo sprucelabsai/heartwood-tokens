@@ -11,7 +11,8 @@ declare type TokenValue = string | number
 interface Token {
   value: TokenValue,
   original: {
-    value: TokenValue
+    value: TokenValue,
+    comment?: string
   },
   name: string,
   attributes: {

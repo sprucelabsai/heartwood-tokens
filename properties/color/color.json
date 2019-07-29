@@ -2,7 +2,8 @@
   "color": {
     "primary": {
       "base": {
-        "value": "#1948CB"
+        "value": "#1948CB",
+        "comment": "The main color for interactive elements and to draw a user's attention."
       },
       "lighter": {
         "value": "#E1E7F9"

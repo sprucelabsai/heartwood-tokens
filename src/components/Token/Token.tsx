@@ -21,7 +21,7 @@ const platformName = ({name, platform}: {name: string, platform: Platform}): str
 
 const Token = (props: ITokenProps): React.ReactElement => {
     const { token, platform } = props;
-    const { attributes } = token;
+    const { attributes, original } = token;
     const { category } = attributes;
 
     // Get this token from the scss file so that we can format it on web
@@ -99,6 +99,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
         }
     }
     return (
+        <>
         <div className="token">
             <span className="token__description">
                 <Clipboard className="token__clipboard" data-clipboard-text={name}>
@@ -114,6 +115,10 @@ const Token = (props: ITokenProps): React.ReactElement => {
                 }
             </span>
         </div>
+        {original.comment &&
+            <p className="py-4 pt-0 tc-copy-lighter">{original.comment}</p>
+        }
+        </>
     )
 }
 
