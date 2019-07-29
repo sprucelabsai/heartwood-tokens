@@ -1,0 +1,13 @@
+// Reset and Normalize
+@import 'base/normalize';
+@import 'base/reset-button';
+@import 'base/reset';
+
+// Heartwood
+@import 'heartwood';
+
+body {
+    font-family: $font-family__primary;
+    color: $text-color__copy;
+    background-color: $bg;
+}
