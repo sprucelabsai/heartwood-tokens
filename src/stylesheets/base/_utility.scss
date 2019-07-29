@@ -1,0 +1,170 @@
+@import '../heartwood';
+
+/**
+* Color classes
+*/
+
+// Background Colors
+@each $label, $value in $hw-background-color {
+    .bg-#{$label} {
+        background-color: $value;
+    }
+}
+
+// Border Colors
+@each $label, $value in $hw-border-color {
+    .border-color-#{$label} {
+        border-color: $value;
+    }
+}
+
+// Colors
+@each $label, $value in $hw-color {
+    .color-#{$label} {
+        color: $value;
+    }
+}
+
+// Text Colors
+@each $label, $value in $hw-text-color {
+    .tc-#{$label} {
+        color: $value;
+    }
+}
+
+
+/**
+* Font classes
+*/
+
+// Font Families
+@each $label, $value in $hw-font-family {
+    .ff-#{$label} {
+        font-family: $value;
+    }
+}
+
+// Font Sizes
+@each $label, $value in $hw-font-size {
+    .fs-#{$label} {
+        font-size: $value;
+    }
+}
+
+// Line Heights
+@each $label, $value in $hw-line-height {
+    .line-height-#{$label} {
+        line-height: $value;
+    }
+}
+
+// Font Weights
+@each $label, $value in $hw-font-weight {
+    .fw-#{$label} {
+        font-weight: $value;
+    }
+}
+
+
+/**
+* Layer
+*/
+@each $label, $value in $hw-layer {
+    .layer-#{$label} {
+        box-shadow: $value;
+    }
+}
+
+
+/**
+* Box Model
+*/
+
+// Margin
+@each $label, $value in $hw-spacing {
+    .m-#{$label} {
+        margin: $value;
+    }
+
+    .mx-#{$label} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+
+    .my-#{$label} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    .mt-#{$label} {
+        margin-top: $value;
+    }
+
+    .mr-#{$label} {
+        margin-right: $value;
+    }
+
+    .mb-#{$label} {
+        margin-bottom: $value;
+    }
+
+    .ml-#{$label} {
+        margin-left: $value;
+    }
+}
+
+// Padding
+@each $label, $value in $hw-spacing {
+    .p-#{$label} {
+        padding: $value;
+    }
+
+    .px-#{$label} {
+        padding-right: $value;
+        padding-left: $value;
+    }
+
+    .py-#{$label} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    .pt-#{$label} {
+        padding-top: $value;
+    }
+
+    .pr-#{$label} {
+        padding-right: $value;
+    }
+
+    .pb-#{$label} {
+        padding-bottom: $value;
+    }
+
+    .pl-#{$label} {
+        padding-left: $value;
+    }
+}
+
+
+/**
+* Layout
+*/
+
+.container {
+    max-width: $l__width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container--tight {
+    max-width: $l__width-tight;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container--wide {
+    max-width: $l__width-wide;
+    margin-left: auto;
+    margin-right: auto;
+}
