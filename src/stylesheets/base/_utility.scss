@@ -164,3 +164,13 @@ $sides: (
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/**
+* Debugging for layout
+*/
+
+.debug,
+.debug * {
+    background-color: rgba($c__primary, 0.05);
+}
