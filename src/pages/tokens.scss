@@ -20,6 +20,13 @@
 
 .token-type-section + .token-type-section {
     .tokens-type__title {
-        padding-top: $spacing__4;
+        padding-top: $spacing__6;
     }
+}
+
+.token__swatch {
+    display: inline-block;
+    width: $spacing__10;
+    height: $spacing__6;
+    background-color: rgba($c__primary, 0.5);
 }
