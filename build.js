@@ -1,8 +1,8 @@
 const StyleDictionary = require('style-dictionary').extend(__dirname + '/config.json');
-const _  = require('lodash')
+const _ = require('lodash')
 const tinycolor = require('tinycolor2')
 
-const  {fileHeader, variablesWithPrefix, sassMultiMap } = require('./formatters')
+const { fileHeader, variablesWithPrefix, sassMultiMap, sassVarName } = require('./formatters')
 
 /**
  * Transforms
@@ -23,11 +23,11 @@ StyleDictionary.registerTransform({
     const catPrefixes = {
       color: 'c',
       'background-color': 'bg',
-      'text-color': 'tc',
+      // 'text-color': 'tc',
       layer: 'layer',
       'font-weight': 'fw',
       'font-size': 'fs',
-      'font-style': 'fstyle',
+      // 'font-style': 'fstyle',
       'breakpoint': 'bp',
       'line-height': 'lh',
       border: 'border',
@@ -36,19 +36,7 @@ StyleDictionary.registerTransform({
       size: 'size',
       layout: 'l',
       margin: 'm',
-      'margin-x': 'mx',
-      'margin-y': 'my',
-      'margin-top': 'mt',
-      'margin-right': 'mr',
-      'margin-bottom': 'mb',
-      'margin-left': 'ml',
-      padding: 'p',
-      'padding-x': 'px',
-      'padding-y': 'py',
-      'padding-top': 'pt',
-      'padding-right': 'pr',
-      'padding-bottom': 'pb',
-      'padding-left': 'pl',
+      padding: 'p'
     }
 
     // Reformat the category name to be shorter
@@ -58,11 +46,11 @@ StyleDictionary.registerTransform({
     let newName = newCat;
 
     if (type && type !== 'base') {
-      newName += `-${type}`
+      newName += `__${type}`
     }
 
     if (item && item !== 'base') {
-      newName += `__${item}`
+      newName += `-${item}`
     }
 
     if (subitem && subitem) {
@@ -87,14 +75,20 @@ StyleDictionary.registerTransform({
     prop.attributes.category === 'line-height' ||
     prop.attributes.category === 'spacing' ||
     prop.attributes.category === 'border-radius',
-  transformer: prop => (parseInt(prop.original.value) / 16).toString() + 'rem'
+  transformer: prop => {
+    if (prop.original.value === 0) {
+      return "0"
+    }
+
+    return (parseInt(prop.original.value) / 16).toString() + 'rem'
+  }
 })
 
 StyleDictionary.registerTransform({
   name: 'font/family/css',
   type: 'value',
   matcher: prop => prop.attributes.category === 'font-family' || (prop.attributes.category === 'font' && prop.attributes.type === 'family'),
-  transformer: prop => prop.original.fallback ?  prop.original.value + ', '  + prop.original.fallback : prop.original.value
+  transformer: prop => prop.original.fallback ? prop.original.value + ', ' + prop.original.fallback : prop.original.value
 })
 
 /**
@@ -103,30 +97,30 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerTransformGroup({
   name: 'heartwood/scss',
   transforms: [
-    'attribute/cti','name/bem','time/seconds','content/icon','size/pxToRem','font/family/css','color/css'
+    'attribute/cti', 'name/bem', 'time/seconds', 'content/icon', 'size/pxToRem', 'font/family/css', 'color/css'
   ]
 })
 
 StyleDictionary.registerTransformGroup({
-  name: 'heartwood/js',
-  transforms: [ 'attribute/cti', 'name/bem', 'size/px', 'color/hex']
+  name: 'heartwood/js-scss',
+  transforms: ['attribute/cti', 'name/bem', 'size/px', 'color/hex']
 })
 
 /**
  * Formats
  */
 StyleDictionary.registerFormat({
-    name: 'scss/defaults',
-    formatter: function(dictionary) {
-        return fileHeader(this.options) + variablesWithPrefix('$', dictionary.allProperties);
-    }
+  name: 'scss/defaults',
+  formatter: function (dictionary) {
+    return fileHeader(this.options) + variablesWithPrefix('$', dictionary.allProperties);
+  }
 })
 
 StyleDictionary.registerFormat({
-    name: 'scss/map-multi',
-    formatter: function(dictionary) {
-        return sassMultiMap({mapPrefix: this.mapPrefix || '', properties: dictionary.allProperties});
-    }
+  name: 'scss/map-multi',
+  formatter: function (dictionary) {
+    return sassMultiMap({ mapPrefix: this.mapPrefix || '', properties: dictionary.allProperties });
+  }
 })
 
 StyleDictionary.registerFormat({
@@ -142,8 +136,8 @@ ${dictionary.allProperties.map(prop => `$${prop.name}: ${prop.value};`).join('\n
 
 StyleDictionary.registerFormat({
   name: 'json/flat-dash',
-  formatter: function(dictionary) {
-    return '{\n' + _.map(dictionary.allProperties, function(prop) {
+  formatter: function (dictionary) {
+    return '{\n' + _.map(dictionary.allProperties, function (prop) {
       return `  "${prop.path.join('-')}": ${JSON.stringify(prop.value)}`;
     }).join(',\n') + '\n}';
   }
@@ -151,8 +145,8 @@ StyleDictionary.registerFormat({
 
 StyleDictionary.registerFormat({
   name: 'figma/color',
-  formatter: function(dictionary) {
-    return '{\n' + _.map(dictionary.allProperties, function(prop) {
+  formatter: function (dictionary) {
+    return '{\n' + _.map(dictionary.allProperties, function (prop) {
       const color = tinycolor(prop.value)
       const colorRgb = color.toRgb();
       const { r, g, b, a } = colorRgb
@@ -186,6 +180,16 @@ StyleDictionary.registerFormat({
 StyleDictionary.registerFilter({
   name: 'omit',
   matcher: prop => prop.attributes.category !== 'size'
+})
+
+StyleDictionary.registerFilter({
+  name: 'tokens',
+  matcher: prop => prop.attributes.category !== 'components' && prop.attributes.category !== 'size'
+})
+
+StyleDictionary.registerFilter({
+  name: 'components',
+  matcher: prop => prop.attributes.category === 'components'
 })
 
 /**
