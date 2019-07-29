@@ -3,7 +3,7 @@
         "base": {
             "value": "{color.greyscale.1.value}"
         },
-        "bold": {
+        "dark": {
             "value": "{color.greyscale.2.value}"
         }
     }

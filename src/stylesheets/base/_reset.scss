@@ -49,5 +49,6 @@ table {
 
 // Added button reset
 button {
-    @extend %reset-button;
+	@extend %reset-button;
+	cursor: pointer;
 }

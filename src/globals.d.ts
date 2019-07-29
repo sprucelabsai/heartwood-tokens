@@ -27,4 +27,4 @@ interface Token {
 /**
  * Platforms
  */
-declare type Platform = 'web' | 'ios'
+declare type Platform = string

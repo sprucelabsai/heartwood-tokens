@@ -1,0 +1,38 @@
+@import '../../stylesheets/heartwood';
+
+.platform-switch {
+    padding: $spacing__8 0;
+}
+
+.platform-switch__title {
+    @extend %ts-subheading-lg;
+    padding-bottom: $spacing__4;
+}
+
+.platform-switch__btn {
+    @extend %ts-subheading-sm;
+    padding: $spacing__3 $spacing__4;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba($c__primary, 0.3);
+    }
+
+    &:first-of-type {
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &:last-of-type {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    &.platform-switch__btn--current  {
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.05) inset;
+        background-color: $bg__light;
+    }
+}

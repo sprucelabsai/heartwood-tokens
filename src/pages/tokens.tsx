@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Layout from '../layouts/Layout/Layout'
+import PlatformSwitch from "../components/PlatformSwitch/PlatformSwitch";
 import Token from '../components/Token/Token'
 import tokensScss from '../../build/js/tokens-scss'
 import './tokens.scss'
@@ -7,24 +8,38 @@ import './tokens.scss'
 interface TokensPageProps {
 	platform?: Platform
 }
+interface TokensPageState {
+  platform: Platform;
+}
 
 const platformFiles = {
 	web: tokensScss
 }
 
-export default class TokensPage extends React.Component<TokensPageProps, {}> {
+export default class TokensPage extends React.Component<TokensPageProps, TokensPageState> {
 	public static defaultProps = {
 		platform: 'web'
 	}
 
+	public state = {
+		platform: 'web'
+	}
+
+	public onClickPlatform = ({ platform }: { platform: Platform }) => {
+	  this.setState({
+		platform
+	  });
+	};
+
 	public render() {
-		const { platform } = this.props;
+		const { platform } = this.state;
 		const tokens = platformFiles[platform];
 
 		return (
 			<Layout>
-				<div className="container ">
-					{Object.keys(tokens).map(cat => (
+				<div className="container">
+				<PlatformSwitch platform={platform} onClick={this.onClickPlatform} />
+					{tokens && Object.keys(tokens).map(cat => (
 						<section className="token-category-section" key={cat}>
 							<h2 className="title-lg tokens-category__title">{cat.split('-').join(' ')}</h2>
 							{Object.keys(tokens[cat]).map(type => {
@@ -45,12 +60,12 @@ export default class TokensPage extends React.Component<TokensPageProps, {}> {
 														</section>
 													)
 												}
-												return <Token token={tokens[cat][type][item]} platform={platform}/>})
+												return <Token key={item} token={tokens[cat][type][item]} platform={platform}/>})
 											}
 										</section>
 									)
 								}
-								return <Token token={tokens[cat][type]} platform={platform}/>
+								return <Token key={type} token={tokens[cat][type]} platform={platform}/>
 							})}
 						</section>
 					))}
