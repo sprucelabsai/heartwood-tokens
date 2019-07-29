@@ -43,6 +43,16 @@
         {
           "destination": "colors.xml",
           "format": "android/colors"
+        }, 
+        {
+          "destination": "../js/tokens-android.js",
+          "format": "javascript/module",
+          "filter": "tokens"
+        }, 
+        {
+          "destination": "../js/components-android.js",
+          "format": "javascript/module",
+          "filter": "components"
         }
       ]
     },
@@ -55,6 +65,16 @@
           "format": "ios-swift/class.swift",
           "className": "StyleDictionary",
           "filter": {}
+        }, 
+        {
+          "destination": "../js/tokens-ios-swift.js",
+          "format": "javascript/module",
+          "filter": "tokens"
+        }, 
+        {
+          "destination": "../js/components-ios-swift.js",
+          "format": "javascript/module",
+          "filter": "components"
         }
       ]
     },

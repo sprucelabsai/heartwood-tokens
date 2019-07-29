@@ -12,8 +12,9 @@
 .platform-switch__btn {
     @extend %ts-subheading-sm;
     padding: $spacing__3 $spacing__4;
-    border: 1px solid $border-color;
-    border-radius: 2px;
+    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    border-right: 1px solid $border-color;
 
     &:focus {
         outline: none;
@@ -21,14 +22,14 @@
     }
 
     &:first-of-type {
-        border-right: none;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        border-left: 1px solid $border-color;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
     }
 
     &:last-of-type {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
     }
 
     &.platform-switch__btn--current  {

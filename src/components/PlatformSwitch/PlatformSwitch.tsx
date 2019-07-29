@@ -18,6 +18,9 @@ const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
             <button onClick={() => onClick({platform: 'ios'})} className={cx("platform-switch__btn", {
                 "platform-switch__btn--current": platform === 'ios'
             })}>iOS</button>
+            <button onClick={() => onClick({platform: 'android'})} className={cx("platform-switch__btn", {
+                "platform-switch__btn--current": platform === 'android'
+            })}>Android</button>
         </div>
     )
 }

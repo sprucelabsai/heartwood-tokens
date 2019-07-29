@@ -3,17 +3,21 @@ import Layout from '../layouts/Layout/Layout'
 import PlatformSwitch from "../components/PlatformSwitch/PlatformSwitch";
 import Token from '../components/Token/Token'
 import tokensScss from '../../build/js/tokens-scss'
+import tokensIOS from '../../build/js/tokens-ios-swift'
+import tokensAndroid from '../../build/js/tokens-android'
 import './tokens.scss'
 
 interface TokensPageProps {
 	platform?: Platform
 }
 interface TokensPageState {
-  platform: Platform;
+	platform: Platform;
 }
 
 const platformFiles = {
-	web: tokensScss
+	web: tokensScss,
+	ios: tokensIOS,
+	android: tokensAndroid
 }
 
 export default class TokensPage extends React.Component<TokensPageProps, TokensPageState> {

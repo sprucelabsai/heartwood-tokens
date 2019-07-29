@@ -23,6 +23,22 @@ const Token = (props: ITokenProps): React.ReactElement => {
     const { token, platform } = props;
     const { attributes } = token;
     const { category } = attributes;
+
+    // Get this token from the scss file so that we can format it on web
+    let scssToken = tokensScss[category];
+    if (typeof attributes.type !== 'undefined') {
+        scssToken = tokensScss[category][attributes.type]
+        if (typeof attributes.item !== 'undefined') {
+            scssToken = tokensScss[category][attributes.type][attributes.item]
+            if (typeof attributes.subitem !== 'undefined') {
+                scssToken = tokensScss[category][attributes.type][attributes.item][attributes.subitem]
+                if (typeof attributes.state !== 'undefined') {
+                    scssToken = tokensScss[category][attributes.type][attributes.item][attributes.subitem][attributes.state]
+                }
+            }
+        }
+    }
+
     let style = {
         backgroundColor: null,
         borderRadius: null,
@@ -41,13 +57,13 @@ const Token = (props: ITokenProps): React.ReactElement => {
     if (category === 'color' || category === 'background-color') {
         style = {
             ...style,
-            backgroundColor: token.value
+            backgroundColor: scssToken.value
         }
 
-        if (tinycolor.readability(token.value, '#fff') < 2) {
+        if (tinycolor.readability(scssToken.value, '#fff') < 2) {
             style = {
                 ...style,
-                border: `1px solid ${tinycolor(token.value).darken(5)}`
+                border: `1px solid ${tinycolor(scssToken.value).darken(5)}`
             }
         }
     }
@@ -55,14 +71,14 @@ const Token = (props: ITokenProps): React.ReactElement => {
         style = {
             ...style,
             backgroundColor: tokensScss['background-color'].base.value,
-            border: `1px solid ${token.value}`
+            border: `1px solid ${scssToken.value}`
         }
     }
     if (category === 'layer') {
         style = {
             ...style,
             backgroundColor: '#fff',
-            boxShadow: token.value,
+            boxShadow: scssToken.value,
             height: '5rem',
             width: '5rem'
         }
@@ -71,7 +87,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
         style = {
             ...style,
             backgroundColor: '#fff',
-            borderRadius: token.value,
+            borderRadius: scssToken.value,
             border: `1px solid ${tokensScss['border-color'].base.value}`
         }
     }
@@ -79,7 +95,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
         style = {
             ...style,
             width: '20rem',
-            height: token.value === '0' ? '1px' : token.value
+            height: scssToken.value === '0' ? '1px' : scssToken.value
         }
     }
     return (
