@@ -53,6 +53,7 @@ export default class TokensPage extends React.Component<TokensPageProps, TokensP
 								>
 									{cat.split('-').join(' ')}
 								</Link>
+								{/* TODO: If there are sub nav items, show them here while this one is current */}
 							</li>
 						))}
 					</ul>

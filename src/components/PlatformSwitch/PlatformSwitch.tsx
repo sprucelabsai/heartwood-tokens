@@ -2,6 +2,8 @@ import React from 'react'
 import cx from 'classnames'
 import './PlatformSwitch.scss'
 
+// TODO: Icons
+
 interface PlatformSwitchProps {
     platform: Platform,
     onClick: ({platform}: {platform: Platform}) => void

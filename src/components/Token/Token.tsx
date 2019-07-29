@@ -4,6 +4,8 @@ import tinycolor from 'tinycolor2'
 import tokensScss from '../../../build/js/tokens-scss'
 import './Token.scss'
 
+// TODO: Animate the click-to-copy
+
 export interface ITokenProps {
     token: Token,
     platform: Platform
