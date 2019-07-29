@@ -1,4 +1,5 @@
 import React from 'react'
+import './Token.scss'
 
 export interface ITokenProps {
     token: Token,

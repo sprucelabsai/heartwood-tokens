@@ -1,0 +1,25 @@
+@import '../stylesheets/heartwood';
+
+.token-category-section {
+    padding-bottom: $spacing__10;
+}
+
+.tokens-category__title,
+.tokens-type__title {
+    text-transform: capitalize;
+}
+
+.tokens-category__title,
+.tokens-type__title {
+    padding-bottom: $spacing__4;
+}
+
+.tokens-category__title {
+    padding-bottom: $spacing__6;
+}
+
+.token-type-section + .token-type-section {
+    .tokens-type__title {
+        padding-top: $spacing__4;
+    }
+}
