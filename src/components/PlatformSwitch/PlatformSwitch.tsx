@@ -12,9 +12,9 @@ const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
     return (
         <div className="platform-switch">
             <p className="platform-switch__title">Platform</p>
-            <button onClick={() => onClick({platform: 'web'})} className={cx("platform-switch__btn", {
-                "platform-switch__btn--current": platform === 'web'
-            })}>Web</button>
+            <button onClick={() => onClick({platform: 'scss'})} className={cx("platform-switch__btn", {
+                "platform-switch__btn--current": platform === 'scss'
+            })}>Scss</button>
             <button onClick={() => onClick({platform: 'ios'})} className={cx("platform-switch__btn", {
                 "platform-switch__btn--current": platform === 'ios'
             })}>iOS</button>

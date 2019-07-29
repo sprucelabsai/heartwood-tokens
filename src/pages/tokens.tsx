@@ -7,26 +7,20 @@ import tokensIOS from '../../build/js/tokens-ios-swift'
 import tokensAndroid from '../../build/js/tokens-android'
 import './tokens.scss'
 
-interface TokensPageProps {
-	platform?: Platform
-}
+interface TokensPageProps {}
 interface TokensPageState {
 	platform: Platform;
 }
 
 const platformFiles = {
-	web: tokensScss,
+	scss: tokensScss,
 	ios: tokensIOS,
 	android: tokensAndroid
 }
 
 export default class TokensPage extends React.Component<TokensPageProps, TokensPageState> {
-	public static defaultProps = {
-		platform: 'web'
-	}
-
 	public state = {
-		platform: 'web'
+		platform: 'scss'
 	}
 
 	public onClickPlatform = ({ platform }: { platform: Platform }) => {
