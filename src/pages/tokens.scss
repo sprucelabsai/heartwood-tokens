@@ -11,7 +11,8 @@
 }
 
 .tokens-container {
-    padding: $spacing__10 $spacing__6;
+    padding: $spacing__6 $spacing__10;
+    max-width: $l__width;
 }
 
 .token-category-section {

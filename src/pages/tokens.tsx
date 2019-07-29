@@ -39,7 +39,7 @@ export default class TokensPage extends React.Component<TokensPageProps, TokensP
 					<h1 className="title-sm">Heartwood Tokens</h1>
 					<PlatformSwitch platform={platform} onClick={this.onClickPlatform} />
 				</aside>
-				<main className="tokens-container container">
+				<main className="tokens-container">
 					{tokens && Object.keys(tokens).map(cat => (
 						<section className="token-category-section" key={cat}>
 							<h2 className="title-sm tokens-category__title">{cat.split('-').join(' ')}</h2>
