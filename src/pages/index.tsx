@@ -31,8 +31,10 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
 		return (
 			<Layout>
-				<h1>{name}</h1>
-				<p>{tagline}</p>
+				<div>
+					<h1>{name}</h1>
+					<p>{tagline}</p>
+				</div>
 			</Layout>
 		)
 	}

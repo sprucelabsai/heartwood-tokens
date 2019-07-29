@@ -2,7 +2,7 @@ import React from 'react';
 import '../../stylesheets/import-once.scss'
 
 interface ILayoutProps {
-    children: React.ReactElement[]
+    children: any
 }
 
 const Layout = (props: ILayoutProps): React.ReactElement => <>{props.children}</>

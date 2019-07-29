@@ -81,70 +81,66 @@
 */
 
 // Margin
-@each $label, $value in $hw-spacing {
-    .m-#{$label} {
-        margin: $value;
-    }
+$sides: (
+    'all': '',
+    'x': '',
+    'y': '',
+    't': 'top',
+    'r': 'right',
+    'b': 'bottom',
+    'l': 'left'
+);
 
-    .mx-#{$label} {
-        margin-right: $value;
-        margin-left: $value;
-    }
-
-    .my-#{$label} {
-        margin-top: $value;
-        margin-bottom: $value;
-    }
-
-    .mt-#{$label} {
-        margin-top: $value;
-    }
-
-    .mr-#{$label} {
-        margin-right: $value;
-    }
-
-    .mb-#{$label} {
-        margin-bottom: $value;
-    }
-
-    .ml-#{$label} {
-        margin-left: $value;
+@each $id, $side in $sides {
+    @each $label, $value in $hw-spacing {
+        @if $id == 'all' {
+            .m-#{$label} {
+                margin: $value;
+            }
+        } @else if $id == 'x' {
+            .mx-#{$label} {
+                margin-left: $value;
+                margin-right: $value;
+            }
+        } @else if $id == 'y' {
+            .my-#{$label} {
+                margin-top: $value;
+                margin-bottom: $value;
+            }
+        } @else {
+            .m#{$id}-#{$label} {
+                margin-#{$side}: $value;
+            }
+        }
     }
 }
+
 
 // Padding
-@each $label, $value in $hw-spacing {
-    .p-#{$label} {
-        padding: $value;
-    }
-
-    .px-#{$label} {
-        padding-right: $value;
-        padding-left: $value;
-    }
-
-    .py-#{$label} {
-        padding-top: $value;
-        padding-bottom: $value;
-    }
-
-    .pt-#{$label} {
-        padding-top: $value;
-    }
-
-    .pr-#{$label} {
-        padding-right: $value;
-    }
-
-    .pb-#{$label} {
-        padding-bottom: $value;
-    }
-
-    .pl-#{$label} {
-        padding-left: $value;
+@each $id, $side in $sides {
+    @each $label, $value in $hw-spacing {
+        @if $id == 'all' {
+            .p-#{$label} {
+                padding: $value;
+            }
+        } @else if $id == 'x' {
+            .px-#{$label} {
+                padding-left: $value;
+                padding-right: $value;
+            }
+        } @else if $id == 'y' {
+            .py-#{$label} {
+                padding-top: $value;
+                padding-bottom: $value;
+            }
+        } @else {
+            .p#{$id}-#{$label} {
+                padding-#{$side}: $value;
+            }
+        }
     }
 }
+
 
 
 /**
