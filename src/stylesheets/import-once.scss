@@ -11,3 +11,7 @@ body {
     color: $text-color__copy;
     background-color: $bg;
 }
+
+h1 {
+    @extend %ts-heading-lg;
+}
