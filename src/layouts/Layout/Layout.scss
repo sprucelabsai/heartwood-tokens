@@ -1,0 +1,7 @@
+@import '../../stylesheets/heartwood';
+
+.layout {
+    &.layout--has-left-sidebar {
+        padding-left: 20rem;
+    }
+}

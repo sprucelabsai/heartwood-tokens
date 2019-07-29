@@ -34,17 +34,20 @@ export default class TokensPage extends React.Component<TokensPageProps, TokensP
 		const tokens = platformFiles[platform];
 
 		return (
-			<Layout>
-				<div className="container">
-				<PlatformSwitch platform={platform} onClick={this.onClickPlatform} />
+			<Layout hasLeftSidebar>
+				<aside className="tokens-nav">
+					<h1 className="title-sm">Heartwood Tokens</h1>
+					<PlatformSwitch platform={platform} onClick={this.onClickPlatform} />
+				</aside>
+				<main className="tokens-container container">
 					{tokens && Object.keys(tokens).map(cat => (
 						<section className="token-category-section" key={cat}>
-							<h2 className="title-lg tokens-category__title">{cat.split('-').join(' ')}</h2>
+							<h2 className="title-sm tokens-category__title">{cat.split('-').join(' ')}</h2>
 							{Object.keys(tokens[cat]).map(type => {
 								if (!tokens[cat][type].value) {
 									return (
 										<section className="token-type-section" key={type}>
-											<h3 className="tokens-type__title title-sm">{type}</h3>
+											<h3 className="tokens-type__title h4">{type}</h3>
 											{Object.keys(tokens[cat][type]).map(item => {
 												if (!tokens[cat][type][item].value) {
 													return (
@@ -67,7 +70,7 @@ export default class TokensPage extends React.Component<TokensPageProps, TokensP
 							})}
 						</section>
 					))}
-				</div>
+				</main>
 			</Layout>
 		)
 	}
