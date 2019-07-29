@@ -72,3 +72,6 @@ Pre-rolled type styles
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
+%ts-code {
+	@include typestyle($size: 'ui', $family: 'code');
+}

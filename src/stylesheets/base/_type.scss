@@ -1,0 +1,23 @@
+h1,
+.h1 {
+    @extend %ts-heading-lg;
+}
+
+h2,
+.h2 {
+    @extend %ts-heading-sm;
+}
+
+h3,
+.h3 {
+    @extend %ts-subheading-lg;
+}
+
+h4,
+.h4 {
+    @extend %ts-subheading-sm;
+}
+
+code {
+    @extend %ts-code;
+}
