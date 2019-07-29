@@ -89,3 +89,9 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+.cache/
+public
+yarn-error.log
+
+README.html
