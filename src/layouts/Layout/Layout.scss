@@ -2,6 +2,7 @@
 
 .layout {
     &.layout--has-left-sidebar {
+        min-width: $l__width-wide;
         padding-left: 20rem;
     }
 }
