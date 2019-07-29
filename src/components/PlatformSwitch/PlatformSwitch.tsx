@@ -11,7 +11,6 @@ const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
     const { platform, onClick } = props
     return (
         <div className="platform-switch">
-            <p className="platform-switch__title">Platform</p>
             <button onClick={() => onClick({platform: 'scss'})} className={cx("platform-switch__btn", {
                 "platform-switch__btn--current": platform === 'scss'
             })}>Scss</button>

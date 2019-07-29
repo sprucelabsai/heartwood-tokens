@@ -13,7 +13,7 @@ const swatchCats = ['color', 'background-color', 'border-color', 'border-radius'
 
 const platformName = ({name, platform}: {name: string, platform: Platform}): string => {
     let str = name;
-    if (platform === 'web') {
+    if (platform === 'scss') {
         str = `$${name}`
     }
     return str

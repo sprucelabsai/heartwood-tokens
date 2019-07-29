@@ -29,18 +29,11 @@
 .tokens-category__title {
     top: 0;
     z-index: 1;
-    // padding-bottom: $spacing__6;
 }
 
 .tokens-type__title {
     top: 2.5rem;
     padding-top: $spacing__2;
-}
-
-.token-type-section + .token-type-section {
-    .tokens-type__title {
-        // padding-top: $spacing__6;
-    }
 }
 
 .token__swatch {
