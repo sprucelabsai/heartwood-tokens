@@ -5,7 +5,8 @@
 *:after { box-sizing: border-box; }
 
 body {
-    font-family: $font-family__primary;
+	font-family: $font-family__primary;
+	line-height: $lh-body;
     color: $text-color__copy;
     background-color: $bg;
 	-moz-osx-font-smoothing: grayscale;

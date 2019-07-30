@@ -3,7 +3,10 @@
         "copy": {
             "base": { "value": "{color.greyscale.9.value}" },
             "light": { "value": "{color.greyscale.7.value}" },
-            "lighter": { "value": "{color.greyscale.5.value}" }
+            "lighter": {
+                "value": "{color.greyscale.5.value}",
+                "comment": "Note that this color should only be used for disabled elements and input placeholders"
+            }
         },
         "code": {
             "base": { "value": "#fff" },

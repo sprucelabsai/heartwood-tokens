@@ -37,7 +37,8 @@
     },
     "success": {
       "base": {
-        "value": "#00b2b2"
+        "value": "#00b2b2",
+        "comment": "Use this color to signify that something good has happened"
       },
       "lighter": {
         "value": "#daf2f2"
@@ -54,7 +55,8 @@
     },
     "warn": {
       "base": {
-        "value": "#ffaa00"
+        "value": "#ffaa00",
+        "comment": "Use this color to draw the user's attention to minor problems they need to address"
       },
       "lighter": {
         "value": "#fdf2db"
@@ -71,7 +73,8 @@
     },
     "critical": {
       "base": {
-        "value": "#cb2f24"
+        "value": "#cb2f24",
+        "comment": "Use this color to indicate mission-critical problems that must be addressed, and to signify destructive actions"
       },
       "lighter": {
         "value": "#ffe8e6"
