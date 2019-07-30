@@ -1,29 +1,41 @@
-import React from 'react'
-import cx from 'classnames'
-import './PlatformSwitch.scss'
+import React from "react";
+import { Link } from "gatsby";
+import "./PlatformSwitch.scss";
 
 // TODO: Icons
 
 interface PlatformSwitchProps {
-    platform: Platform,
-    onClick: ({platform}: {platform: Platform}) => void
+  platform: Platform;
+  onClick: ({ platform }: { platform: Platform }) => void;
 }
 
 const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
-    const { platform, onClick } = props
-    return (
-        <div className="platform-switch">
-            <button onClick={() => onClick({platform: 'scss'})} className={cx("platform-switch__btn", {
-                "platform-switch__btn--current": platform === 'scss'
-            })}>Scss</button>
-            <button onClick={() => onClick({platform: 'ios'})} className={cx("platform-switch__btn", {
-                "platform-switch__btn--current": platform === 'ios'
-            })}>iOS</button>
-            <button onClick={() => onClick({platform: 'android'})} className={cx("platform-switch__btn", {
-                "platform-switch__btn--current": platform === 'android'
-            })}>Android</button>
-        </div>
-    )
-}
+  const { platform, onClick } = props;
+  return (
+    <div className="platform-switch">
+      <Link
+        to="/tokens"
+        className="platform-switch__btn"
+        activeClassName="platform-switch__btn--current"
+      >
+        Scss
+      </Link>
+      <Link
+        to="/tokens/ios"
+        className="platform-switch__btn"
+        activeClassName="platform-switch__btn--current"
+      >
+        iOS
+      </Link>
+      <Link
+        to="/tokens/android"
+        className="platform-switch__btn"
+        activeClassName="platform-switch__btn--current"
+      >
+        Android
+      </Link>
+    </div>
+  );
+};
 
-export default PlatformSwitch
+export default PlatformSwitch;
