@@ -51,6 +51,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
   let value = token.value;
 
   // Get this token from the scss file so that we can format it on web
+  console.log(category)
   let scssToken = tokensScss[category];
   if (typeof attributes.type !== "undefined") {
     scssToken = tokensScss[category][attributes.type];

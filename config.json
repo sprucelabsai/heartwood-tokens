@@ -47,7 +47,7 @@
         {
           "destination": "../js/tokens-android.js",
           "format": "javascript/module",
-          "filter": "tokens"
+          "filter": "tokens/android"
         }, 
         {
           "destination": "../js/components-android.js",
@@ -69,7 +69,7 @@
         {
           "destination": "../js/tokens-ios-swift.js",
           "format": "javascript/module",
-          "filter": "tokens"
+          "filter": "tokens/ios"
         }, 
         {
           "destination": "../js/components-ios-swift.js",

@@ -38,9 +38,11 @@ export default class TokensLayout extends Component<ITokensLayoutProps, ITokensL
           <div className="tokens-nav__section">
             <PlatformSwitch platform={platform} onClick={() => null} />
           </div>
-          <div className="tokens-nav__section">
-            <SizeUnits current={sizeUnit} onClick={this.onClickSizeUnit}/>
-          </div>
+          {platform === 'scss' &&
+            <div className="tokens-nav__section">
+              <SizeUnits current={sizeUnit} onClick={this.onClickSizeUnit}/>
+            </div>
+          }
           <div className="tokens-nav__section">
             <label className="tokens-nav__subtitle">Tokens</label>
           </div>

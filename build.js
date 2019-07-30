@@ -184,7 +184,17 @@ StyleDictionary.registerFilter({
 
 StyleDictionary.registerFilter({
   name: 'tokens',
-  matcher: prop => prop.attributes.category !== 'components' && prop.attributes.category !== 'size'
+  matcher: prop => prop.attributes.category !== 'components'
+})
+
+StyleDictionary.registerFilter({
+  name: 'tokens/android',
+  matcher: prop => prop.attributes.category === 'color' || (prop.attributes.category === 'size' && prop.attributes.type === 'font')
+})
+
+StyleDictionary.registerFilter({
+  name: 'tokens/ios',
+  matcher: prop => prop.attributes.category === 'color' || (prop.attributes.category === 'size' && prop.attributes.type === 'font')
 })
 
 StyleDictionary.registerFilter({
