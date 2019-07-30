@@ -7,14 +7,14 @@
         },
         "code": {
             "base": { "value": "#fff" },
-            "red": { "value": "#F07971" },
-            "orange": { "value": "#F78C6C" },
-            "yellow": { "value": "#FFCE6B" },
-            "green": { "value": "#C3E88D" },
-            "blue": { "value": "#9BEDED" },
-            "indigo": { "value": "#82A3FF" },
-            "violet": { "value": "#CD92EA" },
-            "grey": { "value": "#B0B5C1" }
+            "red": { "value": "#f07971" },
+            "orange": { "value": "#f78C6C" },
+            "yellow": { "value": "#ffce6b" },
+            "green": { "value": "#c3e88d" },
+            "blue": { "value": "#9beded" },
+            "indigo": { "value": "#82a3ff" },
+            "violet": { "value": "#cd92ea" },
+            "grey": { "value": "#b0b5c1" }
         }
     }
 }
