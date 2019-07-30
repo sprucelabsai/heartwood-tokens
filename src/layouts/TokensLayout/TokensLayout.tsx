@@ -13,14 +13,19 @@ interface ITokensLayoutProps {
 
 const TokensLayout = (props: ITokensLayoutProps): React.ReactElement => {
   const { platform, tokens } = props;
+
   return (
     <div
       className="tokens-layout"
     >
       <aside className="tokens-nav">
         <h1 className="title-sm tokens-nav__title">Heartwood Tokens</h1>
-        <PlatformSwitch platform={platform} onClick={() => null} />
-        <p className="tokens-nav__subtitle">Tokens</p>
+        <div className="tokens-nav__section">
+         <PlatformSwitch platform={platform} onClick={() => null} />
+        </div>
+        <div className="tokens-nav__section">
+          <p className="tokens-nav__subtitle">Tokens</p>
+        </div>
         <ul className="tokens-nav__list">
           {Object.keys(tokens).map(cat => (
             <li key={cat} className="tokens-nav__item">

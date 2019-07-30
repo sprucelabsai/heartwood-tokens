@@ -7,10 +7,10 @@
     width: 20rem;
     height: 100%;
     background-color: $bg__dark;
+}
 
-    > * {
-        padding: 0 $spacing__4;
-    }
+.tokens-nav__section {
+    padding: 0 $spacing__4;
 }
 
 .tokens-nav__title {
