@@ -29,3 +29,8 @@ h4,
 code {
     @extend %ts-code;
 }
+
+label,
+.label {
+    @extend %ts-label;
+}

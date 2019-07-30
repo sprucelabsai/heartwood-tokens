@@ -24,7 +24,7 @@ const TokensLayout = (props: ITokensLayoutProps): React.ReactElement => {
          <PlatformSwitch platform={platform} onClick={() => null} />
         </div>
         <div className="tokens-nav__section">
-          <p className="tokens-nav__subtitle">Tokens</p>
+          <label className="tokens-nav__subtitle">Tokens</label>
         </div>
         <ul className="tokens-nav__list">
           {Object.keys(tokens).map(cat => (
