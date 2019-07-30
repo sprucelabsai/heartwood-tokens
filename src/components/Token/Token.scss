@@ -27,3 +27,11 @@
         color: $c__primary-light;
     }
 }
+
+
+.token__swatch {
+    display: inline-block;
+    width: $spacing__8;
+    height: $spacing__8;
+    background-color: rgba($c__primary, 0.5);
+}
