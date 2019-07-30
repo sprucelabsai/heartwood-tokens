@@ -10,6 +10,7 @@
 
 .token__clipboard {
     display: block;
+    position: relative;
     cursor: pointer;
     text-align: left;
 
@@ -17,6 +18,20 @@
     &:active {
         outline: none;
         background-color: $bg__dark;
+    }
+}
+
+.token__clipboard-icon {
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    transform: translate(calc(-100% - 0.5rem), -50%);
+    opacity: 0;
+    transition: transform 300ms ease, opacity 300ms ease;
+
+    .token__clipboard:hover & {
+        opacity: 1;
+        transform: translate(-100%, -50%);
     }
 }
 

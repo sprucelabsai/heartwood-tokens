@@ -2,6 +2,7 @@ import React from "react";
 import Clipboard from "react-clipboard.js";
 import tinycolor from "tinycolor2";
 import ReactTooltip from 'react-tooltip';
+import copyIcon from '../../icons/copy-icon.svg';
 import tokensScss from "../../../build/js/tokens-scss";
 import "./Token.scss";
 
@@ -199,6 +200,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
             data-place="right"
             onSuccess={() => setTimeout(() => ReactTooltip.hide(), 1500)}
           >
+            <img className="token__clipboard-icon" src={copyIcon} width={16} height={16} role="presentation" />
             <code className="token__name">{name}</code>
           </Clipboard>
           <Clipboard
@@ -210,6 +212,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
             data-place="right"
             onSuccess={() => setTimeout(() => ReactTooltip.hide(), 1500)}
           >
+            <img className="token__clipboard-icon" src={copyIcon} width={16} height={16} role="presentation" />
             <code className="token__value">{value}</code>
           </Clipboard>
         </span>
