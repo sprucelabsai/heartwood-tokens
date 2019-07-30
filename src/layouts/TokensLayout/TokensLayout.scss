@@ -84,7 +84,7 @@
 
 .tokens-category__title,
 .tokens-type__title {
-    // position: sticky;
+    position: relative;
     padding-bottom: $spacing__4;
     padding-top: $spacing__4;
     background-color: $bg;
@@ -94,10 +94,6 @@
 .tokens-category__title {
     top: 0;
     z-index: 1;
-}
-
-.tokens-type__title {
-    top: 3rem;
 }
 
 .heading__link-icon {

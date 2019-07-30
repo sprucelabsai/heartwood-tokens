@@ -15,7 +15,7 @@
     "build": "node ./build.js",
     "clean": "rm -rf build",
     "prepublishOnly": "npm run clean && npm run build",
-    "deploy": "clean && build && gatsby:build --prefix-paths && gh-pages -d public",
+    "deploy": "npm run clean && npm run build && gatsby build --prefix-paths && gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Spruce Labs",

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Location } from "@reach/router";
 import { Link } from "react-scroll";
 import { Link as GatsbyLink } from "gatsby";
 import Clipboard from "react-clipboard.js";
@@ -37,6 +38,11 @@ export default class TokensLayout extends Component<
   public render(): React.ReactElement {
     const { sizeUnit } = this.state;
     const { platform, tokens } = this.props;
+    let host = ''
+    if (typeof window !== 'undefined') {
+      host = window.location.href
+    }
+    console.log(host)
 
     return (
       <div className="tokens-layout-wrapper">
@@ -79,7 +85,7 @@ export default class TokensLayout extends Component<
             {tokens &&
               Object.keys(tokens).map(cat => (
                 <section className="token-category-section" key={cat} id={cat}>
-                  <Clipboard className="tokens-section-link" data-clipboard-text={platform === 'scss' ? `${location.host}/tokens#${cat}` : `${location.host}/tokens/${platform}#${cat}`}>
+                  <Clipboard className="tokens-section-link" data-clipboard-text={platform === 'scss' ? `${host}/tokens#${cat}` : `${host}/tokens/${platform}#${cat}`}>
                     <h2 className="title-sm tokens-category__title">
                       <img
                         className="heading__link-icon"
