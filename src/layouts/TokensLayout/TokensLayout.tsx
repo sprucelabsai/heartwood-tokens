@@ -56,6 +56,7 @@ export default class TokensLayout extends Component<ITokensLayoutProps, ITokensL
                   activeClass="tokens-nav__link--active"
                   smooth
                   spy
+                  hashSpy
                   duration={200}
                 >
                   {cat.split("-").join(" ")}
