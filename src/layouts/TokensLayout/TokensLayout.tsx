@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import ReactTooltip from 'react-tooltip';
 import PlatformSwitch from "../../components/PlatformSwitch/PlatformSwitch";
 import SizeUnits from "../../components/SizeUnits/SizeUnits";
 import Token from "../../components/Token/Token";
@@ -123,6 +124,7 @@ export default class TokensLayout extends Component<ITokensLayoutProps, ITokensL
               </section>
             ))}
         </main>
+        <ReactTooltip className="tokens-layout__tooltip" />
       </div>
     );
   }

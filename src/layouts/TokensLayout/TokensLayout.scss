@@ -84,3 +84,22 @@
 .tokens-type__title {
     top: 3rem;
 }
+
+.tokens-layout__tooltip {
+    margin-top: 0;
+    padding: $spacing__2 $spacing__4;
+    font-size: $fs-ui;
+    transition: opacity 200ms ease-in-out, visibility 0s linear 300ms;
+
+    &.show {
+        transition: opacity 300ms ease-in-out;
+    }
+
+    &.place-top {
+        margin-top: 0;
+    }
+
+    &:after {
+        display: none;
+    }
+}

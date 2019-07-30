@@ -1,6 +1,7 @@
 import React from "react";
 import Clipboard from "react-clipboard.js";
 import tinycolor from "tinycolor2";
+import ReactTooltip from 'react-tooltip';
 import tokensScss from "../../../build/js/tokens-scss";
 import "./Token.scss";
 
@@ -22,12 +23,12 @@ const swatchCats = [
 ];
 
 const textCats = [
-    "font-family",
-    "font-size",
-    "line-height",
-    "font-weight",
-    "text-color"
-]
+  "font-family",
+  "font-size",
+  "line-height",
+  "font-weight",
+  "text-color"
+];
 
 const platformName = ({
   name,
@@ -47,11 +48,10 @@ const Token = (props: ITokenProps): React.ReactElement => {
   const { token, platform, sizeUnit } = props;
   const { attributes, original } = token;
   const { category } = attributes;
-  let textSample = "Hello human!"
+  let textSample = "Hello human!";
   let value = token.value;
 
   // Get this token from the scss file so that we can format it on web
-  console.log(category)
   let scssToken = tokensScss[category];
   if (typeof attributes.type !== "undefined") {
     scssToken = tokensScss[category][attributes.type];
@@ -106,22 +106,22 @@ const Token = (props: ITokenProps): React.ReactElement => {
       };
     }
   }
-  if (category === 'text-color') {
+  if (category === "text-color") {
+    style = {
+      ...style,
+      color: scssToken.value
+    };
+
+    if (attributes.type === "code") {
       style = {
-          ...style,
-          color: scssToken.value
-      }
+        ...style,
+        fontFamily: tokensScss["font-family"].code.value,
+        backgroundColor: tokensScss.color.greyscale["10"].value,
+        padding: "1rem"
+      };
 
-      if (attributes.type === 'code') {
-          style = {
-              ...style,
-              fontFamily: tokensScss['font-family'].code.value,
-              backgroundColor: tokensScss.color.greyscale['10'].value,
-              padding: '1rem'
-          }
-
-          textSample = '<hello human>';
-      }
+      textSample = "<hello human>";
+    }
   }
   if (category === "border-color") {
     style = {
@@ -154,42 +154,61 @@ const Token = (props: ITokenProps): React.ReactElement => {
       height: scssToken.value === "0" ? "1px" : scssToken.value
     };
   }
-  if (category === 'font-size') {
-      style = {
-          ...style,
-          fontSize: scssToken.value
-      }
+  if (category === "font-size") {
+    style = {
+      ...style,
+      fontSize: scssToken.value
+    };
   }
-  if (category === 'line-height') {
-      style = {
-          ...style,
-          lineHeight: scssToken.value,
-          backgroundColor: tinycolor(tokensScss['color'].primary.base.value).setAlpha(0.3),
-          padding: '0 1rem'
-      }
+  if (category === "line-height") {
+    style = {
+      ...style,
+      lineHeight: scssToken.value,
+      backgroundColor: tinycolor(
+        tokensScss["color"].primary.base.value
+      ).setAlpha(0.3),
+      padding: "0 1rem"
+    };
   }
-  if (category === 'font-weight') {
-      style = {
-          ...style,
-          fontWeight: scssToken.value
-      }
+  if (category === "font-weight") {
+    style = {
+      ...style,
+      fontWeight: scssToken.value
+    };
   }
 
   // Formatting units
-  if (typeof value === 'string' && value.indexOf('rem') > -1 && sizeUnit === 'px') {
-    value = `${parseFloat(value) * 16}px`
+  if (
+    typeof value === "string" &&
+    value.indexOf("rem") > -1 &&
+    sizeUnit === "px"
+  ) {
+    value = `${parseFloat(value) * 16}px`;
   }
 
   return (
     <>
       <div className="token">
         <span className="token__description">
-          <Clipboard className="token__clipboard" data-clipboard-text={name}>
+          <Clipboard
+            className="token__clipboard"
+            data-clipboard-text={name}
+            data-tip="Copied to clipboard!"
+            data-event="click"
+            data-effect="solid"
+            data-place="right"
+            onSuccess={() => setTimeout(() => ReactTooltip.hide(), 1500)}
+          >
             <code className="token__name">{name}</code>
           </Clipboard>
           <Clipboard
             className="token__clipboard"
             data-clipboard-text={value}
+            data-tip="Copied to clipboard!"
+            data-event="click"
+            data-effect="solid"
+            data-place="right"
+            onSuccess={() => setTimeout(() => ReactTooltip.hide(), 1500)}
           >
             <code className="token__value">{value}</code>
           </Clipboard>
@@ -199,7 +218,9 @@ const Token = (props: ITokenProps): React.ReactElement => {
             <div className="token__swatch" style={style} />
           )}
           {textCats.indexOf(category) > -1 && (
-            <p className="token__text-sample" style={style} >{textSample}</p>
+            <p className="token__text-sample" style={style}>
+              {textSample}
+            </p>
           )}
         </span>
       </div>
