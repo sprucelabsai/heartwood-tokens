@@ -15,6 +15,7 @@
     "build": "node ./build.js",
     "clean": "rm -rf build",
     "prepublishOnly": "npm run clean && npm run build",
+    "deploy": "clean && build && gatsby:build --prefix-paths && gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Spruce Labs",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-tslint": "^0.0.2",
+    "gh-pages": "^2.0.1",
     "tslint": "^5.18.0",
     "tslint-loader": "^3.5.4",
     "tslint-react": "^4.0.0"
