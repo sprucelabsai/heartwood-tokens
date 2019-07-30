@@ -11,6 +11,7 @@
 .token__clipboard {
     display: block;
     cursor: pointer;
+    text-align: left;
 
     &:focus,
     &:active {
