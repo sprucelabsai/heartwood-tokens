@@ -9,6 +9,7 @@ import "./Token.scss";
 export interface ITokenProps {
   token: Token;
   platform: Platform;
+  sizeUnit: SizeUnit;
 }
 
 const swatchCats = [
@@ -43,10 +44,11 @@ const platformName = ({
 };
 
 const Token = (props: ITokenProps): React.ReactElement => {
-  const { token, platform } = props;
+  const { token, platform, sizeUnit } = props;
   const { attributes, original } = token;
   const { category } = attributes;
   let textSample = "Hello human!"
+  let value = token.value;
 
   // Get this token from the scss file so that we can format it on web
   let scssToken = tokensScss[category];
@@ -172,6 +174,11 @@ const Token = (props: ITokenProps): React.ReactElement => {
       }
   }
 
+  // Formatting units
+  if (typeof value === 'string' && value.indexOf('rem') > -1 && sizeUnit === 'px') {
+    value = `${parseFloat(value) * 16}px`
+  }
+
   return (
     <>
       <div className="token">
@@ -181,9 +188,9 @@ const Token = (props: ITokenProps): React.ReactElement => {
           </Clipboard>
           <Clipboard
             className="token__clipboard"
-            data-clipboard-text={token.value}
+            data-clipboard-text={value}
           >
-            <code className="token__value">{token.value}</code>
+            <code className="token__value">{value}</code>
           </Clipboard>
         </span>
         <span className="token__sample">

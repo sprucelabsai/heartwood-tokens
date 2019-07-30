@@ -29,3 +29,8 @@ interface Token {
  * Platforms
  */
 declare type Platform = string
+
+/**
+ * Value Formatting
+ */
+declare type SizeUnit = string
