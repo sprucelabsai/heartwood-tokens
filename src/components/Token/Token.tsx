@@ -118,7 +118,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
         ...style,
         fontFamily: tokensScss["font-family"].code.value,
         backgroundColor: tokensScss.color.greyscale["10"].value,
-        padding: "1rem"
+        padding: "0.5rem 1rem"
       };
 
       textSample = "<hello human>";
