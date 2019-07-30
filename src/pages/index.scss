@@ -96,4 +96,8 @@
     background-color: $bg__dark;
     color: $text-color__copy;
     border-radius: 4px;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }

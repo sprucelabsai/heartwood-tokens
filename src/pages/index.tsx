@@ -84,7 +84,11 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                 <code className="index-section__code-block">
                   npm install @sprucelabs/heartwood-tokens
                 </code>
-                <p className="index-section-body">How you use the tokens depends on the platform. For example, in a web project, you might import token <code>.scss</code> files and write stylesheets on top of them.</p>
+                <p className="index-section-body">
+                  How you use the tokens depends on the platform. For example,
+                  in a web project, you might import token <code>.scss</code>{" "}
+                  files and write stylesheets on top of them.
+                </p>
               </div>
             </div>
           </section>
