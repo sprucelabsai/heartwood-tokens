@@ -3,6 +3,8 @@
 .size-units {
     display: flex;
     flex-flow: row wrap;
+    padding-bottom: $spacing__4;
+    border-bottom: 1px solid $border-color;
 }
 
 .size-units__label {
@@ -15,7 +17,7 @@
     @extend %ts-code;
     flex: 1 0 auto;
     height: $spacing__9;
-    padding: 0 $spacing__4;
+    padding: 0 $spacing__4 0 0;
     border: 1px solid $border-color;
 
     &:focus {
