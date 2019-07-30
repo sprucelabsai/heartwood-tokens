@@ -161,6 +161,12 @@ const Token = (props: ITokenProps): React.ReactElement => {
       fontSize: scssToken.value
     };
   }
+  if (category === "font-family") {
+    style = {
+      ...style,
+      fontFamily: scssToken.value
+    };
+  }
   if (category === "line-height") {
     style = {
       ...style,
