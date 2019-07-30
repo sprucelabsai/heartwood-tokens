@@ -24,7 +24,6 @@
 
     @media screen and (min-width: $l__breakpoint-medium) {
         flex-flow: row;
-        justify-content: space-between;
     }
 }
 
@@ -61,6 +60,12 @@
 
 .index-section-heading {
     @extend %ts-title-sm;
+    flex: 0 0 auto;
+
+    @media screen and (min-width: $l__breakpoint-medium) {
+        width: 20rem;
+        padding-right: $spacing__8;
+    }
 }
 
 .index-section-quote {
@@ -82,4 +87,13 @@
     + .index-section-body {
         margin-top: $spacing__3;
     }
+}
+
+.index-section__code-block {
+    display: block;
+    padding: $spacing__4;
+    margin: $spacing__4 0;
+    background-color: $bg__dark;
+    color: $text-color__copy;
+    border-radius: 4px;
 }
