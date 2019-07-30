@@ -33,6 +33,11 @@
     border-bottom: 1px solid $border-color;
 }
 
+.tokens-nav__title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
 .tokens-nav__list {
     padding-bottom: $spacing__2;
     padding-left: 0;

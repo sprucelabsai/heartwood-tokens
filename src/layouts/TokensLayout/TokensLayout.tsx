@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Location } from '@reach/router';
 import { Link } from "react-scroll";
+import { Link as GatsbyLink } from "gatsby";
 import Clipboard from "react-clipboard.js";
 import ReactTooltip from "react-tooltip";
 import PlatformSwitch from "../../components/PlatformSwitch/PlatformSwitch";
@@ -42,7 +42,9 @@ export default class TokensLayout extends Component<
       <div className="tokens-layout-wrapper">
         <div className="tokens-layout">
           <aside className="tokens-nav">
-            <h1 className="title-sm tokens-nav__title">Heartwood Tokens</h1>
+            <GatsbyLink className="tokens-nav__title-link" to="/">
+              <h1 className="title-sm tokens-nav__title">Heartwood Tokens</h1>
+            </GatsbyLink>
             <div className="tokens-nav__section">
               <PlatformSwitch platform={platform} onClick={() => null} />
             </div>
