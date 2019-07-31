@@ -75,6 +75,7 @@
     @extend %mx-auto;
     max-width: $l__width;
     font-weight: $fw__normal;
+    line-height: 1.4;
     color: $text-color__copy-light;
 
     @media screen and (min-width: $l__breakpoint-medium) {
