@@ -13,15 +13,16 @@ import "../../stylesheets/import-once.scss";
 import "./TokensLayout.scss";
 
 const platNames = {
-  scss: 'Web',
-  ios: 'Swift',
-  android: 'Android'
-}
+  scss: "Web",
+  ios: "Swift",
+  android: "Android"
+};
 
 interface ITokensLayoutProps {
   platform: Platform;
   tokens: any;
   hasLeftSidebar?: boolean;
+  kind: string;
 }
 
 interface ITokensLayoutState {
