@@ -1,0 +1,13 @@
+@import '../../stylesheets/heartwood';
+
+.asset {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing__4 0;
+    border-top: 1px solid $border-color;
+}
+
+.asset__image {
+    max-width: 6rem;
+    max-height: 6rem;
+}

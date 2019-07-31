@@ -29,15 +29,6 @@
           "destination": "../js/components-scss.js",
           "format": "javascript/module",
           "filter": "components"
-        },
-        {
-          "destination": "../js/assets-scss.js",
-          "format": "javascript/module",
-          "filter": {
-            "attributes": {
-              "category": "asset"
-            }
-          }
         }
       ]
     },
@@ -139,12 +130,27 @@
       ]
     },
     "js": {
-      "transformGroup": "js",
+      "transforms": [
+        "attribute/cti",
+        "name/cti/pascal",
+        "size/rem",
+        "color/hex",
+        "asset/base64"
+      ],
       "buildPath": "build/js/",
       "files": [
         {
           "destination": "tokens.js",
           "format": "javascript/module"
+        },
+        {
+          "destination": "assets-base64.js",
+          "format": "javascript/module",
+          "filter": {
+            "attributes": {
+              "category": "asset"
+            }
+          }
         }
       ]
     }

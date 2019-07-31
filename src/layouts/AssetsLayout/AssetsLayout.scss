@@ -1,0 +1,10 @@
+@import '../../stylesheets/heartwood';
+
+.assets-section {
+    padding: $spacing__4;
+}
+
+.assets-section__inner {
+    @extend %mx-auto;
+    max-width: $l__width;
+}
