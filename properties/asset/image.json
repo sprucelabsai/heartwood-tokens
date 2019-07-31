@@ -9,11 +9,11 @@
                 "wordmark-text": { "value": "assets/images/wordmark-text.svg" },
                 "wordmark-vertical": { "value": "assets/images/wordmark-vertical.svg" },
                 "wordmark-vertical-black": { "value": "assets/images/wordmark-vertical-black.svg" },
-                "sl_wordmark": { "value": "assets/images/sl_wordmark.svg" },
-                "sl_wordmark-black": { "value": "assets/images/sl_wordmark-black.svg" },
-                "sl_wordmark-text": { "value": "assets/images/sl_wordmark-text.svg" },
-                "sl_wordmark-vertical": { "value": "assets/images/sl_wordmark-vertical.svg" },
-                "sl_wordmark-vertical-black": { "value": "assets/images/sl_wordmark-vertical-black.svg" }
+                "spruce-labs-wordmark": { "value": "assets/images/sl_wordmark.svg" },
+                "spruce-labs-wordmark-black": { "value": "assets/images/sl_wordmark-black.svg" },
+                "spruce-labs-wordmark-text": { "value": "assets/images/sl_wordmark-text.svg" },
+                "spruce-labs-wordmark-vertical": { "value": "assets/images/sl_wordmark-vertical.svg" },
+                "spruce-labs-wordmark-vertical-black": { "value": "assets/images/sl_wordmark-vertical-black.svg" }
             }
         }
     }

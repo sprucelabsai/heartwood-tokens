@@ -13,7 +13,6 @@ const Asset = (props: IAssetProps): React.ReactElement => {
       <p className="asset__name">{name}</p>
       <img
         className="asset__image"
-        // width={64}
         src={`data:image/svg+xml;base64,${src}`}
       />
     </div>

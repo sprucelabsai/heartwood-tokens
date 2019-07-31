@@ -7,6 +7,10 @@
     border-top: 1px solid $border-color;
 }
 
+.asset__name {
+    text-transform: capitalize;
+}
+
 .asset__image {
     max-width: 6rem;
     max-height: 6rem;

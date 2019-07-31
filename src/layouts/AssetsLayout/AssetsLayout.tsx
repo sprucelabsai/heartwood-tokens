@@ -17,7 +17,7 @@ const AssetsLayout = (): React.ReactElement => {
               {Object.keys(assets.asset.image[itemKey]).map(subitemKey => (
                 <Asset
                   key={subitemKey}
-                  name={subitemKey}
+                  name={subitemKey.split('-').join(' ')}
                   src={assets.asset.image[itemKey][subitemKey].value}
                 />
               ))}
