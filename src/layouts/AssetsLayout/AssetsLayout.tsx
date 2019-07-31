@@ -23,7 +23,6 @@ const AssetsLayout = (): React.ReactElement => {
               >
                 {type.split("-").join(" ")}
               </Link>
-              {/* TODO: If there are sub nav items, show them here while this one is current */}
             </li>
           ))}
         </ul>
