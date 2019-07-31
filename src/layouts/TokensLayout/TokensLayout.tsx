@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Location } from "@reach/router";
+import Helmet from "react-helmet";
 import { Link } from "react-scroll";
-import { Link as GatsbyLink } from "gatsby";
 import Clipboard from "react-clipboard.js";
 import ReactTooltip from "react-tooltip";
 import SidebarNav from "../../components/SidebarNav/SidebarNav";
@@ -11,6 +11,12 @@ import Token from "../../components/Token/Token";
 import linkIcon from "../../icons/link-icon.svg";
 import "../../stylesheets/import-once.scss";
 import "./TokensLayout.scss";
+
+const platNames = {
+  scss: 'Web',
+  ios: 'Swift',
+  android: 'Android'
+}
 
 interface ITokensLayoutProps {
   platform: Platform;
@@ -46,6 +52,9 @@ export default class TokensLayout extends Component<
 
     return (
       <div className="tokens-layout-wrapper">
+        <Helmet titleTemplate="%s | Heartwood Tokens">
+          <title>{`Global Tokens for ${platNames[platform]}`}</title>
+        </Helmet>
         <div className="sidebar-nav-layout">
           <SidebarNav>
             <>
@@ -83,17 +92,18 @@ export default class TokensLayout extends Component<
                         <ul className="sidebar-nav__nested-nav">
                           {Object.keys(category).map(type => (
                             <li key={type} className="sidebar-nav__item">
-                            <Link
-                              to={`${cat}_${type}`}
-                              className="sidebar-nav__link"
-                              activeClass="sidebar-nav__link--active"
-                              smooth
-                              spy
-                              hashSpy
-                              duration={200}
-                            >
-                              {type}
-                            </Link></li>
+                              <Link
+                                to={`${cat}_${type}`}
+                                className="sidebar-nav__link"
+                                activeClass="sidebar-nav__link--active"
+                                smooth
+                                spy
+                                hashSpy
+                                duration={200}
+                              >
+                                {type}
+                              </Link>
+                            </li>
                           ))}
                         </ul>
                       )}

@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { Link } from "react-scroll";
 import Asset from "../../components/Asset/Asset";
 import SidebarNav from "../../components/SidebarNav/SidebarNav";
@@ -8,6 +9,9 @@ import "./AssetsLayout.scss";
 const AssetsLayout = (): React.ReactElement => {
   return (
     <div className="sidebar-nav-layout">
+      <Helmet titleTemplate="%s | Heartwood Tokens">
+        <title>Assets</title>
+      </Helmet>
       <SidebarNav>
         <ul className="sidebar-nav__list">
           {Object.keys(assets.asset).map(type => (

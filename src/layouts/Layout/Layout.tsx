@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
-import './Layout.scss'
+import Helmet from "react-helmet";
+import "./Layout.scss";
 import "../../stylesheets/import-once.scss";
 
 interface ILayoutProps {
@@ -14,6 +15,9 @@ const Layout = (props: ILayoutProps): React.ReactElement => (
       "layout--has-left-sidebar": props.hasLeftSidebar
     })}
   >
+    <Helmet>
+      <title>Heartwood Tokens</title>
+    </Helmet>
     {props.children}
   </div>
 );
