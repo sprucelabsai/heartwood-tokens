@@ -64,22 +64,42 @@ export default class TokensLayout extends Component<
                 <label className="sidebar-nav__subtitle">Tokens</label>
               </div>
               <ul className="sidebar-nav__list">
-                {Object.keys(tokens).map(cat => (
-                  <li key={cat} className="sidebar-nav__item">
-                    <Link
-                      to={cat}
-                      className="sidebar-nav__link"
-                      activeClass="sidebar-nav__link--active"
-                      smooth
-                      spy
-                      hashSpy
-                      duration={200}
-                    >
-                      {cat.split("-").join(" ")}
-                    </Link>
-                    {/* TODO: If there are sub nav items, show them here while this one is current */}
-                  </li>
-                ))}
+                {Object.keys(tokens).map(cat => {
+                  const category = tokens[cat];
+                  return (
+                    <li key={cat} className="sidebar-nav__item">
+                      <Link
+                        to={cat}
+                        className="sidebar-nav__link"
+                        activeClass="sidebar-nav__link--active"
+                        smooth
+                        spy
+                        hashSpy
+                        duration={200}
+                      >
+                        {cat.split("-").join(" ")}
+                      </Link>
+                      {!category[Object.keys(category)[0]].name && (
+                        <ul className="sidebar-nav__nested-nav">
+                          {Object.keys(category).map(type => (
+                            <li key={type} className="sidebar-nav__item">
+                            <Link
+                              to={`${cat}_${type}`}
+                              className="sidebar-nav__link"
+                              activeClass="sidebar-nav__link--active"
+                              smooth
+                              spy
+                              hashSpy
+                              duration={200}
+                            >
+                              {type}
+                            </Link></li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </>
           </SidebarNav>
