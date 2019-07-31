@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { Link as GatsbyLink } from "gatsby";
 import Clipboard from "react-clipboard.js";
 import ReactTooltip from "react-tooltip";
+import SidebarNav from "../../components/SidebarNav/SidebarNav";
 import PlatformSwitch from "../../components/PlatformSwitch/PlatformSwitch";
 import SizeUnits from "../../components/SizeUnits/SizeUnits";
 import Token from "../../components/Token/Token";
@@ -38,54 +39,62 @@ export default class TokensLayout extends Component<
   public render(): React.ReactElement {
     const { sizeUnit } = this.state;
     const { platform, tokens } = this.props;
-    let host = ''
-    if (typeof window !== 'undefined') {
-      host = window.location.href
+    let host = "";
+    if (typeof window !== "undefined") {
+      host = window.location.href;
     }
-    console.log(host)
 
     return (
       <div className="tokens-layout-wrapper">
         <div className="tokens-layout">
-          <aside className="tokens-nav">
-            <GatsbyLink className="tokens-nav__title-link" to="/">
-              <h1 className="title-sm tokens-nav__title">Heartwood Tokens</h1>
-            </GatsbyLink>
-            <div className="tokens-nav__section">
-              <PlatformSwitch platform={platform} onClick={() => null} />
-            </div>
-            {platform === "scss" && (
+          <SidebarNav>
+            <>
               <div className="tokens-nav__section">
-                <SizeUnits current={sizeUnit} onClick={this.onClickSizeUnit} />
+                <PlatformSwitch platform={platform} onClick={() => null} />
               </div>
-            )}
-            <div className="tokens-nav__section">
-              <label className="tokens-nav__subtitle">Tokens</label>
-            </div>
-            <ul className="tokens-nav__list">
-              {Object.keys(tokens).map(cat => (
-                <li key={cat} className="tokens-nav__item">
-                  <Link
-                    to={cat}
-                    className="tokens-nav__link"
-                    activeClass="tokens-nav__link--active"
-                    smooth
-                    spy
-                    hashSpy
-                    duration={200}
-                  >
-                    {cat.split("-").join(" ")}
-                  </Link>
-                  {/* TODO: If there are sub nav items, show them here while this one is current */}
-                </li>
-              ))}
-            </ul>
-          </aside>
+              {platform === "scss" && (
+                <div className="tokens-nav__section">
+                  <SizeUnits
+                    current={sizeUnit}
+                    onClick={this.onClickSizeUnit}
+                  />
+                </div>
+              )}
+              <div className="tokens-nav__section">
+                <label className="tokens-nav__subtitle">Tokens</label>
+              </div>
+              <ul className="tokens-nav__list">
+                {Object.keys(tokens).map(cat => (
+                  <li key={cat} className="tokens-nav__item">
+                    <Link
+                      to={cat}
+                      className="tokens-nav__link"
+                      activeClass="tokens-nav__link--active"
+                      smooth
+                      spy
+                      hashSpy
+                      duration={200}
+                    >
+                      {cat.split("-").join(" ")}
+                    </Link>
+                    {/* TODO: If there are sub nav items, show them here while this one is current */}
+                  </li>
+                ))}
+              </ul>
+            </>
+          </SidebarNav>
           <main className="tokens-container">
             {tokens &&
               Object.keys(tokens).map(cat => (
                 <section className="token-category-section" key={cat} id={cat}>
-                  <Clipboard className="tokens-section-link" data-clipboard-text={platform === 'scss' ? `${host}/tokens#${cat}` : `${host}/tokens/${platform}#${cat}`}>
+                  <Clipboard
+                    className="tokens-section-link"
+                    data-clipboard-text={
+                      platform === "scss"
+                        ? `${host}/tokens#${cat}`
+                        : `${host}/tokens/${platform}#${cat}`
+                    }
+                  >
                     <h2 className="title-sm tokens-category__title">
                       <img
                         className="heading__link-icon"
