@@ -13,7 +13,7 @@ const fileHeader = options => {
 }
 
 const variablesWithPrefix = (prefix, properties) => properties.map(prop => {
-  let strProp = `${prefix}${prop.name}: ${prop.attributes.category === 'asset' ? `"${prop.value}` : prop.value} !default;`
+  let strProp = `${prefix}${prop.name}: ${prop.attributes.category === 'asset' ? `"${prop.value}"` : prop.value} !default;`
   if (prop.comment) {
     strProp = strProp.concat(' /* ' + prop.comment + ' */');
   }

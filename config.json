@@ -105,6 +105,20 @@
         }
       ]
     },
+    "assets/embed/scss": {
+      "transforms": ["attribute/cti", "name/cti/kebab", "asset/base64"],
+      "buildPath": "build/scss/",
+      "files": [{
+        "destination": "_image-assets.scss",
+        "format": "scss/defaults",
+        "filter": {
+          "attributes": {
+            "category": "asset",
+            "type": "image"
+          }
+        }
+      }]
+    },
     "json": {
       "transformGroup": "js",
       "buildPath": "build/json/",
