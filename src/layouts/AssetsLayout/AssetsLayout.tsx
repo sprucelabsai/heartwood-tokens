@@ -13,14 +13,17 @@ const AssetsLayout = (): React.ReactElement => {
         <div className="assets-section__inner">
           {Object.keys(assets.asset.image).map(itemKey => (
             <div key={itemKey}>
-              <h2 className="title-sm">{itemKey}</h2>
-              {Object.keys(assets.asset.image[itemKey]).map(subitemKey => (
-                <Asset
-                  key={subitemKey}
-                  name={subitemKey.split('-').join(' ')}
-                  src={assets.asset.image[itemKey][subitemKey].value}
-                />
-              ))}
+              <h2 className="asset-group-title title-sm">{itemKey}</h2>
+              {Object.keys(assets.asset.image[itemKey]).map(subitemKey => {
+                const name = subitemKey.split("-").join(" ");
+                return (
+                  <Asset
+                    key={subitemKey}
+                    name={name}
+                    src={assets.asset.image[itemKey][subitemKey].value}
+                  />
+                );
+              })}
             </div>
           ))}
         </div>

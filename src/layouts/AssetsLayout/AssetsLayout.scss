@@ -8,3 +8,8 @@
     @extend %mx-auto;
     max-width: $l__width;
 }
+
+.asset-group-title {
+    padding-bottom: $spacing__4;
+    text-transform: capitalize;
+}
