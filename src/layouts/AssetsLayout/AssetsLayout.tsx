@@ -9,25 +9,42 @@ const AssetsLayout = (): React.ReactElement => {
       <div className=" assets-section">
         <h1 className="title-lg assets-section__inner">Assets</h1>
       </div>
-      <section className="assets-section">
-        <div className="assets-section__inner">
-          {Object.keys(assets.asset.image).map(itemKey => (
-            <div key={itemKey}>
-              <h2 className="asset-group-title title-sm">{itemKey}</h2>
-              {Object.keys(assets.asset.image[itemKey]).map(subitemKey => {
-                const name = subitemKey.split("-").join(" ");
+      {Object.keys(assets.asset).map(typeKey => {
+        const type = assets.asset[typeKey];
+        return (
+          <section key={typeKey} className="assets-section">
+            <div className="assets-section__inner">
+              <h2 className="asset-group-title title-sm">{typeKey}</h2>
+              {Object.keys(type).map(itemKey => {
+                const item = type[itemKey];
+                const itemName = itemKey.split("-").join(" ");
+                if (item.value) {
+                  return (
+                    <Asset key={itemKey} name={itemName} src={item.value} />
+                  );
+                }
                 return (
-                  <Asset
-                    key={subitemKey}
-                    name={name}
-                    src={assets.asset.image[itemKey][subitemKey].value}
-                  />
+                  <div key={itemKey}>
+                    <h3>{itemKey}</h3>
+                    {Object.keys(item).map(subitemKey => {
+                      const subitem = item[subitemKey];
+                      const subitemName = subitemKey.split("-").join(" ");
+
+                      return (
+                        <Asset
+                          key={subitemKey}
+                          name={subitemName}
+                          src={subitem.value}
+                        />
+                      );
+                    })}
+                  </div>
                 );
               })}
             </div>
-          ))}
-        </div>
-      </section>
+          </section>
+        );
+      })}
     </div>
   );
 };
