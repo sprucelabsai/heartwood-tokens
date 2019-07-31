@@ -7,7 +7,7 @@ import "./AssetsLayout.scss";
 
 const AssetsLayout = (): React.ReactElement => {
   return (
-    <div className="assets-layout">
+    <div className="sidebar-nav-layout">
       <SidebarNav>
         <ul className="sidebar-nav__list">
           {Object.keys(assets.asset).map(type => (
@@ -28,8 +28,8 @@ const AssetsLayout = (): React.ReactElement => {
           ))}
         </ul>
       </SidebarNav>
-      <main>
-        <div className=" assets-section">
+      <main className="assets-container">
+        <div className="assets-section">
           <h1 className="title-lg assets-section__inner">Assets</h1>
         </div>
         {Object.keys(assets.asset).map(typeKey => {

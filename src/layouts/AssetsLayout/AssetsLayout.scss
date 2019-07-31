@@ -1,5 +1,10 @@
 @import '../../stylesheets/heartwood';
 
+.assets-container {
+    padding: $spacing__6 $spacing__10;
+    max-width: $l__width;
+}
+
 .assets-section {
     padding: $spacing__4;
 }

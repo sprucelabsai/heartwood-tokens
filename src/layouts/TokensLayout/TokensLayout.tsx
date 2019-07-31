@@ -46,7 +46,7 @@ export default class TokensLayout extends Component<
 
     return (
       <div className="tokens-layout-wrapper">
-        <div className="tokens-layout">
+        <div className="sidebar-nav-layout">
           <SidebarNav>
             <>
               <div className="sidebar-nav__section">
