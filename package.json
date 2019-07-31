@@ -12,7 +12,7 @@
     "develop": "npm run clean && npm run build && gatsby develop",
     "gatsby:build": "gatsby build",
     "serve": "gatsby serve",
-    "build": "node ./build.js",
+    "build": "npm run clean && node ./scripts/generateIcons && node ./build.js",
     "clean": "rm -rf build",
     "prepublishOnly": "npm run clean && npm run build",
     "deploy": "npm run clean && npm run build && gatsby build --prefix-paths && gh-pages -d public",

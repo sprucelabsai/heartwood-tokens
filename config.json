@@ -113,8 +113,7 @@
         "format": "scss/defaults",
         "filter": {
           "attributes": {
-            "category": "asset",
-            "type": "image"
+            "category": "asset"
           }
         }
       }]

@@ -1,0 +1,360 @@
+{
+  "asset": {
+    "icon": {
+      "access-private": {
+        "value": "assets/icons/ic_access_private.svg"
+      },
+      "access-public": {
+        "value": "assets/icons/ic_access_public.svg"
+      },
+      "add": {
+        "value": "assets/icons/ic_add.svg"
+      },
+      "appointment": {
+        "value": "assets/icons/ic_appointment.svg"
+      },
+      "button": {
+        "value": "assets/icons/ic_button.svg"
+      },
+      "calendar": {
+        "value": "assets/icons/ic_calendar.svg"
+      },
+      "camera": {
+        "value": "assets/icons/ic_camera.svg"
+      },
+      "caution": {
+        "value": "assets/icons/ic_caution.svg"
+      },
+      "colors": {
+        "value": "assets/icons/ic_colors.svg"
+      },
+      "complete": {
+        "value": "assets/icons/ic_complete.svg"
+      },
+      "copy-paste": {
+        "value": "assets/icons/ic_copy_paste.svg"
+      },
+      "css": {
+        "value": "assets/icons/ic_css.svg"
+      },
+      "current-location": {
+        "value": "assets/icons/ic_current_location.svg"
+      },
+      "dashboard": {
+        "value": "assets/icons/ic_dashboard.svg"
+      },
+      "date": {
+        "value": "assets/icons/ic_date.svg"
+      },
+      "date-disable": {
+        "value": "assets/icons/ic_date_disable.svg"
+      },
+      "desktop": {
+        "value": "assets/icons/ic_desktop.svg"
+      },
+      "disable": {
+        "value": "assets/icons/ic_disable.svg"
+      },
+      "duplicate": {
+        "value": "assets/icons/ic_duplicate.svg"
+      },
+      "edit": {
+        "value": "assets/icons/ic_edit.svg"
+      },
+      "edit-inline": {
+        "value": "assets/icons/ic_edit_inline.svg"
+      },
+      "email": {
+        "value": "assets/icons/ic_email.svg"
+      },
+      "empty-box": {
+        "value": "assets/icons/ic_empty_box.svg"
+      },
+      "favicon": {
+        "value": "assets/icons/ic_favicon.svg"
+      },
+      "favorite-location": {
+        "value": "assets/icons/ic_favorite_location.svg"
+      },
+      "fill-arrow-back": {
+        "value": "assets/icons/ic_fill_arrow_back.svg"
+      },
+      "fill-arrow-downward": {
+        "value": "assets/icons/ic_fill_arrow_downward.svg"
+      },
+      "fill-arrow-drop-down": {
+        "value": "assets/icons/ic_fill_arrow_drop_down.svg"
+      },
+      "fill-arrow-drop-up": {
+        "value": "assets/icons/ic_fill_arrow_drop_up.svg"
+      },
+      "fill-arrow-forward": {
+        "value": "assets/icons/ic_fill_arrow_forward.svg"
+      },
+      "fill-arrow-upward": {
+        "value": "assets/icons/ic_fill_arrow_upward.svg"
+      },
+      "fill-cancel-solid": {
+        "value": "assets/icons/ic_fill_cancel_solid.svg"
+      },
+      "fill-caution-solid": {
+        "value": "assets/icons/ic_fill_caution_solid.svg"
+      },
+      "fill-check-box": {
+        "value": "assets/icons/ic_fill_check_box.svg"
+      },
+      "fill-check-box-outline-blank": {
+        "value": "assets/icons/ic_fill_check_box_outline_blank.svg"
+      },
+      "fill-check-circle": {
+        "value": "assets/icons/ic_fill_check_circle.svg"
+      },
+      "fill-check-mark": {
+        "value": "assets/icons/ic_fill_check_mark.svg"
+      },
+      "fill-close": {
+        "value": "assets/icons/ic_fill_close.svg"
+      },
+      "fill-drag-handle": {
+        "value": "assets/icons/ic_fill_drag_handle.svg"
+      },
+      "fill-facebook": {
+        "value": "assets/icons/ic_fill_facebook.svg"
+      },
+      "fill-favorite-location-solid": {
+        "value": "assets/icons/ic_fill_favorite_location_solid.svg"
+      },
+      "fill-fullscreen": {
+        "value": "assets/icons/ic_fill_fullscreen.svg"
+      },
+      "fill-fullscreen-exit": {
+        "value": "assets/icons/ic_fill_fullscreen_exit.svg"
+      },
+      "fill-github": {
+        "value": "assets/icons/ic_fill_github.svg"
+      },
+      "fill-indeterminate-check-box": {
+        "value": "assets/icons/ic_fill_indeterminate_check_box.svg"
+      },
+      "fill-keyboard-arrow-down": {
+        "value": "assets/icons/ic_fill_keyboard_arrow_down.svg"
+      },
+      "fill-keyboard-arrow-left": {
+        "value": "assets/icons/ic_fill_keyboard_arrow_left.svg"
+      },
+      "fill-keyboard-arrow-right": {
+        "value": "assets/icons/ic_fill_keyboard_arrow_right.svg"
+      },
+      "fill-linkedin": {
+        "value": "assets/icons/ic_fill_linkedin.svg"
+      },
+      "fill-location-solid": {
+        "value": "assets/icons/ic_fill_location_solid.svg"
+      },
+      "fill-menu": {
+        "value": "assets/icons/ic_fill_menu.svg"
+      },
+      "fill-more-solid": {
+        "value": "assets/icons/ic_fill_more_solid.svg"
+      },
+      "fill-new-tab": {
+        "value": "assets/icons/ic_fill_new_tab.svg"
+      },
+      "fill-payment-failed-solid": {
+        "value": "assets/icons/ic_fill_payment_failed_solid.svg"
+      },
+      "fill-payment-success-solid": {
+        "value": "assets/icons/ic_fill_payment_success_solid.svg"
+      },
+      "fill-pin-solid": {
+        "value": "assets/icons/ic_fill_pin_solid.svg"
+      },
+      "fill-radio-button-checked": {
+        "value": "assets/icons/ic_fill_radio_button_checked.svg"
+      },
+      "fill-radio-button-unchecked": {
+        "value": "assets/icons/ic_fill_radio_button_unchecked.svg"
+      },
+      "fill-search": {
+        "value": "assets/icons/ic_fill_search.svg"
+      },
+      "fill-star-solid": {
+        "value": "assets/icons/ic_fill_star_solid.svg"
+      },
+      "fill-user-avatar-solid": {
+        "value": "assets/icons/ic_fill_user_avatar_solid.svg"
+      },
+      "fonts": {
+        "value": "assets/icons/ic_fonts.svg"
+      },
+      "guest": {
+        "value": "assets/icons/ic_guest.svg"
+      },
+      "guests": {
+        "value": "assets/icons/ic_guests.svg"
+      },
+      "help": {
+        "value": "assets/icons/ic_help.svg"
+      },
+      "hide": {
+        "value": "assets/icons/ic_hide.svg"
+      },
+      "home": {
+        "value": "assets/icons/ic_home.svg"
+      },
+      "info": {
+        "value": "assets/icons/ic_info.svg"
+      },
+      "late": {
+        "value": "assets/icons/ic_late.svg"
+      },
+      "launch": {
+        "value": "assets/icons/ic_launch.svg"
+      },
+      "layout-grid": {
+        "value": "assets/icons/ic_layout_grid.svg"
+      },
+      "layout-list": {
+        "value": "assets/icons/ic_layout_list.svg"
+      },
+      "location": {
+        "value": "assets/icons/ic_location.svg"
+      },
+      "location-group": {
+        "value": "assets/icons/ic_location_group.svg"
+      },
+      "logout": {
+        "value": "assets/icons/ic_logout.svg"
+      },
+      "map": {
+        "value": "assets/icons/ic_map.svg"
+      },
+      "message": {
+        "value": "assets/icons/ic_message.svg"
+      },
+      "message-failed": {
+        "value": "assets/icons/ic_message_failed.svg"
+      },
+      "messages": {
+        "value": "assets/icons/ic_messages.svg"
+      },
+      "more": {
+        "value": "assets/icons/ic_more.svg"
+      },
+      "more-vertical": {
+        "value": "assets/icons/ic_more_vertical.svg"
+      },
+      "move-bottom": {
+        "value": "assets/icons/ic_move_bottom.svg"
+      },
+      "move-down": {
+        "value": "assets/icons/ic_move_down.svg"
+      },
+      "move-top": {
+        "value": "assets/icons/ic_move_top.svg"
+      },
+      "move-up": {
+        "value": "assets/icons/ic_move_up.svg"
+      },
+      "no-matches": {
+        "value": "assets/icons/ic_no_matches.svg"
+      },
+      "note": {
+        "value": "assets/icons/ic_note.svg"
+      },
+      "organization": {
+        "value": "assets/icons/ic_organization.svg"
+      },
+      "password-lock": {
+        "value": "assets/icons/ic_password_lock.svg"
+      },
+      "phone": {
+        "value": "assets/icons/ic_phone.svg"
+      },
+      "pin": {
+        "value": "assets/icons/ic_pin.svg"
+      },
+      "power": {
+        "value": "assets/icons/ic_power.svg"
+      },
+      "preferences": {
+        "value": "assets/icons/ic_preferences.svg"
+      },
+      "price": {
+        "value": "assets/icons/ic_price.svg"
+      },
+      "remove": {
+        "value": "assets/icons/ic_remove.svg"
+      },
+      "remove-circle": {
+        "value": "assets/icons/ic_remove_circle.svg"
+      },
+      "reports": {
+        "value": "assets/icons/ic_reports.svg"
+      },
+      "rotate-left": {
+        "value": "assets/icons/ic_rotate_left.svg"
+      },
+      "rotate-right": {
+        "value": "assets/icons/ic_rotate_right.svg"
+      },
+      "settings": {
+        "value": "assets/icons/ic_settings.svg"
+      },
+      "show": {
+        "value": "assets/icons/ic_show.svg"
+      },
+      "skill": {
+        "value": "assets/icons/ic_skill.svg"
+      },
+      "smartphone": {
+        "value": "assets/icons/ic_smartphone.svg"
+      },
+      "social-media": {
+        "value": "assets/icons/ic_social_media.svg"
+      },
+      "star": {
+        "value": "assets/icons/ic_star.svg"
+      },
+      "status": {
+        "value": "assets/icons/ic_status.svg"
+      },
+      "store": {
+        "value": "assets/icons/ic_store.svg"
+      },
+      "switch-users": {
+        "value": "assets/icons/ic_switch_users.svg"
+      },
+      "sync": {
+        "value": "assets/icons/ic_sync.svg"
+      },
+      "team": {
+        "value": "assets/icons/ic_team.svg"
+      },
+      "teammates": {
+        "value": "assets/icons/ic_teammates.svg"
+      },
+      "thumbs-up": {
+        "value": "assets/icons/ic_thumbs_up.svg"
+      },
+      "time": {
+        "value": "assets/icons/ic_time.svg"
+      },
+      "unordered-list": {
+        "value": "assets/icons/ic_unordered_list.svg"
+      },
+      "upload": {
+        "value": "assets/icons/ic_upload.svg"
+      },
+      "user-avatar": {
+        "value": "assets/icons/ic_user_avatar.svg"
+      },
+      "vip": {
+        "value": "assets/icons/ic_vip.svg"
+      },
+      "wifi": {
+        "value": "assets/icons/ic_wifi.svg"
+      }
+    }
+  }
+}
