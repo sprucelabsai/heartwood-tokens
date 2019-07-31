@@ -39,11 +39,11 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
             <div className="index-section__inner">
               <img src={logo} width={80} alt="spruce logo" />
               <h1 className="index-title title-lg">{name}</h1>
-              <h2 className="index-subtitle">{tagline}</h2>
             </div>
           </section>
           <section className="index-section index-section--centered">
             <div className="index-section__inner">
+              <label className="index-section__label">WTF are Design Tokens?</label>
               <blockquote className="index-section-quote">
                 Design tokens are the smallest pieces of the Heartwood design
                 system — basically anything that can be described using letters

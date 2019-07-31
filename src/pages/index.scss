@@ -66,6 +66,12 @@
     }
 }
 
+.index-section__label {
+    display: block;
+    margin-bottom: $spacing__4;
+    color: $text-color__copy-light;
+}
+
 .index-section-heading {
     @extend %ts-title-sm;
 }
