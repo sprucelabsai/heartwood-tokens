@@ -7,6 +7,10 @@
         border-top: 1px solid $border-color;
     }
 
+    &--centered {
+        text-align: center;
+    }
+
     @media screen and (min-width: $l__breakpoint-medium) {
         padding: $spacing__8;
     }
@@ -64,18 +68,12 @@
 
 .index-section-heading {
     @extend %ts-title-sm;
-    flex: 0 0 auto;
-
-    @media screen and (min-width: $l__breakpoint-medium) {
-        width: 20rem;
-        padding-right: $spacing__8;
-    }
 }
 
 .index-section-quote {
     @extend %ts-heading-lg;
+    @extend %mx-auto;
     max-width: $l__width;
-    margin: $spacing__5 0;
     font-weight: $fw__normal;
     color: $text-color__copy-light;
 
@@ -104,4 +102,46 @@
     &:first-child {
         margin-top: 0;
     }
+}
+
+.index-page-link-wrapper {
+
+    @media screen and (min-width: $l__breakpoint-medium) {
+        margin-top: $spacing__4;
+    }
+}
+
+.index-page-link {
+    position: relative;
+    margin: $spacing__2;
+    padding: $spacing__4;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+
+    &:after {
+        content: '';
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: $layer__floating;
+        transition: opacity 300ms ease;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+}
+
+.index-page-link__title {
+    @extend %ts-subheading-sm;
+    margin-top: $spacing__2;
+}
+
+.index-page-link__subtitle {
+    color: $text-color__copy-light;
 }

@@ -84,6 +84,7 @@ export default class TokensLayout extends Component<
             </>
           </SidebarNav>
           <main className="tokens-container">
+            <h1 className="title-lg assets-section__inner">Global Tokens</h1>
             {tokens &&
               Object.keys(tokens).map(cat => (
                 <section className="token-category-section" key={cat} id={cat}>
