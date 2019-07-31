@@ -48,11 +48,6 @@
           "destination": "../js/tokens-android.js",
           "format": "javascript/module",
           "filter": "tokens/android"
-        }, 
-        {
-          "destination": "../js/components-android.js",
-          "format": "javascript/module",
-          "filter": "components"
         }
       ]
     },
@@ -70,11 +65,6 @@
           "destination": "../js/tokens-ios-swift.js",
           "format": "javascript/module",
           "filter": "tokens/ios"
-        }, 
-        {
-          "destination": "../js/components-ios-swift.js",
-          "format": "javascript/module",
-          "filter": "components"
         }
       ]
     },
