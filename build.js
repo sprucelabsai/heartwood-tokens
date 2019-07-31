@@ -97,7 +97,7 @@ StyleDictionary.registerTransform({
 StyleDictionary.registerTransformGroup({
   name: 'heartwood/scss',
   transforms: [
-    'attribute/cti', 'name/bem', 'time/seconds', 'content/icon', 'size/pxToRem', 'font/family/css', 'color/css'
+    'attribute/cti', 'name/bem', 'time/seconds', 'content/icon', 'size/pxToRem', 'font/family/css', 'color/css', 'asset/base64'
   ]
 })
 
@@ -184,7 +184,7 @@ StyleDictionary.registerFilter({
 
 StyleDictionary.registerFilter({
   name: 'tokens',
-  matcher: prop => prop.attributes.category !== 'components'
+  matcher: prop => prop.attributes.category !== 'components' && prop.attributes.category !== 'asset'
 })
 
 StyleDictionary.registerFilter({

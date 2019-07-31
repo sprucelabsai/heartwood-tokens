@@ -29,6 +29,15 @@
           "destination": "../js/components-scss.js",
           "format": "javascript/module",
           "filter": "components"
+        },
+        {
+          "destination": "../js/assets-scss.js",
+          "format": "javascript/module",
+          "filter": {
+            "attributes": {
+              "category": "asset"
+            }
+          }
         }
       ]
     },

@@ -59,7 +59,7 @@ const sassMultiMap = ({ mapPrefix, properties }) => {
 
 `
   const defaults = properties.map(prop => {
-    return `$${prop.name}: ${prop.value} !default;`
+    return `$${prop.name}: ${prop.attributes.category === 'asset' ? `"${prop.value}"` : prop.value} !default;`
   })
 
   return fileComment + defaults.join('\n') + '\n\n' + catArray.map(key => {
