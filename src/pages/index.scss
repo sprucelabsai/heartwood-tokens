@@ -56,6 +56,10 @@
         color: $c__primary-light;
         border-color: $c__primary-light;
     }
+
+    + .index-link {
+        margin-left: $spacing__4;
+    }
 }
 
 .index-section-heading {

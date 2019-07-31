@@ -41,6 +41,9 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
               <Link className="index-link" to="/tokens">
                 Explore Tokens
               </Link>
+              <Link className="index-link" to="/assets">
+                See Assets
+              </Link>
             </div>
           </section>
           <section className="index-section">

@@ -49,27 +49,27 @@ export default class TokensLayout extends Component<
         <div className="tokens-layout">
           <SidebarNav>
             <>
-              <div className="tokens-nav__section">
+              <div className="sidebar-nav__section">
                 <PlatformSwitch platform={platform} onClick={() => null} />
               </div>
               {platform === "scss" && (
-                <div className="tokens-nav__section">
+                <div className="sidebar-nav__section">
                   <SizeUnits
                     current={sizeUnit}
                     onClick={this.onClickSizeUnit}
                   />
                 </div>
               )}
-              <div className="tokens-nav__section">
-                <label className="tokens-nav__subtitle">Tokens</label>
+              <div className="sidebar-nav__section">
+                <label className="sidebar-nav__subtitle">Tokens</label>
               </div>
-              <ul className="tokens-nav__list">
+              <ul className="sidebar-nav__list">
                 {Object.keys(tokens).map(cat => (
-                  <li key={cat} className="tokens-nav__item">
+                  <li key={cat} className="sidebar-nav__item">
                     <Link
                       to={cat}
-                      className="tokens-nav__link"
-                      activeClass="tokens-nav__link--active"
+                      className="sidebar-nav__link"
+                      activeClass="sidebar-nav__link--active"
                       smooth
                       spy
                       hashSpy
