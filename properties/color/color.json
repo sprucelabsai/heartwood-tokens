@@ -89,6 +89,26 @@
         "value": "#4f0803"
       }
     },
+    "brand": {
+      "primary": {
+        "value": "#22cc96"
+      },
+      "primary-alt": {
+        "value": "#20bc93"
+      },
+      "mist": {
+        "value": "#f5f5f5"
+      },
+      "fog": {
+        "value": "#e4e3e3"
+      },
+      "slate": {
+        "value": "#545d6c"
+      },
+      "midnight": {
+        "value": "#111926"
+      }
+    },
     "greyscale": {
       "0": {
         "value": "#f0f2f7"
