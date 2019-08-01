@@ -17,6 +17,16 @@ module.exports = {
         icon: `src/images/favicon.png`
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `source code pro\:400,600`,
+          `source sans pro\:400,600` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
