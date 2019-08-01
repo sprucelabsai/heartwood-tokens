@@ -4,7 +4,6 @@ import tinycolor from "tinycolor2";
 import ReactTooltip from 'react-tooltip';
 import copyIcon from '../../icons/copy-icon.svg';
 import tokensScss from "../../../build/js/tokens-scss";
-import componentsScss from "../../../build/js/components-scss";
 import "./Token.scss";
 
 // TODO: Animate the click-to-copy
@@ -13,7 +12,6 @@ export interface ITokenProps {
   token: Token;
   platform: Platform;
   sizeUnit: SizeUnit;
-  kind: string;
 }
 
 const swatchCats = [
@@ -47,20 +45,15 @@ const platformName = ({
   return str;
 };
 
-const tokenKinds = {
-  token: tokensScss,
-  component: componentsScss
-}
-
 const Token = (props: ITokenProps): React.ReactElement => {
-  const { token, platform, sizeUnit, kind } = props;
+  const { token, platform, sizeUnit } = props;
   const { attributes, original } = token;
   const { category } = attributes;
   let textSample = "Hello human!";
   let value = token.value;
 
   // Get this token from the scss file so that we can format it on web
-  const scssTokens = tokenKinds[kind];
+  const scssTokens = tokensScss;
   let scssToken = scssTokens[category];
   if (typeof attributes.type !== "undefined") {
     scssToken = scssTokens[category][attributes.type];

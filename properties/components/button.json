@@ -1,9 +1,7 @@
 {
     "components": {
         "button": {
-            "base": {
-                "border-radius": { "value": 4 }
-            },
+            "border-radius": { "value": 4 },
             "primary": {
                 "text-color": {
                     "value": "#fff"

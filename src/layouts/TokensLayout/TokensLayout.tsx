@@ -23,7 +23,6 @@ interface ITokensLayoutProps {
   platform: Platform;
   tokens: any;
   hasLeftSidebar?: boolean;
-  kind: string;
 }
 
 interface ITokensLayoutState {
@@ -46,7 +45,7 @@ export default class TokensLayout extends Component<
 
   public render(): React.ReactElement {
     const { sizeUnit } = this.state;
-    const { platform, tokens, kind, title } = this.props;
+    const { platform, tokens, title } = this.props;
     let host = "";
     if (typeof window !== "undefined") {
       host = window.location.href;
@@ -170,9 +169,10 @@ export default class TokensLayout extends Component<
                                             ).map(state => (
                                               <Token
                                                 key={state}
-                                                kind={kind}
                                                 token={
-                                                  tokens[cat][type][item][subitem][state]
+                                                  tokens[cat][type][item][
+                                                    subitem
+                                                  ][state]
                                                 }
                                                 platform={platform}
                                                 sizeUnit={sizeUnit}
@@ -185,7 +185,6 @@ export default class TokensLayout extends Component<
                                       return (
                                         <Token
                                           key={subitem}
-                                          kind={kind}
                                           token={
                                             tokens[cat][type][item][subitem]
                                           }
@@ -201,7 +200,6 @@ export default class TokensLayout extends Component<
                             return (
                               <Token
                                 key={item}
-                                kind={kind}
                                 token={tokens[cat][type][item]}
                                 platform={platform}
                                 sizeUnit={sizeUnit}
@@ -214,7 +212,6 @@ export default class TokensLayout extends Component<
                     return (
                       <Token
                         key={type}
-                        kind={kind}
                         token={tokens[cat][type]}
                         platform={platform}
                         sizeUnit={sizeUnit}
