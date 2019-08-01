@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: $spacing__3;
-    padding-bottom: $spacing__3;
+    // padding-bottom: $spacing__3;
     border-top: 1px solid $border-color;
 }
 
@@ -41,6 +41,10 @@
 
     .token__clipboard:hover & {
         color: $c__primary-light;
+    }
+
+    &.token__name--plain {
+        color: inherit;
     }
 }
 

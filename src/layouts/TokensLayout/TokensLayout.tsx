@@ -15,7 +15,8 @@ import "./TokensLayout.scss";
 const platNames = {
   scss: "Web",
   ios: "Swift",
-  android: "Android"
+  android: "Android",
+  figma: "figma"
 };
 
 interface ITokensLayoutProps {
@@ -60,7 +61,7 @@ export default class TokensLayout extends Component<
           <SidebarNav>
             <>
               <div className="sidebar-nav__section">
-                <PlatformSwitch platform={platform} tokens={platform === 'scss' && tokens} />
+                <PlatformSwitch platform={platform} tokens={platform === 'figma' && tokens} />
               </div>
               {platform === "scss" && (
                 <div className="sidebar-nav__section">

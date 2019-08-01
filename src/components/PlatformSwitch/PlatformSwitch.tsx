@@ -3,6 +3,7 @@ import { navigate } from "gatsby";
 import sassIcon from "../../icons/sass-icon.png";
 import appleIcon from "../../icons/apple-icon.svg";
 import androidIcon from "../../icons/android-icon.svg";
+import figmaIcon from "../../icons/figma-icon.svg";
 import downloadIcon from "../../icons/download-icon.svg";
 import "./PlatformSwitch.scss";
 
@@ -14,7 +15,8 @@ interface PlatformSwitchProps {
 const icons = {
   scss: sassIcon,
   ios: appleIcon,
-  android: androidIcon
+  android: androidIcon,
+  figma: figmaIcon
 };
 
 const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
@@ -43,6 +45,9 @@ const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
           </option>
           <option value="/tokens/android" selected={platform === "android"}>
             Android
+          </option>
+          <option value="/tokens/figma" selected={platform === "figma"}>
+            Figma
           </option>
         </select>
         {tokens && (
