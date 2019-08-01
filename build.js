@@ -75,7 +75,8 @@ StyleDictionary.registerTransform({
     prop.attributes.category === 'line-height' ||
     prop.attributes.category === 'spacing' ||
     prop.attributes.category === 'border-radius' ||
-    prop.attributes.category === 'components' && prop.attributes.item === 'border-radius',
+    prop.attributes.category === 'components' && prop.attributes.item === 'border-radius' ||
+    prop.attributes.category === 'components' && prop.attributes.item === 'width',
   transformer: prop => {
     if (prop.original.value === 0) {
       return "0"

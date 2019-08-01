@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 20rem;
+  width: $components__sidebar-width_base;
   height: 100%;
   overflow: scroll;
   background-color: $bg__dark;
