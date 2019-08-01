@@ -20,8 +20,12 @@
     text-transform: capitalize;
 }
 
+.components-section {
+    margin-top: $spacing__10;
+}
+
 .components-subsection {
-    margin-top: $spacing__8;
+    margin-top: $spacing__6;
 }
 .components-subsection__title {
     margin-bottom: $spacing__3;
