@@ -4,6 +4,7 @@ import tinycolor from "tinycolor2";
 import ReactTooltip from 'react-tooltip';
 import copyIcon from '../../icons/copy-icon.svg';
 import tokensScss from "../../../build/js/tokens-scss";
+import componentsScss from "../../../build/js/components-scss";
 import "./Token.scss";
 
 // TODO: Animate the click-to-copy
@@ -12,6 +13,7 @@ export interface ITokenProps {
   token: Token;
   platform: Platform;
   sizeUnit: SizeUnit;
+  kind: string;
 }
 
 const swatchCats = [
@@ -45,27 +47,33 @@ const platformName = ({
   return str;
 };
 
+const tokenKinds = {
+  token: tokensScss,
+  component: componentsScss
+}
+
 const Token = (props: ITokenProps): React.ReactElement => {
-  const { token, platform, sizeUnit } = props;
+  const { token, platform, sizeUnit, kind } = props;
   const { attributes, original } = token;
   const { category } = attributes;
   let textSample = "Hello human!";
   let value = token.value;
 
   // Get this token from the scss file so that we can format it on web
-  let scssToken = tokensScss[category];
+  const scssTokens = tokenKinds[kind];
+  let scssToken = scssTokens[category];
   if (typeof attributes.type !== "undefined") {
-    scssToken = tokensScss[category][attributes.type];
+    scssToken = scssTokens[category][attributes.type];
     if (typeof attributes.item !== "undefined") {
-      scssToken = tokensScss[category][attributes.type][attributes.item];
+      scssToken = scssTokens[category][attributes.type][attributes.item];
       if (typeof attributes.subitem !== "undefined") {
         scssToken =
-          tokensScss[category][attributes.type][attributes.item][
+          scssTokens[category][attributes.type][attributes.item][
             attributes.subitem
           ];
         if (typeof attributes.state !== "undefined") {
           scssToken =
-            tokensScss[category][attributes.type][attributes.item][
+            scssTokens[category][attributes.type][attributes.item][
               attributes.subitem
             ][attributes.state];
         }
@@ -94,7 +102,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
       borderRadius: "2px"
     };
   }
-  if (category === "color" || category === "background-color") {
+  if (category === "color" || category === "background-color" || tinycolor(scssToken.value).isValid()) {
     style = {
       ...style,
       backgroundColor: scssToken.value
@@ -223,7 +231,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
           </Clipboard>
         </span>
         <span className="token__sample">
-          {swatchCats.indexOf(category) > -1 && (
+          {(swatchCats.indexOf(category) > -1 || tinycolor(scssToken.value).isValid()) && (
             <div className="token__swatch" style={style} />
           )}
           {textCats.indexOf(category) > -1 && (

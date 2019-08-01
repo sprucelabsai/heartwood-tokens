@@ -3,7 +3,7 @@ import TokensLayout from "../layouts/TokensLayout/TokensLayout";
 import tokensScss from "../../build/js/tokens-scss";
 
 const TokensPage = (): React.ReactElement => (
-  <TokensLayout platform="scss" kind="tokens" tokens={tokensScss} />
+  <TokensLayout title="Global Tokens" platform="scss" kind="token" tokens={tokensScss} />
 );
 
 export default TokensPage;

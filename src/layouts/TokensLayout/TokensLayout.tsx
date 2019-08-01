@@ -19,6 +19,7 @@ const platNames = {
 };
 
 interface ITokensLayoutProps {
+  title: string;
   platform: Platform;
   tokens: any;
   hasLeftSidebar?: boolean;
@@ -45,7 +46,7 @@ export default class TokensLayout extends Component<
 
   public render(): React.ReactElement {
     const { sizeUnit } = this.state;
-    const { platform, tokens } = this.props;
+    const { platform, tokens, kind, title } = this.props;
     let host = "";
     if (typeof window !== "undefined") {
       host = window.location.href;
@@ -54,7 +55,7 @@ export default class TokensLayout extends Component<
     return (
       <div className="tokens-layout-wrapper">
         <Helmet titleTemplate="%s | Heartwood Tokens">
-          <title>{`Global Tokens for ${platNames[platform]}`}</title>
+          <title>{`${title} for ${platNames[platform]}`}</title>
         </Helmet>
         <div className="sidebar-nav-layout">
           <SidebarNav>
@@ -115,7 +116,7 @@ export default class TokensLayout extends Component<
             </>
           </SidebarNav>
           <main className="tokens-container">
-            <h1 className="title-lg assets-section__inner">Global Tokens</h1>
+            <h1 className="title-lg assets-section__inner">{title}</h1>
             {tokens &&
               Object.keys(tokens).map(cat => (
                 <section className="token-category-section" key={cat} id={cat}>
@@ -157,11 +158,42 @@ export default class TokensLayout extends Component<
                                 >
                                   <h4 className="tokens-item__title">{item}</h4>
                                   {Object.keys(tokens[cat][type][item]).map(
-                                    subitem => (
-                                      <div key={subitem}>
-                                        <p>{subitem}</p>
-                                      </div>
-                                    )
+                                    subitem => {
+                                      if (
+                                        !tokens[cat][type][item][subitem].value
+                                      ) {
+                                        return (
+                                          <section key={subitem}>
+                                            <p>{subitem}</p>
+                                            {Object.keys(
+                                              tokens[cat][type][item][subitem]
+                                            ).map(state => (
+                                              <Token
+                                                key={state}
+                                                kind={kind}
+                                                token={
+                                                  tokens[cat][type][item][subitem][state]
+                                                }
+                                                platform={platform}
+                                                sizeUnit={sizeUnit}
+                                              />
+                                            ))}
+                                          </section>
+                                        );
+                                      }
+
+                                      return (
+                                        <Token
+                                          key={subitem}
+                                          kind={kind}
+                                          token={
+                                            tokens[cat][type][item][subitem]
+                                          }
+                                          platform={platform}
+                                          sizeUnit={sizeUnit}
+                                        />
+                                      );
+                                    }
                                   )}
                                 </section>
                               );
@@ -169,6 +201,7 @@ export default class TokensLayout extends Component<
                             return (
                               <Token
                                 key={item}
+                                kind={kind}
                                 token={tokens[cat][type][item]}
                                 platform={platform}
                                 sizeUnit={sizeUnit}
@@ -181,6 +214,7 @@ export default class TokensLayout extends Component<
                     return (
                       <Token
                         key={type}
+                        kind={kind}
                         token={tokens[cat][type]}
                         platform={platform}
                         sizeUnit={sizeUnit}
