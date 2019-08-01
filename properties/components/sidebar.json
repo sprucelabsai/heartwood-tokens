@@ -1,11 +1,7 @@
 {
     "components": {
         "sidebar": {
-            "width": {
-                "base": { "value": 320 },
-                "wide": { "value": 360 },
-                "narrow": { "value": 240 }
-            }
+            "width": { "value": 320 }
         }
     }
 }

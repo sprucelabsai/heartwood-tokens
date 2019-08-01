@@ -95,29 +95,6 @@
         }
       ]
     },
-    "assets/embed/scss": {
-      "transforms": ["attribute/cti", "name/cti/kebab", "asset/base64"],
-      "buildPath": "build/scss/",
-      "files": [{
-        "destination": "_image-assets.scss",
-        "format": "scss/defaults",
-        "filter": {
-          "attributes": {
-            "category": "asset"
-          }
-        }
-      }]
-    },
-    "json": {
-      "transformGroup": "js",
-      "buildPath": "build/json/",
-      "files": [
-        {
-          "destination": "dictionary.json",
-          "format": "json/flat-dash"
-        }
-      ]
-    },
     "js": {
       "transforms": [
         "attribute/cti",

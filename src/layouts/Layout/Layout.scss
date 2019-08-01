@@ -3,11 +3,11 @@
 .layout {
     &.layout--has-left-sidebar {
         min-width: $l__width-wide;
-        padding-left: $components__sidebar-width_base;
+        padding-left: $components__sidebar-width;
     }
 }
 
 .sidebar-nav-layout {
     min-width: $l__width-wide;
-    padding-left: $components__sidebar-width_base;
+    padding-left: $components__sidebar-width;
 }
