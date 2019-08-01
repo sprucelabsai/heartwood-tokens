@@ -241,7 +241,7 @@ StyleDictionary.registerFormat({
       dictionary.allProperties
         .map(prop => `"${prop.name}": ${JSON.stringify(prop.value, null, 2)}`)
         .join(",\n") +
-      "\n"
+      "\n}"
     );
   }
 });
