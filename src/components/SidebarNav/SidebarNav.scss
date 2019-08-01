@@ -2,18 +2,39 @@
 
 .sidebar-nav {
   position: fixed;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: $components__sidebar-width_base;
   height: 100%;
   overflow: scroll;
   background-color: $bg__dark;
+
+  .footer-primary {
+      border-top: 1px solid $border-color;
+      margin-top: $spacing__4;
+      padding: $spacing__4;
+  }
+
+  .footer-primary__inner {
+      flex-flow: column;
+  }
+
+  .footer-primary__text + .footer-primary__text {
+      margin-top: $spacing__4;
+  }
 }
 
 .sidebar-nav__header {
     position: sticky;
     top: 0;
     background-color: inherit;
+}
+
+.sidebar-nav__inner {
+    flex: 1 0 auto;
 }
 
 .sidebar-nav__section {

@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import Helmet from "react-helmet";
+import Footer from '../../components/Footer/Footer'
 import "./Layout.scss";
 import "../../stylesheets/import-once.scss";
 
@@ -19,6 +20,7 @@ const Layout = (props: ILayoutProps): React.ReactElement => (
       <title>Heartwood Tokens</title>
     </Helmet>
     {props.children}
+    <Footer />
   </div>
 );
 

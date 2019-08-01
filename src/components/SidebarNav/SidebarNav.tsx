@@ -1,5 +1,6 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
+import Footer from "../Footer/Footer";
 import "./SidebarNav.scss";
 
 interface ISidebarNav {
@@ -15,7 +16,8 @@ const SidebarNav = (props: ISidebarNav): React.ReactElement => {
           <h1 className="title-sm sidebar-nav__title">Heartwood Tokens</h1>
         </GatsbyLink>
       </div>
-      {children}
+      <div className="sidebar-nav__inner">{children}</div>
+      <Footer />
     </aside>
   );
 };

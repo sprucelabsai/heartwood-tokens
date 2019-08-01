@@ -1,0 +1,35 @@
+@import '../../stylesheets/heartwood';
+
+.footer-primary {
+    margin-top: $spacing__10;
+    padding: $spacing__4;
+    @extend %ts-code;
+    background-color: $bg__dark;
+    color: $text-color__copy-light;
+
+    @media screen and (min-width: $l__breakpoint-medium) {
+        padding: $spacing__6;
+    }
+}
+
+.footer-primary__inner {
+    @extend %mx-auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    max-width: $l__width-wide;
+
+    @media screen and (min-width: $l__breakpoint-medium) {
+        flex-flow: row;
+    }
+}
+
+.footer-primary__text {
+    + .footer-primary__text {
+        margin-top: $spacing__4;
+
+        @media screen and (min-width: $l__breakpoint-medium) {
+            margin-top: 0;
+        }
+    }
+}
