@@ -1,0 +1,56 @@
+@import '../../stylesheets/heartwood';
+
+.components-container {
+    padding: $spacing__6 $spacing__10;
+    max-width: $l__width;
+}
+
+.components-title {
+    margin-bottom: $spacing__8;
+}
+
+.components-subtitle,
+.components-subsection__title,
+.components-subsection__subtitle {
+    text-transform: capitalize;
+}
+
+.components-subtitle {
+    margin-bottom: $spacing__4;
+    text-transform: capitalize;
+}
+
+.components-subsection {
+    margin-top: $spacing__8;
+}
+.components-subsection__title {
+    margin-bottom: $spacing__3;
+}
+
+.components-subsection__subtitle {
+    margin-bottom: $spacing__2;
+    font-family: $font-family__code;
+    font-weight: $fw__bold;
+    color: $text-color__copy-light;
+}
+
+.components-label {
+    display: block;
+    margin-bottom: $spacing__2;
+}
+
+.components__token {
+    padding-top: $spacing__3;
+    padding-bottom: $spacing__3;
+    border-top: 1px solid $border-color;
+}
+
+.components__token-name,
+.components__token-value {
+    @extend %ts-code;
+}
+
+.components__token-name {
+    font-weight: $fw__bold;
+    color: $c__primary;
+}
