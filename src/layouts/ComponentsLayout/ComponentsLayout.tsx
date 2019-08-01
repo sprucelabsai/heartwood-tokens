@@ -22,7 +22,7 @@ const ComponentsLayout = (): React.ReactElement => {
                 return (
                   <div>
                     <h3 className="heading-lg">Base values</h3>
-                    <p>{`${itemKey}: ${item.value}`}</p>
+                    <p>{`$${item.name}: ${item.value}`}</p>
                   </div>
                 );
               }
@@ -39,7 +39,7 @@ const ComponentsLayout = (): React.ReactElement => {
                       return (
                         <div>
                           <label>Base Values</label>
-                          <p>{`${subitemKey}: ${subitem.value}`}</p>
+                          <p>{`$${subitem.name}: ${subitem.value}`}</p>
                         </div>
                       );
                     }
@@ -53,7 +53,7 @@ const ComponentsLayout = (): React.ReactElement => {
 
                           return (
                             <div key={stateKey}>
-                              <p>{`${stateKey}: ${state.value}`}</p>
+                              <p>{`$${state.name}: ${state.value}`}</p>
                             </div>
                           );
                         })}
