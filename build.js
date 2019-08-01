@@ -136,7 +136,6 @@ StyleDictionary.registerTransform({
     return matches.indexOf(prop.attributes.category) > -1;
   },
   transformer: prop => {
-    // Transform this into a Figma value
     const color = tinycolor(prop.value);
     const colorRgb = color.toRgb();
     const { r, g, b, a } = colorRgb;
