@@ -46,7 +46,12 @@ const AssetsLayout = (): React.ReactElement => {
                   const itemName = itemKey.split("-").join(" ");
                   if (item.value) {
                     return (
-                      <Asset key={itemKey} name={itemName} src={item.value} />
+                      <Asset
+                        key={itemKey}
+                        name={itemName}
+                        src={item.value}
+                        canDownload={typeKey !== "icon"}
+                      />
                     );
                   }
                   return (
@@ -61,6 +66,7 @@ const AssetsLayout = (): React.ReactElement => {
                             key={subitemKey}
                             name={subitemName}
                             src={subitem.value}
+                            canDownload={typeKey !== "icon"}
                           />
                         );
                       })}
