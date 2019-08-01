@@ -118,7 +118,11 @@ StyleDictionary.registerTransform({
   transformer: prop => {
     let name = prop.path;
     let newName = name
-      .map(word => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
+      .map(word => {
+        return word.split('-').map(str => {
+          return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+        }).join(' ')
+      })
       .join(" / ");
     return newName;
   }
@@ -236,13 +240,13 @@ StyleDictionary.registerFormat({
 StyleDictionary.registerFormat({
   name: "figma/color",
   formatter: dictionary => {
-    return (
-      "{\n" +
-      dictionary.allProperties
-        .map(prop => `"${prop.name}": ${JSON.stringify(prop.value, null, 2)}`)
-        .join(",\n") +
-      "\n}"
-    );
+    return `
+{
+  ${dictionary.allProperties.map(
+    prop => `"${prop.name}": ${JSON.stringify(prop.value, null, 2)}`
+  )}
+}
+`;
   }
 });
 
