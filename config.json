@@ -4,6 +4,17 @@
     "properties/**/*.js"
   ],
   "platforms": {
+    "css": {
+      "transformGroup": "figma",
+      "buildPath": "build/figma/",
+      "files": [
+        {
+          "destination": "figma.json",
+          "format": "figma/color",
+          "filter": "figma/shared-styles"
+        }
+      ]
+    },
     "scss": {
       "transformGroup": "heartwood/scss",
       "buildPath": "build/scss/",
