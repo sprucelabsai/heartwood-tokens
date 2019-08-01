@@ -48,7 +48,7 @@ export default class TokensLayout extends Component<
     const { platform, tokens, title } = this.props;
     let host = "";
     if (typeof window !== "undefined") {
-      host = window.location.href;
+      host = window.location.host;
     }
 
     return (
