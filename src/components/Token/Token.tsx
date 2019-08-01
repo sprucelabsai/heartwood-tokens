@@ -102,7 +102,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
       borderRadius: "2px"
     };
   }
-  if (category === "color" || category === "background-color" || tinycolor(scssToken.value).isValid()) {
+  if (category === "color" || category === "background-color" ) {
     style = {
       ...style,
       backgroundColor: scssToken.value
@@ -231,7 +231,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
           </Clipboard>
         </span>
         <span className="token__sample">
-          {(swatchCats.indexOf(category) > -1 || tinycolor(scssToken.value).isValid()) && (
+          {swatchCats.indexOf(category) > -1 && (
             <div className="token__swatch" style={style} />
           )}
           {textCats.indexOf(category) > -1 && (
