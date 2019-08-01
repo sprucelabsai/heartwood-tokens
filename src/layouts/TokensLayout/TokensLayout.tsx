@@ -60,7 +60,7 @@ export default class TokensLayout extends Component<
           <SidebarNav>
             <>
               <div className="sidebar-nav__section">
-                <PlatformSwitch platform={platform} onClick={() => null} />
+                <PlatformSwitch platform={platform} tokens={platform === 'scss' && tokens} />
               </div>
               {platform === "scss" && (
                 <div className="sidebar-nav__section">

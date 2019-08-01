@@ -12,6 +12,8 @@
 
 .platform-switch__select-wrapper {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .platform-switch__current-icon {
@@ -40,5 +42,14 @@
         outline: none;
         border-color: $c__primary;
         box-shadow: 0 0 0 3px rgba($c__primary, 0.3);
+    }
+}
+
+.platform-switch__download-btn {
+    margin-left: $spacing__4;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
     }
 }
