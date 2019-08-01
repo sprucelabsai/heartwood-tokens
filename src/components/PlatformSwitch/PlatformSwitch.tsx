@@ -19,7 +19,6 @@ const icons = {
 
 const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
   const { platform, tokens } = props;
-  console.log(JSON.stringify(tokens));
   return (
     <div className="platform-switch">
       <label className="platform-switch__label">Platform</label>
