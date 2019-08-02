@@ -119,9 +119,12 @@ StyleDictionary.registerTransform({
     let name = prop.path;
     let newName = name
       .map(word => {
-        return word.split('-').map(str => {
-          return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
-        }).join(' ')
+        return word
+          .split("-")
+          .map(str => {
+            return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+          })
+          .join(" ");
       })
       .join(" / ");
     return newName;
@@ -160,6 +163,19 @@ StyleDictionary.registerTransform({
   }
 });
 
+StyleDictionary.registerTransform({
+  name: "font-style/figma",
+  type: "value",
+  matcher: prop => {
+    const matches = ["font-family", "font-size", "line-height", "font-weight"];
+    return matches.indexOf(prop.attributes.category) > -1;
+  },
+  transformer: prop => {
+    const value = prop.value;
+    return value;
+  }
+});
+
 /**
  * Transform Groups
  */
@@ -184,7 +200,7 @@ StyleDictionary.registerTransformGroup({
 
 StyleDictionary.registerTransformGroup({
   name: "figma",
-  transforms: ["attribute/cti", "name/figma", "color/figma"]
+  transforms: ["attribute/cti", "size/px", "name/figma", "color/figma", "font-style/figma"]
 });
 
 /**
@@ -249,6 +265,50 @@ StyleDictionary.registerFormat({
   }
 });
 
+StyleDictionary.registerFormat({
+  name: 'figma/font-style',
+  formatter: dictionary => {
+    const obj = '{\n' + dictionary.allProperties.map(prop => `"${prop.name}": "${prop.value}"`).join(',\n') + '\n}';
+    let styles = dictionary.properties['platform']['figma']['font-style'];
+    let figmaStyles = {}
+    const buildStyle = ({baseStyle, dest, styleKey, fontStyle, nest = true}) => {
+      const key = nest ? `${styleKey} / ${fontStyle}` : styleKey
+      dest[key] = {
+        fontName: {
+          family: baseStyle.family.value.replace("'", ""),
+          style: fontStyle
+        },
+        fontSize: baseStyle['font-size'].value,
+        lineHeight: {
+          value: baseStyle['line-height'].value,
+          unit: baseStyle['line-height'].unit || 'PIXELS'
+        },
+        textDecoration: baseStyle.textDecoration ? baseStyle.textDecoration.value : '',
+        letterSpacing: {
+          value: baseStyle.letterSpacing ? baseStyle.letterSpacing.value : 0,
+          unit: baseStyle.letterSpacing ? baseStyle.letterSpacing.unit.toUpperCase() : 'PIXELS'
+        },
+        paragraphIndent: baseStyle.paragraphIndent ? baseStyle.paragraphIndent.value : 0,
+        paragraphSpacing: baseStyle.paragraphSpacing ? baseStyle.paragraphSpacing.value : 0,
+        textCase: baseStyle.textCase ? baseStyle.textCase.value.toUpperCase() : 'ORIGINAL'
+      }
+    }
+    
+    Object.keys(styles).forEach(styleKey => {
+      const baseStyle = styles[styleKey]
+      const fontStyles = styles[styleKey].styles.value;
+      if (fontStyles.length > 1) {
+        fontStyles.forEach(fontStyle => {
+          buildStyle({dest: figmaStyles, baseStyle, styleKey, fontStyle})
+        })
+      } else {
+        buildStyle({dest: figmaStyles, baseStyle, styleKey, fontStyle: baseStyle.styles.value[0], nest: false})
+      }
+    })
+    return JSON.stringify(figmaStyles, null, 2)
+  }
+})
+
 /**
  * Filters
  */
@@ -261,21 +321,24 @@ StyleDictionary.registerFilter({
   name: "tokens",
   matcher: prop =>
     prop.attributes.category !== "components" &&
-    prop.attributes.category !== "asset"
+    prop.attributes.category !== "asset" &&
+    prop.attributes.category !== "platform"
 });
 
 StyleDictionary.registerFilter({
   name: "tokens/android",
   matcher: prop =>
     prop.attributes.category === "color" ||
-    (prop.attributes.category === "size" && prop.attributes.type === "font")
+    (prop.attributes.category === "size" && prop.attributes.type === "font") &&
+    prop.attributes.category !== "platform"
 });
 
 StyleDictionary.registerFilter({
   name: "tokens/ios",
   matcher: prop =>
     prop.attributes.category === "color" ||
-    (prop.attributes.category === "size" && prop.attributes.type === "font")
+    (prop.attributes.category === "size" && prop.attributes.type === "font") &&
+    prop.attributes.category !== "platform"
 });
 
 StyleDictionary.registerFilter({
@@ -284,12 +347,29 @@ StyleDictionary.registerFilter({
 });
 
 StyleDictionary.registerFilter({
-  name: "figma/shared-styles",
+  name: "figma/color-styles",
   matcher: prop => {
     const matches = ["color", "text-color", "background-color", "border-color"];
     return matches.indexOf(prop.attributes.category) > -1;
   }
 });
+
+StyleDictionary.registerFilter({
+  name: "figma/font-styles",
+  matcher: prop => {
+    const match = prop.attributes.category === 'platform' && prop.attributes.type === 'figma' && prop.attributes.item === 'font-style';
+    return match;
+  }
+});
+
+StyleDictionary.registerFilter({
+  name: 'figma/shared-styles',
+  matcher: prop => {
+    const matches = ["color", "text-color", "background-color", "border-color"];
+    const match = prop.attributes.category === 'platform' && prop.attributes.type === 'figma' && prop.attributes.item === 'font-style';
+    return matches.indexOf(prop.attributes.category) > -1 || match
+  }
+})
 
 /**
  * Build command

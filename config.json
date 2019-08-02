@@ -9,13 +9,18 @@
       "buildPath": "build/figma/",
       "files": [
         {
-          "destination": "figma.json",
+          "destination": "figma-color-styles.json",
           "format": "figma/color",
-          "filter": "figma/shared-styles"
+          "filter": "figma/color-styles"
+        },
+        {
+          "destination": "figma-font-styles.json",
+          "format": "figma/font-style",
+          "filter": "figma/font-styles"
         }, {
           "destination": "../js/tokens-figma.js",
           "format": "javascript/module",
-          "filter": "figma/shared-styles"
+          "filter": "figma/color-styles"
         }
       ]
     },
