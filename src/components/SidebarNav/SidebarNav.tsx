@@ -1,6 +1,7 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import Footer from "../Footer/Footer";
+import logo from '../../images/spruce-logo.svg'
 import "./SidebarNav.scss";
 
 interface ISidebarNav {
@@ -13,6 +14,7 @@ const SidebarNav = (props: ISidebarNav): React.ReactElement => {
     <aside className="sidebar-nav">
       <div className="sidebar-nav__header">
         <GatsbyLink className="sidebar-nav__title-link" to="/">
+          <img className="sidebar-nav__logo" src={logo} width={28} />
           <h1 className="title-sm sidebar-nav__title">Heartwood Tokens</h1>
         </GatsbyLink>
       </div>
