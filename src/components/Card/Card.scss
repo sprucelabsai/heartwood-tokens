@@ -1,0 +1,17 @@
+@import "../../stylesheets/heartwood";
+
+.card {
+    display: flex;
+    padding: $spacing__4;
+    background-color: $bg__light;
+    box-shadow: $layer__raised;
+    border-radius: 2px;
+}
+
+.card__icon + .card__body {
+    margin-left: $spacing__2;
+}
+
+.card__body {
+    font-size: $fs-body;
+}

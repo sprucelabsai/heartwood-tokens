@@ -1,0 +1,7 @@
+@import "../../stylesheets/heartwood";
+
+.figma-tokens__card {
+  @extend %my-8;
+  display: inline-block;
+  text-decoration: none;
+}

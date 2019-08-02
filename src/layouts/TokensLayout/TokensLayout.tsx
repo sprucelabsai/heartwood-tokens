@@ -24,6 +24,7 @@ interface ITokensLayoutProps {
   platform: Platform;
   tokens: any;
   hasLeftSidebar?: boolean;
+  children?: React.ReactElement
 }
 
 interface ITokensLayoutState {
@@ -46,7 +47,7 @@ export default class TokensLayout extends Component<
 
   public render(): React.ReactElement {
     const { sizeUnit } = this.state;
-    const { platform, tokens, title } = this.props;
+    const { platform, tokens, title, children } = this.props;
     let host = "";
     if (typeof window !== "undefined") {
       host = window.location.host;
@@ -117,6 +118,7 @@ export default class TokensLayout extends Component<
           </SidebarNav>
           <main className="tokens-container">
             <h1 className="title-lg assets-section__inner">{title}</h1>
+            {children && children}
             {tokens &&
               Object.keys(tokens).map(cat => (
                 <section className="token-category-section" key={cat} id={cat}>
