@@ -1,0 +1,44 @@
+@import "../../stylesheets/heartwood";
+
+.figma-tokens__resources-headline {
+  @extend %mt-8;
+  @extend %ts-title-sm;
+}
+
+.resource-card {
+  @extend %mb-8;
+  @extend %mt-4;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 300ms ease;
+  }
+
+  &:before {
+    box-shadow: $layer__raised;
+  }
+
+  &:after {
+    box-shadow: $layer__floating;
+    opacity: 0;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 0;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+}

@@ -16,7 +16,7 @@ const platNames = {
   scss: "Web",
   ios: "Swift",
   android: "Android",
-  figma: "figma"
+  figma: "Figma"
 };
 
 interface ITokensLayoutProps {

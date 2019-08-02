@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.scss";
 
-interface ICardProps {
+export interface ICardProps {
   icon?: {
     src: string;
     width?: number;
