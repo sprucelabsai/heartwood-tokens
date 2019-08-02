@@ -268,7 +268,6 @@ StyleDictionary.registerFormat({
 StyleDictionary.registerFormat({
   name: 'figma/font-style',
   formatter: dictionary => {
-    const obj = '{\n' + dictionary.allProperties.map(prop => `"${prop.name}": "${prop.value}"`).join(',\n') + '\n}';
     let styles = dictionary.properties['platform']['figma']['font-style'];
     let figmaStyles = {}
     const buildStyle = ({baseStyle, dest, styleKey, fontStyle, nest = true}) => {
