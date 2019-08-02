@@ -1,7 +1,13 @@
 @import "../../stylesheets/heartwood";
 
+.figma-tokens__resources-headline {
+    @extend %mt-8;
+    @extend %ts-title-sm;
+}
+
 .figma-tokens__card {
-  @extend %my-8;
+  @extend %mb-8;
+  @extend %mt-4;
   display: inline-block;
   position: relative;
   text-decoration: none;
