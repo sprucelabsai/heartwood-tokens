@@ -24,6 +24,14 @@
    > * + * { margin-top: $spacing__4;}
 }
 
+.index-section__inner--narrow {
+    max-width: $l__width;
+    margin-left: auto;
+    margin-right: auto;
+
+   > * + * { margin-top: $spacing__4;}
+}
+
 .index-section__inner--flex {
     display: flex;
     flex-flow: column;
@@ -160,9 +168,12 @@
     p:first-of-type { display: none;}
 
     h2:not(:first-of-type),
-    h3,
-    h4 {
+    h3 {
         margin-top: $spacing__8;
+    }
+    
+    h4 {
+        margin-top: $spacing__6;
     }
 
     h2 {

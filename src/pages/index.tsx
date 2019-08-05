@@ -75,7 +75,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
             </div>
           </section>
           <section className="index-section index-section">
-            <div className="index-section__inner">
+            <div className="index-section__inner--narrow">
               <ReactMarkdown source={readme} className="index__md" />
             </div>
           </section>
