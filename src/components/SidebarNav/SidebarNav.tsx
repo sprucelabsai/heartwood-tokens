@@ -15,7 +15,7 @@ const SidebarNav = (props: ISidebarNav): React.ReactElement => {
       <div className="sidebar-nav__header">
         <GatsbyLink className="sidebar-nav__title-link" to="/">
           <img className="sidebar-nav__logo" src={logo} width={28} />
-          <h1 className="title-sm sidebar-nav__title">Heartwood Tokens</h1>
+          <h1 className="sidebar-nav__title">Heartwood Tokens</h1>
         </GatsbyLink>
       </div>
       <div className="sidebar-nav__inner">{children}</div>
