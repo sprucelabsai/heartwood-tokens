@@ -20,6 +20,8 @@
     max-width: $l__width-wide;
     margin-left: auto;
     margin-right: auto;
+
+   > * + * { margin-top: $spacing__4;}
 }
 
 .index-section__inner--flex {
