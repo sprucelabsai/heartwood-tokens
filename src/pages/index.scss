@@ -184,11 +184,13 @@
 
     code {
         font-weight: $fw__bold;
+        line-height: $lh-body;
     }
 
     pre {
         padding: $spacing__2;
-        color: $text-color__code;
+        color: $text-color__code-blue;
         background-color: $c__greyscale-9;
+        border-radius: 0.25rem;
     }
 }
