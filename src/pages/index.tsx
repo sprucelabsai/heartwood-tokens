@@ -1,6 +1,8 @@
 import { graphql, Link } from "gatsby";
 import * as React from "react";
+import ReactMarkdown from 'react-markdown'
 import Layout from "../layouts/Layout/Layout";
+import readme from '../../README.md'
 import logo from "../images/spruce-logo.svg";
 import globalTokensImage from "../images/global-tokens.png";
 import assetsImage from "../images/assets.png";
@@ -31,10 +33,9 @@ export const indexPageQuery = graphql`
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     const { name, tagline } = this.props.data.site.siteMetadata;
-
     return (
       <Layout>
-        <div className="debhug">
+        <div>
           <section className="index-intro index-section">
             <div className="index-section__inner">
               <img src={logo} width={80} alt="spruce logo" />
@@ -75,72 +76,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           </section>
           <section className="index-section index-section">
             <div className="index-section__inner">
-              <h2 className="title-sm">Usage</h2>
-                <h3>Sass</h3>
-                <h4>Install via yarn or npm</h4>
-                <p>
-                  <code>yarn install @sprucelabs/heartwood-tokens</code> or{" "}
-                  <code>npm install @sprucelabs/heartwood-tokens</code>
-                </p>
-
-                <h4>Import _tokens.scss</h4>
-                <p>
-                  The easiest way to consume Heartwood Tokens is to import them
-                  into a <code>.scss</code> file and use the variables generated
-                  by Style Dictionary.
-                </p>
-                <p>
-                  <code>
-                    @import "~@sprucelabs/heartwood-tokens/build/scss/tokens";
-                  </code>
-                </p>
-                <p>
-                  <strong>Note: </strong>depending on how you want to build your
-                  styles, it may be necessary to update your{" "}
-                  <code>webpack.config.js</code>, <code>gulpfile.js</code>, or
-                  whatever other build tool you're using.
-                </p>
-
-                <h4>Import _components.scss</h4>
-                <p>
-                  Once global tokens are imported, you can also use component
-                  tokens.
-                </p>
-                <p>
-                  <code>
-                    @import
-                    "~@sprucelabs/heartwood-tokens/build/scss/components";
-                  </code>
-                </p>
-
-                <h4>Theming</h4>
-                <p>
-                  All of the variables generated in Heartwood Tokens use a{" "}
-                  <code>!default</code> flag to make theming easy. The best way
-                  to override variables is to import your overrides first, and
-                  then import tokens:
-                </p>
-                <p>
-                  <code>@import "my-theme.scss"</code>
-                </p>
-                <p>
-                  <code>
-                    @import "~@sprucelabs/heartwood-tokens/build/scss/tokens";
-                  </code>
-                </p>
-                <p>
-                  <code>
-                    @import
-                    "~@sprucelabs/heartwood-tokens/build/scss/components";
-                  </code>
-                </p>
-                <p>
-                  In <code>my-theme.scss</code>, you could for example change
-                  the primary color by adding:
-                </p>
-                <p>
-                  <code>$c__primary: #4c3cff;</code>
-                </p>
+              <ReactMarkdown source={readme} className="index__md" />
             </div>
           </section>
         </div>

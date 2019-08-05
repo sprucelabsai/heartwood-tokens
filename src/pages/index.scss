@@ -154,3 +154,41 @@
 .index-page-link__subtitle {
     color: $text-color__copy-light;
 }
+
+.index__md {
+    h1,
+    p:first-of-type { display: none;}
+
+    h2:not(:first-of-type),
+    h3,
+    h4 {
+        margin-top: $spacing__8;
+    }
+
+    h2 {
+        @extend %ts-title-sm;
+    }
+
+    h3 {
+        @extend %ts-heading-lg;
+    }
+
+    h4 {
+        @extend %ts-heading-sm;
+    }
+
+    p,
+    pre {
+        margin-top: $spacing__3;
+    }
+
+    code {
+        font-weight: $fw__bold;
+    }
+
+    pre {
+        padding: $spacing__2;
+        color: $text-color__code;
+        background-color: $c__greyscale-9;
+    }
+}
