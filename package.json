@@ -1,5 +1,5 @@
 {
-  "name": "heartwood-tokens",
+  "name": "@sprucelabs/heartwood-tokens",
   "version": "1.0.0",
   "description": "Design tokens for the Heartwood design system",
   "main": "build.js",
