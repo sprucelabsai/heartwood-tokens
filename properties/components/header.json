@@ -1,0 +1,7 @@
+{
+    "components": {
+        "header": {
+            "height": { "value": 48 }
+        }
+    }
+}

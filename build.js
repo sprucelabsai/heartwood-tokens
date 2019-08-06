@@ -57,11 +57,11 @@ StyleDictionary.registerTransform({
     // Build the name
     let newName = newCat;
 
-    if (category === 'components' && type) {
+    if (category === "components" && type) {
       newName = type;
     }
 
-    if (type && type !== "base" && category !== 'components') {
+    if (type && type !== "base" && category !== "components") {
       newName += `__${type}`;
     }
 
@@ -94,7 +94,9 @@ StyleDictionary.registerTransform({
     (prop.attributes.category === "components" &&
       prop.attributes.item === "border-radius") ||
     (prop.attributes.category === "components" &&
-      (prop.attributes.item === 'size' || prop.attributes.item === "width")),
+      (prop.attributes.item === "size" ||
+        prop.attributes.item === "width" ||
+        prop.attributes.item === "height")),
   transformer: prop => {
     if (prop.original.value === 0) {
       return "0";
@@ -204,7 +206,13 @@ StyleDictionary.registerTransformGroup({
 
 StyleDictionary.registerTransformGroup({
   name: "figma",
-  transforms: ["attribute/cti", "size/px", "name/figma", "color/figma", "font-style/figma"]
+  transforms: [
+    "attribute/cti",
+    "size/px",
+    "name/figma",
+    "color/figma",
+    "font-style/figma"
+  ]
 });
 
 /**
@@ -270,47 +278,69 @@ StyleDictionary.registerFormat({
 });
 
 StyleDictionary.registerFormat({
-  name: 'figma/font-style',
+  name: "figma/font-style",
   formatter: dictionary => {
-    let styles = dictionary.properties['platform']['figma']['font-style'];
-    let figmaStyles = {}
-    const buildStyle = ({baseStyle, dest, styleKey, fontStyle, nest = true}) => {
-      const key = nest ? `${styleKey} / ${fontStyle}` : styleKey
+    let styles = dictionary.properties["platform"]["figma"]["font-style"];
+    let figmaStyles = {};
+    const buildStyle = ({
+      baseStyle,
+      dest,
+      styleKey,
+      fontStyle,
+      nest = true
+    }) => {
+      const key = nest ? `${styleKey} / ${fontStyle}` : styleKey;
       dest[key] = {
         fontName: {
           family: baseStyle.family.value.replace("'", ""),
           style: fontStyle
         },
-        fontSize: baseStyle['font-size'].value,
+        fontSize: baseStyle["font-size"].value,
         lineHeight: {
-          value: baseStyle['line-height'].value,
-          unit: baseStyle['line-height'].unit || 'PIXELS'
+          value: baseStyle["line-height"].value,
+          unit: baseStyle["line-height"].unit || "PIXELS"
         },
-        textDecoration: baseStyle.textDecoration ? baseStyle.textDecoration.value : '',
+        textDecoration: baseStyle.textDecoration
+          ? baseStyle.textDecoration.value
+          : "",
         letterSpacing: {
           value: baseStyle.letterSpacing ? baseStyle.letterSpacing.value : 0,
-          unit: baseStyle.letterSpacing ? baseStyle.letterSpacing.unit.toUpperCase() : 'PIXELS'
+          unit: baseStyle.letterSpacing
+            ? baseStyle.letterSpacing.unit.toUpperCase()
+            : "PIXELS"
         },
-        paragraphIndent: baseStyle.paragraphIndent ? baseStyle.paragraphIndent.value : 0,
-        paragraphSpacing: baseStyle.paragraphSpacing ? baseStyle.paragraphSpacing.value : 0,
-        textCase: baseStyle.textCase ? baseStyle.textCase.value.toUpperCase() : 'ORIGINAL'
-      }
-    }
-    
+        paragraphIndent: baseStyle.paragraphIndent
+          ? baseStyle.paragraphIndent.value
+          : 0,
+        paragraphSpacing: baseStyle.paragraphSpacing
+          ? baseStyle.paragraphSpacing.value
+          : 0,
+        textCase: baseStyle.textCase
+          ? baseStyle.textCase.value.toUpperCase()
+          : "ORIGINAL"
+      };
+    };
+
     Object.keys(styles).forEach(styleKey => {
-      const baseStyle = styles[styleKey]
+      const baseStyle = styles[styleKey];
       const fontStyles = styles[styleKey].styles.value;
       if (fontStyles.length > 1) {
         fontStyles.forEach(fontStyle => {
-          buildStyle({dest: figmaStyles, baseStyle, styleKey, fontStyle})
-        })
+          buildStyle({ dest: figmaStyles, baseStyle, styleKey, fontStyle });
+        });
       } else {
-        buildStyle({dest: figmaStyles, baseStyle, styleKey, fontStyle: baseStyle.styles.value[0], nest: false})
+        buildStyle({
+          dest: figmaStyles,
+          baseStyle,
+          styleKey,
+          fontStyle: baseStyle.styles.value[0],
+          nest: false
+        });
       }
-    })
-    return JSON.stringify(figmaStyles, null, 2)
+    });
+    return JSON.stringify(figmaStyles, null, 2);
   }
-})
+});
 
 /**
  * Filters
@@ -332,16 +362,18 @@ StyleDictionary.registerFilter({
   name: "tokens/android",
   matcher: prop =>
     prop.attributes.category === "color" ||
-    (prop.attributes.category === "size" && prop.attributes.type === "font") &&
-    prop.attributes.category !== "platform"
+    (prop.attributes.category === "size" &&
+      prop.attributes.type === "font" &&
+      prop.attributes.category !== "platform")
 });
 
 StyleDictionary.registerFilter({
   name: "tokens/ios",
   matcher: prop =>
     prop.attributes.category === "color" ||
-    (prop.attributes.category === "size" && prop.attributes.type === "font") &&
-    prop.attributes.category !== "platform"
+    (prop.attributes.category === "size" &&
+      prop.attributes.type === "font" &&
+      prop.attributes.category !== "platform")
 });
 
 StyleDictionary.registerFilter({
@@ -360,19 +392,25 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFilter({
   name: "figma/font-styles",
   matcher: prop => {
-    const match = prop.attributes.category === 'platform' && prop.attributes.type === 'figma' && prop.attributes.item === 'font-style';
+    const match =
+      prop.attributes.category === "platform" &&
+      prop.attributes.type === "figma" &&
+      prop.attributes.item === "font-style";
     return match;
   }
 });
 
 StyleDictionary.registerFilter({
-  name: 'figma/shared-styles',
+  name: "figma/shared-styles",
   matcher: prop => {
     const matches = ["color", "text-color", "background-color", "border-color"];
-    const match = prop.attributes.category === 'platform' && prop.attributes.type === 'figma' && prop.attributes.item === 'font-style';
-    return matches.indexOf(prop.attributes.category) > -1 || match
+    const match =
+      prop.attributes.category === "platform" &&
+      prop.attributes.type === "figma" &&
+      prop.attributes.item === "font-style";
+    return matches.indexOf(prop.attributes.category) > -1 || match;
   }
-})
+});
 
 /**
  * Build command
