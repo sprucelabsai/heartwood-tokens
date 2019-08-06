@@ -1,0 +1,23 @@
+{
+    "text-color": {
+        "copy": {
+            "base": { "value": "{color.greyscale.9.value}" },
+            "light": { "value": "{color.greyscale.7.value}" },
+            "lighter": {
+                "value": "{color.greyscale.5.value}",
+                "comment": "Note that this color should only be used for disabled elements and input placeholders"
+            }
+        },
+        "code": {
+            "base": { "value": "#fff" },
+            "red": { "value": "#f07971" },
+            "orange": { "value": "#f78C6C" },
+            "yellow": { "value": "#ffce6b" },
+            "green": { "value": "#c3e88d" },
+            "blue": { "value": "#9beded" },
+            "indigo": { "value": "#82a3ff" },
+            "violet": { "value": "#cd92ea" },
+            "grey": { "value": "#b0b5c1" }
+        }
+    }
+}

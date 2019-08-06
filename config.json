@@ -1,58 +1,54 @@
 {
-  "source": ["properties/**/*.json", "properties/**/*.js"],
+  "source": [
+    "properties/**/*.json",
+    "properties/**/*.js"
+  ],
   "platforms": {
+    "figma": {
+      "transformGroup": "figma",
+      "buildPath": "build/figma/",
+      "files": [
+        {
+          "destination": "figma-color-styles.json",
+          "format": "figma/color",
+          "filter": "figma/color-styles"
+        },
+        {
+          "destination": "figma-font-styles.json",
+          "format": "figma/font-style",
+          "filter": "figma/font-styles"
+        }, {
+          "destination": "../js/tokens-figma.js",
+          "format": "javascript/module",
+          "filter": "figma/color-styles"
+        }
+      ]
+    },
     "scss": {
       "transformGroup": "heartwood/scss",
       "buildPath": "build/scss/",
       "files": [
         {
-          "destination": "_font.scss",
-          "filter": {
-            "attributes": {
-              "category": "font"
-            }
-          },
-          "format": "scss/defaults"
+          "destination": "_tokens.scss",
+          "format": "scss/map-multi",
+          "mapPrefix": "hw",
+          "filter": "tokens"
         },
         {
-          "destination": "_colors.scss",
-          "filter": {
-            "attributes": {
-              "category": "color"
-            }
-          },
-          "format": "scss/defaults"
+          "destination": "_components.scss",
+          "format": "scss/map-multi",
+          "mapPrefix": "hw",
+          "filter": "components"
         },
         {
-          "destination": "_dimension.scss",
-          "filter": {
-            "attributes": {
-              "category": "dimension"
-            }
-          },
-          "format": "scss/defaults"
+          "destination": "../js/tokens-scss.js",
+          "format": "javascript/module",
+          "filter": "tokens"
         },
         {
-          "destination": "_layer.scss",
-          "filter": {
-            "attributes": {
-              "category": "layer"
-            }
-          },
-          "format": "scss/defaults"
-        },
-        {
-          "destination": "_border.scss",
-          "filter": {
-            "attributes": {
-              "category": "border"
-            }
-          },
-          "format": "scss/defaults"
-        },
-        {
-          "destination": "index.scss",
-          "format": "scss/index"
+          "destination": "../js/components-scss.js",
+          "format": "javascript/module",
+          "filter": "components"
         }
       ]
     },
@@ -67,56 +63,11 @@
         {
           "destination": "colors.xml",
           "format": "android/colors"
-        }
-      ]
-    },
-    "ios": {
-      "transformGroup": "ios",
-      "buildPath": "build/ios/",
-      "files": [
+        }, 
         {
-          "destination": "StyleDictionaryColor.h",
-          "format": "ios/colors.h",
-          "className": "StyleDictionaryColor",
-          "type": "StyleDictionaryColorName",
-          "filter": {
-            "attributes": {
-              "category": "color"
-            }
-          }
-        },
-        {
-          "destination": "StyleDictionaryColor.m",
-          "format": "ios/colors.m",
-          "className": "StyleDictionaryColor",
-          "type": "StyleDictionaryColorName",
-          "filter": {
-            "attributes": {
-              "category": "color"
-            }
-          }
-        },
-        {
-          "destination": "StyleDictionarySize.h",
-          "format": "ios/static.h",
-          "className": "StyleDictionarySize",
-          "type": "float",
-          "filter": {
-            "attributes": {
-              "category": "size"
-            }
-          }
-        },
-        {
-          "destination": "StyleDictionarySize.m",
-          "format": "ios/static.m",
-          "className": "StyleDictionarySize",
-          "type": "float",
-          "filter": {
-            "attributes": {
-              "category": "size"
-            }
-          }
+          "destination": "../js/tokens-android.js",
+          "format": "javascript/module",
+          "filter": "tokens/android"
         }
       ]
     },
@@ -129,6 +80,11 @@
           "format": "ios-swift/class.swift",
           "className": "StyleDictionary",
           "filter": {}
+        }, 
+        {
+          "destination": "../js/tokens-ios-swift.js",
+          "format": "javascript/module",
+          "filter": "tokens/ios"
         }
       ]
     },
@@ -159,13 +115,29 @@
         }
       ]
     },
-    "json": {
-      "transformGroup": "js",
-      "buildPath": "build/json/",
+    "js": {
+      "transforms": [
+        "attribute/cti",
+        "name/cti/pascal",
+        "size/pxToRem",
+        "color/hex",
+        "asset/base64"
+      ],
+      "buildPath": "build/js/",
       "files": [
         {
-          "destination": "dictionary.json",
-          "format": "json/flat-dash"
+          "destination": "tokens.js",
+          "format": "javascript/module",
+          "filter": "tokens"
+        },
+        {
+          "destination": "assets-base64.js",
+          "format": "javascript/module",
+          "filter": {
+            "attributes": {
+              "category": "asset"
+            }
+          }
         }
       ]
     }

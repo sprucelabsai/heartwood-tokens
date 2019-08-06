@@ -1,0 +1,103 @@
+{
+    "platform": {
+        "figma": {
+            "font-style": {
+                "UI": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.base.ui.value}"},
+                    "styles": {"value": ["Regular", "SemiBold"]},
+                    "line-height": { "value": "{line-height.base.ui.value}"}
+                },
+                "Body": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.base.body.value}"},
+                    "styles": {"value": ["Regular", "SemiBold"]},
+                    "line-height": { "value": "{line-height.base.body.value}"}
+                },
+                "Label": {
+                    "family": { "value": "{font-family.label.value}"},
+                    "font-size": { "value": "{font-size.base.label.value}"},
+                    "styles": {"value": ["Regular", "SemiBold"]},
+                    "line-height": { "value": "{line-height.base.label.value}"},
+                    "textCase": "UPPER",
+                    "letterSpacing": {
+                        "value": 1,
+                        "unit": "pixels"
+                    }
+                },
+                "Code": {
+                    "family": { "value": "{font-family.code.value}"},
+                    "font-size": { "value": "{font-size.base.code.value}"},
+                    "styles": {"value": ["Regular", "SemiBold"]},
+                    "line-height": { "value": "{line-height.base.code.value}"}
+                },
+                "Subheading Small": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.base.subheading-small.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.base.subheading-small.value}"}
+                },
+                "Subheading Large / Base": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.base.subheading-large.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.base.subheading-large.value}"}
+                },
+                "Subheading Large / Desktop": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.desktop.subheading-large.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.desktop.subheading-large.value}"}
+                },
+                "Heading Small / Base": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.base.heading-small.value}"},
+                    "styles": {"value": ["Normal"]},
+                    "line-height": { "value": "{line-height.base.heading-small.value}"}
+                },
+                "Heading Small / Desktop": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.desktop.heading-small.value}"},
+                    "styles": {"value": ["Normal"]},
+                    "line-height": { "value": "{line-height.desktop.heading-small.value}"}
+                },
+                "Heading Large / Base": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.base.heading-large.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.base.heading-large.value}"}
+                },
+                "Heading Large / Desktop": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.desktop.heading-large.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.desktop.heading-large.value}"}
+                },
+                "Title Small / Base": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.base.title-small.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.base.title-small.value}"}
+                },
+                "Title Small / Desktop": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.desktop.title-small.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.desktop.title-small.value}"}
+                },
+                "Title Large / Base": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.base.title-large.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.base.title-large.value}"}
+                },
+                "Title Large / Desktop": {
+                    "family": { "value": "{font-family.primary.value}"},
+                    "font-size": { "value": "{font-size.desktop.title-large.value}"},
+                    "styles": {"value": ["SemiBold"]},
+                    "line-height": { "value": "{line-height.desktop.title-large.value}"}
+                }
+            }
+        }
+    }
+}

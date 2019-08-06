@@ -1,0 +1,176 @@
+@import '../heartwood';
+
+/**
+* Color classes
+*/
+
+// Background Colors
+@each $label, $value in $hw-background-color {
+    .bg-#{$label} {
+        background-color: $value;
+    }
+}
+
+// Border Colors
+@each $label, $value in $hw-border-color {
+    .border-color-#{$label} {
+        border-color: $value;
+    }
+}
+
+// Colors
+@each $label, $value in $hw-color {
+    .color-#{$label} {
+        color: $value;
+    }
+}
+
+// Text Colors
+@each $label, $value in $hw-text-color {
+    .tc-#{$label} {
+        color: $value;
+    }
+}
+
+
+/**
+* Font classes
+*/
+
+// Font Families
+@each $label, $value in $hw-font-family {
+    .ff-#{$label} {
+        font-family: $value;
+    }
+}
+
+// Font Sizes
+@each $label, $value in $hw-font-size {
+    .fs-#{$label} {
+        font-size: $value;
+    }
+}
+
+// Line Heights
+@each $label, $value in $hw-line-height {
+    .line-height-#{$label} {
+        line-height: $value;
+    }
+}
+
+// Font Weights
+@each $label, $value in $hw-font-weight {
+    .fw-#{$label} {
+        font-weight: $value;
+    }
+}
+
+
+/**
+* Layer
+*/
+@each $label, $value in $hw-layer {
+    .layer-#{$label} {
+        box-shadow: $value;
+    }
+}
+
+
+/**
+* Box Model
+*/
+
+// Margin
+.mx-auto {
+    @extend %mx-auto;
+}
+
+$sides: (
+    'all': '',
+    'x': '',
+    'y': '',
+    't': 'top',
+    'r': 'right',
+    'b': 'bottom',
+    'l': 'left'
+);
+
+@each $id, $side in $sides {
+    @each $label, $value in $hw-spacing {
+        @if $id == 'all' {
+            .m-#{$label} {
+                @extend %m-#{$label};
+            }
+        } @else if $id == 'x' {
+            .mx-#{$label} {
+                @extend %mx-#{$label};
+            }
+        } @else if $id == 'y' {
+            .my-#{$label} {
+                @extend %my-#{$label};
+            }
+        } @else {
+            .m#{$id}-#{$label} {
+                @extend %m#{$id}-#{$label};
+            }
+        }
+    }
+}
+
+
+// Padding
+@each $id, $side in $sides {
+    @each $label, $value in $hw-spacing {
+        @if $id == 'all' {
+            .p-#{$label} {
+                @extend %p-#{$label};
+            }
+        } @else if $id == 'x' {
+            .px-#{$label} {
+                @extend %px-#{$label};
+            }
+        } @else if $id == 'y' {
+            .py-#{$label} {
+                @extend %py-#{$label};
+            }
+        } @else {
+            .p#{$id}-#{$label} {
+                @extend %p#{$id}-#{$label};
+            }
+        }
+    }
+}
+
+
+
+/**
+* Layout
+*/
+
+.container {
+    max-width: $l__width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container--tight {
+    max-width: $l__width-tight;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container--wide {
+    max-width: $l__width-wide;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/**
+* Debugging for layout
+*/
+
+.debug,
+.debug * {
+    background-color: rgba($c__primary, 0.05);
+}

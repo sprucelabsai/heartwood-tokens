@@ -1,0 +1,8 @@
+{
+    "size": {
+        "tap": {
+            "base": { "value": 48 },
+            "small": { "value": 36 }
+        }
+    }
+}

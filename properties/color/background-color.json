@@ -1,0 +1,13 @@
+{
+    "background-color": {
+        "base": {
+            "value": "#f9fafc"
+        },
+        "light": {
+            "value": "#fff"
+        },
+        "dark": {
+            "value": "{color.greyscale.0.value}"
+        }
+    }
+}

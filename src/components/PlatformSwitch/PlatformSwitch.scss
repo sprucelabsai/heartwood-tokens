@@ -1,0 +1,55 @@
+@import '../../stylesheets/heartwood';
+
+.platform-switch {
+    padding-top: $spacing__4;
+    padding-bottom: $spacing__4;
+    border-bottom: 1px solid $border-color;
+}
+.platform-switch__label {
+    display: block;
+    margin-bottom: $spacing__1;
+}
+
+.platform-switch__select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.platform-switch__current-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translate(0, -50%);
+}
+
+.platform-switch__select {
+    width: 100%;
+    height: 3rem;
+    padding: 0 $spacing__4 0 $spacing__8;
+    background-color: $bg;
+    border: 1px solid transparent;
+    color: $text-color__copy;
+    box-shadow: $layer__raised;
+    cursor: pointer;
+    appearance: none;
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $c__primary;
+        box-shadow: 0 0 0 3px rgba($c__primary, 0.3);
+    }
+}
+
+.platform-switch__download-btn {
+    margin-left: $spacing__4;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}

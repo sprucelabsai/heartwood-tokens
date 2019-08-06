@@ -1,9 +1,0 @@
-{
-    "font": {
-        "line-height": {
-            "base": { "value": 1.25 },
-            "tight": { "value": 1.125 },
-            "loose": { "value": 1.5 }
-        }
-    }
-}

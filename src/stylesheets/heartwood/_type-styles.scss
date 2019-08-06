@@ -1,0 +1,77 @@
+@mixin typestyle($size: 'body', $family: 'primary', $weight: 'normal') {
+	// Only add the font family if it is not the base font family
+	@if ($family != 'primary' and map-has-key($hw-font-family, $family)) {
+		font-family: map-get($hw-font-family, $family);
+	}
+	// Check the map of mobile sizes first
+	@if map-has-key($hw-font-size, $size) {
+		font-size: map-get($hw-font-size, $size);
+	} @else {
+		// If there's no mobile/desktop sizing, make sure the size exists in the base size map
+		@if map-has-key($hw-font-size, $size) {
+			font-size: map-get($hw-font-size, $size);
+		} @else {
+			// If not, this won't fail, but let's tell the developer
+			@warn 'This is not a step of the Heartwood Type Scale!';
+		}
+	}
+	@if map-has-key($hw-line-height, $size) {
+		line-height: map-get($hw-line-height, $size);
+	} @else {
+		line-height: map-get($hw-line-height, $size);
+	}
+	font-weight: map-get($hw-font-weight, $weight);
+
+	@if map-has-key($hw-font-size, 'desktop-#{$size}') {
+		@media screen and (min-width: $l__breakpoint-small) {
+			font-size: map-get($hw-font-size, 'desktop-#{$size}');
+			line-height: map-get($hw-line-height, 'desktop-#{$size}');
+		}
+	}
+}
+
+/**
+Pre-rolled type styles
+*/
+// New styles
+%ts-title-lg {
+	@include typestyle($size: 'title-large', $weight: 'bold');
+}
+%ts-title-sm {
+	@include typestyle($size: 'title-small', $weight: 'bold');
+}
+%ts-heading-lg {
+	@include typestyle($size: 'heading-large', $weight: 'bold');
+}
+%ts-heading-sm {
+	@include typestyle($size: 'heading-small');
+}
+%ts-heading-sm--bold {
+	@include typestyle($size: 'heading-small', $weight: 'bold');
+}
+%ts-subheading-lg {
+	@include typestyle($size: 'subheading-large', $weight: 'bold');
+}
+%ts-subheading-sm {
+	@include typestyle($size: 'subheading-small', $weight: 'bold');
+}
+%ts-body {
+	@include typestyle();
+}
+%ts-body--bold {
+	@include typestyle($weight: 'bold');
+}
+%ts-ui {
+	@include typestyle($size: 'ui');
+}
+%ts-ui--bold {
+	@include typestyle($size: 'ui', $weight: 'bold');
+}
+%ts-label {
+	@include typestyle($size: 'label', $family: 'label');
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+%ts-code {
+	@include typestyle($size: 'ui', $family: 'code');
+}

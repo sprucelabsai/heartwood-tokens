@@ -1,0 +1,10 @@
+{
+    "layout": {
+        "breakpoint": {
+            "small": { "value": 500 },
+            "medium": { "value": 750 },
+            "large": { "value": 1000 },
+            "x-large": { "value": 1200 }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "border-color": {
+        "base": {
+            "value": "{color.greyscale.1.value}"
+        },
+        "dark": {
+            "value": "{color.greyscale.2.value}"
+        }
+    }
+}

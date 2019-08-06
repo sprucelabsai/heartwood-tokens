@@ -1,0 +1,37 @@
+@import '../heartwood';
+
+*,
+*:before,
+*:after { box-sizing: border-box; }
+
+body {
+	font-family: $font-family__primary;
+	line-height: $lh-body;
+    color: $text-color__copy;
+    background-color: $bg;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: 'kern' 1;
+}
+
+
+.flex-parent {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+  
+	@media screen and (min-width: $l__breakpoint-medium) {
+		flex-flow: row;
+	}
+  }
+  
+  .flex-child {
+	margin-top: $spacing__4;
+  
+	> * { width: 100%; }
+  
+	@media screen and (min-width: $l__breakpoint-medium) {
+	   width: calc(50% - #{$spacing__4});
+	}
+  }

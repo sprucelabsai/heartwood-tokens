@@ -1,0 +1,57 @@
+@import '../../stylesheets/heartwood';
+
+.token {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $spacing__3;
+    padding-bottom: $spacing__3;
+    border-top: 1px solid $border-color;
+}
+
+.token__clipboard {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+
+    &:focus,
+    &:active {
+        outline: none;
+        background-color: $bg__dark;
+    }
+}
+
+.token__clipboard-icon {
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    transform: translate(calc(-100% - 0.5rem), -50%);
+    opacity: 0;
+    transition: transform 300ms ease, opacity 300ms ease;
+
+    .token__clipboard:hover & {
+        opacity: 1;
+        transform: translate(-100%, -50%);
+    }
+}
+
+.token__name {
+    font-weight: $fw__bold;
+    color: $c__primary;
+
+    .token__clipboard:hover & {
+        color: $c__primary-light;
+    }
+
+    &.token__name--plain {
+        color: inherit;
+    }
+}
+
+
+.token__swatch {
+    display: inline-block;
+    width: $spacing__8;
+    height: $spacing__8;
+    background-color: rgba($c__primary, 0.5);
+}

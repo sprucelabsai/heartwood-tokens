@@ -1,0 +1,62 @@
+@import '../../stylesheets/heartwood';
+
+.tokens-layout-wrapper {
+    overflow: hidden;
+}
+
+.tokens-container {
+    padding: $spacing__6 $spacing__10;
+    max-width: $l__width;
+}
+
+.token-category-section {
+    padding-top: $spacing__2;
+    padding-bottom: $spacing__8;
+}
+
+.tokens-category__title,
+.tokens-type__title {
+    position: relative;
+    padding-bottom: $spacing__4;
+    padding-top: $spacing__4;
+    background-color: $bg;
+    text-transform: capitalize;
+}
+
+.tokens-category__title {
+    top: 0;
+    z-index: 1;
+}
+
+.heading__link-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(calc(-120% - 0.5rem), -50%);
+    opacity: 0;
+    transition: opacity 300ms ease, transform 300ms ease;
+
+    .tokens-category__title:hover & {
+        transform: translate(calc(-100% - 0.5rem), -50%);
+        opacity: 1;
+    }
+}
+
+.tokens-layout__tooltip {
+    margin-top: 0;
+    padding: $spacing__2 $spacing__4;
+    font-size: $fs-ui;
+    transition: opacity 200ms ease-in-out, visibility 0s linear 300ms;
+
+    &.show {
+        transition: opacity 300ms ease-in-out;
+    }
+
+    &.place-top {
+        margin-top: 0;
+    }
+
+    &:after {
+        display: none;
+    }
+}

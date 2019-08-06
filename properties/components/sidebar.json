@@ -1,0 +1,7 @@
+{
+    "components": {
+        "sidebar": {
+            "width": { "value": 320 }
+        }
+    }
+}

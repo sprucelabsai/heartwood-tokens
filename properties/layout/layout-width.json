@@ -1,0 +1,9 @@
+{
+    "layout": {
+        "width": {
+            "tight": { "value": 480 },
+            "base": { "value": 720 },
+            "wide": { "value": 1040 }
+        }
+    }
+}
