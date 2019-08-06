@@ -57,7 +57,11 @@ StyleDictionary.registerTransform({
     // Build the name
     let newName = newCat;
 
-    if (type && type !== "base") {
+    if (category === 'components' && type) {
+      newName = type;
+    }
+
+    if (type && type !== "base" && category !== 'components') {
       newName += `__${type}`;
     }
 

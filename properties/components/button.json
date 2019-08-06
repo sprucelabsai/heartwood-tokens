@@ -2,6 +2,10 @@
     "components": {
         "button": {
             "border-radius": { "value": 4 },
+            "height": { "value": "{size.tap.base.value}" },
+            "small": {
+                "height": { "value": "{size.tap.small.value}" }
+            },
             "primary": {
                 "text-color": {
                     "value": "#fff"
@@ -21,6 +25,33 @@
                     "hover": {
                         "value": "{color.primary.light.value}"
                     }
+                }
+            },
+            "secondary": {
+                "text-color": {
+                    "value": "{color.primary.base.value}"
+                },
+                "border-color": {
+                    "value": "{color.primary.base.value}"
+                },
+                "background-color": {
+                    "value": "{color.primary.base.value}"
+                },
+                "background-opacity": {
+                    "base": { "value": 0 },
+                    "hover": { "value": 0.3 }
+                }
+            },
+            "simple": {
+                "text-color": {
+                    "value": "{color.primary.base.value}"
+                },
+                "background-color": {
+                    "value": "{color.primary.base.value}"
+                },
+                "background-opacity": {
+                    "base": { "value": 0 },
+                    "hover": { "value": 0.3 }
                 }
             },
             "destructive": {
