@@ -90,7 +90,7 @@ StyleDictionary.registerTransform({
     (prop.attributes.category === "components" &&
       prop.attributes.item === "border-radius") ||
     (prop.attributes.category === "components" &&
-      prop.attributes.item === "width"),
+      (prop.attributes.item === 'size' || prop.attributes.item === "width")),
   transformer: prop => {
     if (prop.original.value === 0) {
       return "0";
