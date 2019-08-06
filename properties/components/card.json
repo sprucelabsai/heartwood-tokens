@@ -1,0 +1,16 @@
+{
+    "components": {
+        "card": {
+            "background-color": { "value": "#fff" },
+            "border-radius": { "value": 2 },
+            "layer": { "value": "{layer.raised.value}" },
+            "title": {
+                "font-weight": { "value": "{font-weight.bold.value}" },
+                "font-size": {
+                    "base": { "value": "{font-size.base.subheading-small.value}" },
+                    "desktop": { "value": "{font-size.base.subheading-large.value}" }
+                }
+            }
+        }
+    }
+}
