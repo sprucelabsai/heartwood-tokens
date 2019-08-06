@@ -1,0 +1,22 @@
+@import '../stylesheets/heartwood';
+
+.tokens-usage {
+    @extend %my-4;
+    padding-top: $spacing__4;
+    border-top: 1px solid $border-color;
+}
+
+.tokens-usage__title{
+    margin-bottom: $spacing__4;
+}
+
+.tokens-usage__label {
+    display: inline-block;
+    min-width: 4rem;
+}
+
+.tokens-usage__instruction {
+    + .tokens-usage__instruction {
+        margin-top: $spacing__2;
+    }
+}

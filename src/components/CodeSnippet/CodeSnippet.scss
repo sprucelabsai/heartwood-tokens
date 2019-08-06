@@ -1,0 +1,21 @@
+@import "../../stylesheets/heartwood";
+
+.code-snippet {
+    position: relative;
+    padding: $spacing__2;
+    background-color: $bg__dark;
+    border-radius: 4px;
+
+    &:hover {
+        color: $c__primary;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($c__primary, 0.3);
+    }
+}
+
+.code-snippet__text {
+    font-size: $size__font-1;
+}

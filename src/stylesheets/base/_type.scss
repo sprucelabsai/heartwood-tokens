@@ -34,3 +34,8 @@ label,
 .label {
     @extend %ts-label;
 }
+
+strong,
+.strong {
+    font-weight: $fw__bold;
+}
