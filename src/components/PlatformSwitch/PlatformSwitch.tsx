@@ -1,6 +1,7 @@
 import React from "react";
 import { navigate } from "gatsby";
 import sassIcon from "../../icons/sass-icon.png";
+import jsIcon from '../../icons/js-icon.svg';
 import appleIcon from "../../icons/apple-icon.svg";
 import androidIcon from "../../icons/android-icon.svg";
 import figmaIcon from "../../icons/figma-icon.svg";
@@ -14,6 +15,7 @@ interface PlatformSwitchProps {
 
 const icons = {
   scss: sassIcon,
+  javascript: jsIcon,
   ios: appleIcon,
   android: androidIcon,
   figma: figmaIcon
@@ -39,6 +41,9 @@ const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
         >
           <option value="/tokens" selected={platform === "scss"}>
             Scss
+          </option>
+          <option value="/tokens/javascript" selected={platform === "javascript"}>
+            Javascript
           </option>
           <option value="/tokens/ios" selected={platform === "ios"}>
             iOS

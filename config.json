@@ -119,7 +119,7 @@
       "transforms": [
         "attribute/cti",
         "name/cti/pascal",
-        "size/rem",
+        "size/pxToRem",
         "color/hex",
         "asset/base64"
       ],
@@ -127,7 +127,8 @@
       "files": [
         {
           "destination": "tokens.js",
-          "format": "javascript/module"
+          "format": "javascript/module",
+          "filter": "tokens"
         },
         {
           "destination": "assets-base64.js",

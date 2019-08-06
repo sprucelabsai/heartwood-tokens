@@ -15,6 +15,7 @@ import "./TokensLayout.scss";
 const platNames = {
   scss: "Web",
   ios: "Swift",
+  javascript: "Javascript",
   android: "Android",
   figma: "Figma"
 };
@@ -48,6 +49,7 @@ export default class TokensLayout extends Component<
   public render(): React.ReactElement {
     const { sizeUnit } = this.state;
     const { platform, tokens, title, children } = this.props;
+    const showSizeUnits = platform === 'scss' || platform === 'javascript';
     let host = "";
     if (typeof window !== "undefined") {
       host = window.location.host;
@@ -64,7 +66,7 @@ export default class TokensLayout extends Component<
               <div className="sidebar-nav__section">
                 <PlatformSwitch platform={platform} tokens={platform === 'figma' && tokens} />
               </div>
-              {platform === "scss" && (
+              {showSizeUnits && (
                 <div className="sidebar-nav__section">
                   <SizeUnits
                     current={sizeUnit}
