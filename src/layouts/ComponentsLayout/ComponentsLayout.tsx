@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { Link } from "react-scroll";
 import ReactTooltip from "react-tooltip";
 import Clipboard from "react-clipboard.js";
+import SEO from "../../components/SEO/SEO";
 import copyIcon from "../../icons/copy-icon.svg";
 import SidebarNav from "../../components/SidebarNav/SidebarNav";
 import componentsJson from "../../../build/js/components-scss.js";
@@ -13,9 +14,7 @@ const ComponentsLayout = (): React.ReactElement => {
   const componentKeys = Object.keys(components);
   return (
     <div className="sidebar-nav-layout">
-      <Helmet titleTemplate="%s | Heartwood Tokens">
-        <title>Components</title>
-      </Helmet>
+      <SEO title="Components" />
       <SidebarNav>
         <ul className="sidebar-nav__list">
           {componentKeys.map(type => (

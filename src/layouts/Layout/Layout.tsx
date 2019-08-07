@@ -1,7 +1,8 @@
 import React from "react";
 import cx from "classnames";
 import Helmet from "react-helmet";
-import Footer from '../../components/Footer/Footer'
+import SEO from "../../components/SEO/SEO";
+import Footer from "../../components/Footer/Footer";
 import "./Layout.scss";
 import "../../stylesheets/import-once.scss";
 
@@ -16,9 +17,7 @@ const Layout = (props: ILayoutProps): React.ReactElement => (
       "layout--has-left-sidebar": props.hasLeftSidebar
     })}
   >
-    <Helmet>
-      <title>Heartwood Tokens</title>
-    </Helmet>
+    <SEO />
     {props.children}
     <Footer />
   </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { Link } from "react-scroll";
+import SEO from "../../components/SEO/SEO";
 import Asset from "../../components/Asset/Asset";
 import SidebarNav from "../../components/SidebarNav/SidebarNav";
 import assets from "../../../build/js/assets-base64.js";
@@ -9,9 +10,7 @@ import "./AssetsLayout.scss";
 const AssetsLayout = (): React.ReactElement => {
   return (
     <div className="sidebar-nav-layout">
-      <Helmet titleTemplate="%s | Heartwood Tokens">
-        <title>Assets</title>
-      </Helmet>
+      <SEO title="Assets" />
       <SidebarNav>
         <ul className="sidebar-nav__list">
           {Object.keys(assets.asset).map(type => (
