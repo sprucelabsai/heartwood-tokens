@@ -19,7 +19,7 @@ function SEO({ description, lang, meta, title }) {
   );
 
   const metaDescription = description || site.siteMetadata.tagline;
-
+      console.log({site})
   return (
     <Helmet
       htmlAttributes={{
@@ -58,7 +58,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: name
+          content: title
         },
         {
           name: `twitter:description`,

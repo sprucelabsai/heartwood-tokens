@@ -1,6 +1,5 @@
 import React from "react";
 import cx from "classnames";
-import Helmet from "react-helmet";
 import SEO from "../../components/SEO/SEO";
 import Footer from "../../components/Footer/Footer";
 import "./Layout.scss";
@@ -17,7 +16,7 @@ const Layout = (props: ILayoutProps): React.ReactElement => (
       "layout--has-left-sidebar": props.hasLeftSidebar
     })}
   >
-    <SEO />
+    <SEO title="Intro" />
     {props.children}
     <Footer />
   </div>
