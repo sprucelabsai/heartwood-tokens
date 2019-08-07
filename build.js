@@ -231,7 +231,7 @@ StyleDictionary.registerFormat({
 
 StyleDictionary.registerFormat({
   name: "scss/map-multi",
-  formatter: dictionary => {
+  formatter: function(dictionary) {
     return sassMultiMap({
       mapPrefix: this.mapPrefix || "",
       properties: dictionary.allProperties

@@ -80,6 +80,16 @@ const sassMultiMap = ({ mapPrefix, properties }) => {
     return formatSassValue(prop, properties)
   })
 
+  // Sort defaults to make sure that variables are defined before they're referenced
+  defaults.sort((a,b) => {
+    const aProp = a.split(': ')[1]
+    const bProp = b.split(': ')[1]
+    if (aProp.indexOf('$') > -1 || bProp.indexOf('$') > -1) {
+      return 1
+    }
+    return -1
+  });
+
   return fileComment + defaults.join('\n') + '\n\n' + catArray.map(key => {
     const type = categories[key];
     const items = type;

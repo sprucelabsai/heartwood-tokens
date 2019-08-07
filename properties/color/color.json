@@ -18,9 +18,6 @@
         "value": "#00195d"
       }
     },
-    "test": {
-      "base": { "value": "{color.primary.base.value}" }
-    },
     "secondary": {
       "base": {
         "value": "#5a5ae6"
