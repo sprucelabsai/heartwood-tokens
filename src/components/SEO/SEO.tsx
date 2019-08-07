@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription
         },
         {
-          property: `og:title`,
+          property: `og:title | ${site.siteMetadata.name}`,
           content: title
         },
         {
@@ -57,7 +57,7 @@ function SEO({ description, lang, meta, title }) {
           content: site.siteMetadata.author
         },
         {
-          name: `twitter:title`,
+          name: `twitter:title | ${site.siteMetadata.name}`,
           content: title
         },
         {
