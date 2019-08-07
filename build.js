@@ -182,6 +182,7 @@ StyleDictionary.registerTransform({
   }
 });
 
+
 /**
  * Transform Groups
  */
@@ -230,7 +231,7 @@ StyleDictionary.registerFormat({
 
 StyleDictionary.registerFormat({
   name: "scss/map-multi",
-  formatter: function(dictionary) {
+  formatter: dictionary => {
     return sassMultiMap({
       mapPrefix: this.mapPrefix || "",
       properties: dictionary.allProperties
