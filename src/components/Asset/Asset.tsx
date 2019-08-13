@@ -28,7 +28,7 @@ const Asset = (props: IAssetProps): React.ReactElement => {
             <span>{name}</span>
           </a>
         ) : (
-          <p className="asset__name">{name}</p>
+          <span className="asset__name">{name}</span>
         )}
       </p>
       <img className="asset__image" src={`data:image/svg+xml;base64,${src}`} />

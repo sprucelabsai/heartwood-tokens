@@ -1,7 +1,7 @@
 import React from "react";
 import { navigate } from "gatsby";
 import sassIcon from "../../icons/sass-icon.png";
-import jsIcon from '../../icons/js-icon.svg';
+import jsIcon from "../../icons/js-icon.svg";
 import appleIcon from "../../icons/apple-icon.svg";
 import androidIcon from "../../icons/android-icon.svg";
 import figmaIcon from "../../icons/figma-icon.svg";
@@ -37,21 +37,28 @@ const PlatformSwitch = (props: PlatformSwitchProps): React.ReactElement => {
         )}
         <select
           className="platform-switch__select"
-          onChange={e => navigate(e.currentTarget.value)}
+          onChange={e => {
+            if (e.currentTarget.value === "scss") {
+              navigate(`/tokens`);
+            } else {
+              navigate(`/tokens/${e.currentTarget.value}`);
+            }
+          }}
+          defaultValue={platform}
         >
-          <option value="/tokens" selected={platform === "scss"}>
+          <option value="scss" data-destination="/tokens">
             Scss
           </option>
-          <option value="/tokens/javascript" selected={platform === "javascript"}>
+          <option value="javascript" data-destination="/tokens/javascript">
             Javascript
           </option>
-          <option value="/tokens/ios" selected={platform === "ios"}>
+          <option value="ios" data-destination="/tokens/ios">
             iOS
           </option>
-          <option value="/tokens/android" selected={platform === "android"}>
+          <option value="android" data-destination="/tokens/android">
             Android
           </option>
-          <option value="/tokens/figma" selected={platform === "figma"}>
+          <option value="figma" data-destination="/tokens/figma">
             Figma
           </option>
         </select>
