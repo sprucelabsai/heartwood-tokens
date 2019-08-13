@@ -45,12 +45,24 @@ const platformName = ({
   return str;
 };
 
+const getOriginalValue = (originalValue: string): string =>
+  originalValue.replace(".value", "");
+
 const Token = (props: ITokenProps): React.ReactElement => {
   const { token, platform, sizeUnit } = props;
   const { attributes, original } = token;
   const { category } = attributes;
   let textSample = "Hello human!";
   let value = token.value;
+  let originalValue = "";
+  if (
+    token.original &&
+    token.original.value &&
+    typeof token.original.value === "string"
+  ) {
+    originalValue = getOriginalValue(token.original.value);
+    // console.log(originalValue);
+  }
   if (typeof value !== "string") {
     value = null;
   }
@@ -60,8 +72,8 @@ const Token = (props: ITokenProps): React.ReactElement => {
   let scssToken = scssTokens[category];
 
   // Escape if the scssToken doesn't exist
-  if (typeof scssToken === 'undefined') {
-    return null
+  if (typeof scssToken === "undefined") {
+    return null;
   }
 
   // Find the exact scssToken for styling
@@ -228,24 +240,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
                 />
                 <code className="token__name">{name}</code>
               </Clipboard>
-              <Clipboard
-                className="token__clipboard"
-                data-clipboard-text={value}
-                data-tip="Copied to clipboard!"
-                data-event="click"
-                data-effect="solid"
-                data-place="right"
-                onSuccess={() => setTimeout(() => ReactTooltip.hide(), 1500)}
-              >
-                <img
-                  className="token__clipboard-icon"
-                  src={copyIcon}
-                  width={16}
-                  height={16}
-                  role="presentation"
-                />
-                <code className="token__value">{value}</code>
-              </Clipboard>
+                <code className="token__value">{originalValue || value}</code>
             </>
           ) : (
             <code className="token__name token__name--plain">{name}</code>
