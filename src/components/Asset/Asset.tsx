@@ -10,8 +10,13 @@ interface IAssetProps {
 
 const Asset = (props: IAssetProps): React.ReactElement => {
   const { name, src, canDownload } = props;
+  const style = {
+    padding: '1rem',
+    borderRadius: '4px',
+    backgroundColor: name.indexOf('dark') > -1 ? '#2c323d' : 'transparent'
+  }
   return (
-    <div className="asset">
+    <div className="asset" >
       <p className="asset__name">
         {canDownload ? (
           <a
@@ -31,7 +36,9 @@ const Asset = (props: IAssetProps): React.ReactElement => {
           <span className="asset__name">{name}</span>
         )}
       </p>
+      <div style={style}>
       <img className="asset__image" src={`data:image/svg+xml;base64,${src}`} />
+      </div>
     </div>
   );
 };

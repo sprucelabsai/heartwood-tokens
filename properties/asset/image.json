@@ -12,7 +12,19 @@
             "spruce-labs-wordmark-black": { "value": "assets/images/sl_wordmark-black.svg" },
             "spruce-labs-wordmark-text": { "value": "assets/images/sl_wordmark-text.svg" },
             "spruce-labs-wordmark-vertical": { "value": "assets/images/sl_wordmark-vertical.svg" },
-            "spruce-labs-wordmark-vertical-black": { "value": "assets/images/sl_wordmark-vertical-black.svg" }
+            "spruce-labs-wordmark-vertical-black": { "value": "assets/images/sl_wordmark-vertical-black.svg" },
+            "dark-logo": { "value": "assets/images/dark-logo.svg" },
+            "dark-logo-white": { "value": "assets/images/dark-logo-white.svg" },
+            "dark-wordmark": { "value": "assets/images/dark-wordmark.svg" },
+            "dark-wordmark-white": { "value": "assets/images/dark-wordmark-white.svg" },
+            "dark-wordmark-text": { "value": "assets/images/dark-wordmark-text.svg" },
+            "dark-wordmark-vertical": { "value": "assets/images/dark-wordmark-vertical.svg" },
+            "dark-wordmark-vertical-white": { "value": "assets/images/dark-wordmark-vertical-white.svg" },
+            "dark-spruce-labs-wordmark": { "value": "assets/images/dark-sl_wordmark.svg" },
+            "dark-spruce-labs-wordmark-white": { "value": "assets/images/dark-sl_wordmark-white.svg" },
+            "dark-spruce-labs-wordmark-text": { "value": "assets/images/dark-sl_wordmark-text.svg" },
+            "dark-spruce-labs-wordmark-vertical": { "value": "assets/images/dark-sl_wordmark-vertical.svg" },
+            "dark-spruce-labs-wordmark-vertical-white": { "value": "assets/images/dark-sl_wordmark-vertical-white.svg" }
         }
     }
 }
