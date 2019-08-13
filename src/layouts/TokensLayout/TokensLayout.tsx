@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import { Link } from "react-scroll";
 import Clipboard from "react-clipboard.js";
 import ReactTooltip from "react-tooltip";
+import SEO from "../../components/SEO/SEO";
 import SidebarNav from "../../components/SidebarNav/SidebarNav";
 import PlatformSwitch from "../../components/PlatformSwitch/PlatformSwitch";
 import SizeUnits from "../../components/SizeUnits/SizeUnits";
@@ -57,9 +58,7 @@ export default class TokensLayout extends Component<
 
     return (
       <div className="tokens-layout-wrapper">
-        <Helmet titleTemplate="%s | Heartwood Tokens">
-          <title>{`${title} for ${platNames[platform]}`}</title>
-        </Helmet>
+        <SEO title={`${title} for ${platNames[platform]}`} />
         <div className="sidebar-nav-layout">
           <SidebarNav>
             <>

@@ -3,19 +3,25 @@ import Helmet from "react-helmet";
 import { Link } from "react-scroll";
 import ReactTooltip from "react-tooltip";
 import Clipboard from "react-clipboard.js";
+import SEO from "../../components/SEO/SEO";
 import copyIcon from "../../icons/copy-icon.svg";
 import SidebarNav from "../../components/SidebarNav/SidebarNav";
 import componentsJson from "../../../build/js/components-scss.js";
 import "./ComponentsLayout.scss";
+
+const getOriginalValue = (originalValue: string | number): string | number => {
+  if (typeof originalValue === "string") {
+    return originalValue.replace(".value", "");
+  }
+  return originalValue;
+};
 
 const ComponentsLayout = (): React.ReactElement => {
   const components = componentsJson.components;
   const componentKeys = Object.keys(components);
   return (
     <div className="sidebar-nav-layout">
-      <Helmet titleTemplate="%s | Heartwood Tokens">
-        <title>Components</title>
-      </Helmet>
+      <SEO title="Components" />
       <SidebarNav>
         <ul className="sidebar-nav__list">
           {componentKeys.map(type => (
@@ -76,7 +82,9 @@ const ComponentsLayout = (): React.ReactElement => {
                             item.name
                           }`}</p>
                         </Clipboard>
-                        <p className="components__token-value">{item.value}</p>
+                        <p className="components__token-value">
+                          {getOriginalValue(item.original.value)}
+                        </p>
                       </div>
                     </div>
                   );
@@ -94,9 +102,6 @@ const ComponentsLayout = (): React.ReactElement => {
                       if (subitem.value) {
                         return (
                           <div key={subitemKey}>
-                            <label className="components-label">
-                              Base Values
-                            </label>
                             <div className="components__token">
                               <Clipboard
                                 className="token__clipboard"
@@ -121,7 +126,7 @@ const ComponentsLayout = (): React.ReactElement => {
                                 }`}</p>
                               </Clipboard>
                               <p className="components__token-value">
-                                {subitem.value}
+                                {getOriginalValue(subitem.original.value)}
                               </p>
                             </div>
                           </div>
@@ -164,7 +169,7 @@ const ComponentsLayout = (): React.ReactElement => {
                                   }`}</p>
                                 </Clipboard>
                                 <p className="components__token-value">
-                                  {state.value}
+                                  {getOriginalValue(state.original.value)}
                                 </p>
                               </div>
                             );

@@ -47,6 +47,24 @@ const sassVarName = attributes => {
   return name
 }
 
+const formatSassValue = (prop, properties) => {
+  const { original, attributes } = prop
+  const name = `$${prop.name}`;
+  let value = attributes.category === 'asset' ? `"${prop.value}"` : `${prop.value} !default`;
+  
+  if (original.value && typeof original.value === 'string' && original.value.charAt(0) === '{') {
+    // console.log(original.value.split('.'), prop)
+    let path = original.value.split('.').map(str => str.replace('{', '').replace('}', ''))
+    path.pop();
+    properties.forEach(origProp => {
+      if (_.isEqual(path, origProp.path) && attributes.category !== 'asset') {
+        value = `$${origProp.name} !default`
+      }
+    })
+  }
+  return `${name}: ${value};`
+}
+
 const sassMultiMap = ({ mapPrefix, properties }) => {
   const categories = _.groupBy(properties, property => property.attributes.category)
 
@@ -59,8 +77,18 @@ const sassMultiMap = ({ mapPrefix, properties }) => {
 
 `
   const defaults = properties.map(prop => {
-    return `$${prop.name}: ${prop.attributes.category === 'asset' ? `"${prop.value}"` : prop.value} !default;`
+    return formatSassValue(prop, properties)
   })
+
+  // Sort defaults to make sure that variables are defined before they're referenced
+  defaults.sort((a,b) => {
+    const aProp = a.split(': ')[1]
+    const bProp = b.split(': ')[1]
+    if (aProp.indexOf('$') > -1 || bProp.indexOf('$') > -1) {
+      return 1
+    }
+    return -1
+  });
 
   return fileComment + defaults.join('\n') + '\n\n' + catArray.map(key => {
     const type = categories[key];

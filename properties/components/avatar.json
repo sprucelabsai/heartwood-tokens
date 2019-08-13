@@ -1,0 +1,15 @@
+{
+    "components": {
+        "avatar": {
+            "size": {
+                "base": { "value": 40 },
+                "small": { "value": 32 },
+                "large": { "value": 96 }
+            },
+            "indicator": {
+                "online": { "value": "{color.success.base.value}" },
+                "offline": { "value": "{color.greyscale.5.value}" }
+            }
+        }
+    }
+}
