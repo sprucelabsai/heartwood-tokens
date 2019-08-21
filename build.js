@@ -182,6 +182,18 @@ StyleDictionary.registerTransform({
   }
 });
 
+StyleDictionary.registerTransform({
+  name: "color/UIColorSwiftModes",
+  type: "value",
+  matcher: prop => prop.attributes.category === 'day' || prop.attributes.category === 'night',
+  transformer: prop => {
+    const { r, g, b, a } = tinycolor(prop.value).toRgb();
+    const rFixed = (r / 255.0).toFixed(3);
+    const gFixed = (g / 255.0).toFixed(3);
+    const bFixed = (b / 255.0).toFixed(3);
+    return `UIColor(red: ${rFixed}, green: ${gFixed}, blue: ${bFixed}, alpha:${a})`;
+  }
+})
 
 /**
  * Transform Groups
@@ -371,7 +383,8 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFilter({
   name: "tokens/ios",
   matcher: prop =>
-    prop.attributes.category === "color" ||
+    prop.attributes.category === "day" ||
+    prop.attributes.category === "night" ||
     (prop.attributes.category === "size" &&
       prop.attributes.type === "font" &&
       prop.attributes.category !== "platform")

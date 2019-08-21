@@ -20,22 +20,22 @@
                 },
                 "background-color": {
                     "default": {
-                        "value": "{color.primary.base.value}"
+                        "value": "{day.color.primary.base.value}"
                     },
                     "hover": {
-                        "value": "{color.primary.light.value}"
+                        "value": "{day.color.primary.light.value}"
                     }
                 }
             },
             "secondary": {
                 "text-color": {
-                    "value": "{color.primary.base.value}"
+                    "value": "{day.color.primary.base.value}"
                 },
                 "border-color": {
-                    "value": "{color.primary.base.value}"
+                    "value": "{day.color.primary.base.value}"
                 },
                 "background-color": {
-                    "value": "{color.primary.base.value}"
+                    "value": "{day.color.primary.base.value}"
                 },
                 "background-opacity": {
                     "base": { "value": 0 },
@@ -44,10 +44,10 @@
             },
             "simple": {
                 "text-color": {
-                    "value": "{color.primary.base.value}"
+                    "value": "{day.color.primary.base.value}"
                 },
                 "background-color": {
-                    "value": "{color.primary.base.value}"
+                    "value": "{day.color.primary.base.value}"
                 },
                 "background-opacity": {
                     "base": { "value": 0 },
@@ -68,10 +68,10 @@
                 },
                 "background-color": {
                     "default": {
-                        "value": "{color.critical.base.value}"
+                        "value": "{day.color.critical.base.value}"
                     },
                     "hover": {
-                        "value": "{color.critical.light.value}"
+                        "value": "{day.color.critical.light.value}"
                     }
                 }
             }

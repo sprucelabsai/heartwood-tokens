@@ -1,10 +1,14 @@
 {
-    "border-color": {
-        "base": {
-            "value": "{color.greyscale.1.value}"
-        },
-        "dark": {
-            "value": "{color.greyscale.2.value}"
+    "day": {
+        "border-color": {
+            "base": { "value": "#E1E4EB" },
+            "bold": { "value": "#C7CCD6" }
+        }
+    },
+    "night": {
+        "border-color": {
+            "base": { "value": "#3E4552" },
+            "bold": { "value": "#525966" }
         }
     }
 }

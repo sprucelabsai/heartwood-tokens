@@ -1,23 +1,39 @@
 {
-    "text-color": {
-        "copy": {
-            "base": { "value": "{color.greyscale.9.value}" },
-            "light": { "value": "{color.greyscale.7.value}" },
-            "lighter": {
-                "value": "{color.greyscale.5.value}",
-                "comment": "Note that this color should only be used for disabled elements and input placeholders"
+    "day": {
+        "text-color": {
+            "base": { "value": "#2C323D" },
+            "subdued": { "value": "#525966" },
+            "placeholder": { "value": "#7F8794" },
+            "code": {
+                "base": { "value": "#2C323D" },
+                "red": { "value": "#CB244C" },
+                "orange": { "value": "#B24700" },
+                "yellow": { "value": "#946700" },
+                "green": { "value": "#0D7080" },
+                "blue": { "value": "#0074C2" },
+                "indigo": { "value": "#2551CB" },
+                "violet": { "value": "#6019CB" },
+                "grey": { "value": "#525966" }
             }
-        },
-        "code": {
-            "base": { "value": "#fff" },
-            "red": { "value": "#f07971" },
-            "orange": { "value": "#f78C6C" },
-            "yellow": { "value": "#ffce6b" },
-            "green": { "value": "#c3e88d" },
-            "blue": { "value": "#9beded" },
-            "indigo": { "value": "#82a3ff" },
-            "violet": { "value": "#cd92ea" },
-            "grey": { "value": "#b0b5c1" }
+
+        }
+    },
+    "night": {
+        "text-color": {
+            "base": { "value": "#FFFFFF" },
+            "subdued": { "value": "#B0B5C1" },
+            "placeholder": { "value": "#7F8794" },
+            "code": {
+                "base": { "value": "#FFFFFF" },
+                "red": { "value": "#F07971" },
+                "orange": { "value": "#F78C6C" },
+                "yellow": { "value": "#FFCE6B" },
+                "green": { "value": "#C3E88D" },
+                "blue": { "value": "#9BEDED" },
+                "indigo": { "value": "#82A3FF" },
+                "violet": { "value": "#CD92EA" },
+                "grey": { "value": "#B0B5C1" }
+            }  
         }
     }
 }

@@ -35,7 +35,7 @@
     margin-bottom: $spacing__2;
     font-family: $font-family__code;
     font-weight: $fw__bold;
-    color: $text-color__copy-light;
+    color: $day__text-color;
 }
 
 .components-label {
@@ -46,7 +46,7 @@
 .components__token {
     padding-top: $spacing__3;
     padding-bottom: $spacing__3;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $day__border-color;
 }
 
 .components__token-name,
@@ -56,5 +56,5 @@
 
 .components__token-name {
     font-weight: $fw__bold;
-    color: $c__primary;
+    color: $day__color-primary_base;
 }

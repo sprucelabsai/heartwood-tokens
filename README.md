@@ -38,7 +38,7 @@ All of the variables generated in Heartwood Tokens use a `!default` flag to make
 
 In `my-theme.scss`, you could for example change the primary color by adding:
 ```scss
-$c__primary: #4c3cff;
+$c__day-primary_base: #4c3cff;
 ```
 **Recommended:** Make sure to look at [https://sprucelabsai.github.io/heartwood-tokens/](https://sprucelabsai.github.io/heartwood-tokens/) to see all the available tokens. Heartwood Tokens don't automatically generate full color palettes, so theming requires attention to detail to avoid unexpected results.
 

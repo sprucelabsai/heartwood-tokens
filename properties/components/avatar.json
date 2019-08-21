@@ -7,8 +7,8 @@
                 "large": { "value": 96 }
             },
             "indicator": {
-                "online": { "value": "{color.success.base.value}" },
-                "offline": { "value": "{color.greyscale.5.value}" }
+                "online": { "value": "{day.color.success.base.value}" },
+                "offline": { "value": "{day.text-color.placeholder.value}" }
             }
         }
     }

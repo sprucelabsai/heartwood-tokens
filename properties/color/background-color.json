@@ -1,13 +1,17 @@
 {
-    "background-color": {
-        "base": {
-            "value": "#f9fafc"
-        },
-        "light": {
-            "value": "#fff"
-        },
-        "dark": {
-            "value": "{color.greyscale.0.value}"
+    "day": {
+        "background-color": {
+            "base": { "value": "#F9FAFC" },
+            "dark": { "value": "#F0F2F7" },
+            "light": { "value": "#FFFFFF" }
+
+        }
+    },
+    "night": {
+        "background-color": {
+            "base": { "value": "#212733" },
+            "dark": { "value": "#181D26" },
+            "light": { "value": "#2C323D" }
         }
     }
 }

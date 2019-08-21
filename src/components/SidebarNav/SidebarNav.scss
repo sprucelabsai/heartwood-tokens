@@ -10,10 +10,10 @@
   width: $sidebar-width_base;
   height: 100%;
   overflow: scroll;
-  background-color: $bg__dark;
+  background-color: $day__background-color-dark;
 
   .footer-primary {
-      border-top: 1px solid $border-color;
+      border-top: 1px solid $day__border-color;
       margin-top: $spacing__4;
       padding: $spacing__4;
   }
@@ -31,7 +31,7 @@
     position: sticky;
     top: 0;
     background-color: inherit;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $day__border-color;
 }
 
 .sidebar-nav__inner {
@@ -83,7 +83,7 @@
         left: 0;
         width: 3px;
         height: 100%;
-        background-color: $c__primary;
+        background-color: $day__color-primary_base;
     }
 
     &.sidebar-nav__link--active {
@@ -96,7 +96,7 @@
 
 .sidebar-section-link:focus {
     outline: none;
-    color: $c__primary;
+    color: $day__color-primary_base;
 }
 
 .sidebar-nav__nested-nav {
@@ -109,7 +109,7 @@
     }
 
     .sidebar-nav__link--active {
-        color: $c__primary;
+        color: $day__color-primary_base;
         &:before {
             display: none;
         }

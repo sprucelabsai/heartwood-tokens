@@ -1,147 +1,65 @@
 {
-  "color": {
-    "primary": {
-      "base": {
-        "value": "#1948cb",
-        "comment": "The main color for interactive elements and to draw a user's attention."
-      },
-      "lighter": {
-        "value": "#e1e7f9"
-      },
-      "light": {
-        "value": "#4a70d9"
-      },
-      "dark": {
-        "value": "#072e99"
-      },
-      "darker": {
-        "value": "#00195d"
-      }
-    },
-    "secondary": {
-      "base": {
-        "value": "#5a5ae6"
-      },
-      "lighter": {
-        "value": "#e7e7Fa"
-      },
-      "light": {
-        "value": "#8388f0"
-      },
-      "dark": {
-        "value": "#4136ba"
-      },
-      "darker": {
-        "value": "#26223b"
-      }
-    },
-    "success": {
-      "base": {
-        "value": "#00b2b2",
-        "comment": "Use this color to signify that something good has happened"
-      },
-      "lighter": {
-        "value": "#daf2f2"
-      },
-      "light": {
-        "value": "#6fd0d0"
-      },
-      "dark": {
-        "value": "#0f8385"
-      },
-      "darker": {
-        "value": "#0f3a3a"
-      }
-    },
-    "warn": {
-      "base": {
-        "value": "#ffaa00",
-        "comment": "Use this color to draw the user's attention to minor problems they need to address"
-      },
-      "lighter": {
-        "value": "#fdf2db"
-      },
-      "light": {
-        "value": "#fbcd70"
-      },
-      "dark": {
-        "value": "#b47800"
-      },
-      "darker": {
-        "value": "#473000"
-      }
-    },
-    "critical": {
-      "base": {
-        "value": "#cb2f24",
-        "comment": "Use this color to indicate mission-critical problems that must be addressed, and to signify destructive actions"
-      },
-      "lighter": {
-        "value": "#ffe8e6"
-      },
-      "light": {
-        "value": "#ee5C52"
-      },
-      "dark": {
-        "value": "#98180f"
-      },
-      "darker": {
-        "value": "#4f0803"
-      }
-    },
-    "brand": {
+  "day": {
+    "color": {
       "primary": {
-        "value": "#22cc96"
+        "base": { "value": "#1948CB" },
+        "light": { "value": "#2E62F2" },
+        "lighter": { "value": "#99B4FF" },
+        "dark": { "value": "#0331AD" },
+        "darker": { "value": "#081A4D" }
       },
-      "primary-alt": {
-        "value": "#20bc93"
+      "success": {
+        "base": { "value": "#0D7080" },
+        "light": { "value": "#197D8C" },
+        "lighter": { "value": "#B8DCE5" },
+        "dark": { "value": "#005866" },
+        "darker": { "value": "#003942" }
       },
-      "mist": {
-        "value": "#f5f5f5"
+      "warning": {
+        "base": { "value": "#B24700" },
+        "light": { "value": "#BD550F" },
+        "lighter": { "value": "#FFAF7A" },
+        "dark": { "value": "#873600" },
+        "darker": { "value": "#4D1F00" }
       },
-      "fog": {
-        "value": "#e4e3e3"
-      },
-      "slate": {
-        "value": "#545d6c"
-      },
-      "midnight": {
-        "value": "#111926"
+      "critical": {
+        "base": { "value": "#CB244C" },
+        "light": { "value": "#DE1F4D" },
+        "lighter": { "value": "#FFB2C5" },
+        "dark": { "value": "#AB0029" },
+        "darker": { "value": "#470011" }
       }
-    },
-    "greyscale": {
-      "0": {
-        "value": "#f0f2f7"
+    }
+  },
+  "night": {
+    "color": {
+      "primary": {
+        "base": { "value": "#3EA6FF" },
+        "light": { "value": "#70BDFF" },
+        "lighter": { "value": "#CCE7FF" },
+        "dark": { "value": "#3792E0" },
+        "darker": { "value": "#246094" }
       },
-      "1": {
-        "value": "#e1e4eB"
+      "success": {
+        "base": { "value": "#00B2B2" },
+        "light": { "value": "#2BD9D9" },
+        "lighter": { "value": "#C2FFFF" },
+        "dark": { "value": "#009E9E" },
+        "darker": { "value": "#006B6B" }
       },
-      "2": {
-        "value": "#c7cbd6"
+      "warning": {
+        "base": { "value": "#FFAA00" },
+        "light": { "value": "#FFCC66" },
+        "lighter": { "value": "#FFEECC" },
+        "dark": { "value": "#CC8800" },
+        "darker": { "value": "#805500" }
       },
-      "3": {
-        "value": "#b0b5c1"
-      },
-      "4": {
-        "value": "#969eab"
-      },
-      "5": {
-        "value": "#7f8794"
-      },
-      "6": {
-        "value": "#69707d"
-      },
-      "7": {
-        "value": "#525966"
-      },
-      "8": {
-        "value": "#3e4552"
-      },
-      "9": {
-        "value": "#2c323d"
-      },
-      "10": {
-        "value": "#0a0c10"
+      "critical": {
+        "base": { "value": "#FF7066" },
+        "light": { "value": "#FF8880" },
+        "lighter": { "value": "#FFCFCC" },
+        "dark": { "value": "#FF5457" },
+        "darker": { "value": "#B23B3C" }
       }
     }
   }
