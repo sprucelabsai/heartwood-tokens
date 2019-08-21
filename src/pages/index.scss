@@ -4,7 +4,7 @@
     padding: $spacing__4;
 
     &:not(:first-child) {
-        border-top: 1px solid $border-color__day;
+        border-top: 1px solid $day__border-color;
     }
 
     &--centered {
@@ -43,7 +43,7 @@
 
 .index-intro {
     text-align: center;
-    background-color: $bg__day-dark;
+    background-color: $day__background-color-dark;
 }
 
 .index-title {
@@ -52,7 +52,7 @@
 }
 
 .index-subtitle {
-    color: $text-color__day-subdued;
+    color: $day__text-color-subdued;
 }
 
 .index-link {
@@ -61,14 +61,14 @@
     padding: $spacing__4 $spacing__8;
     margin-top: $spacing__8;
     font-weight: $fw__bold;
-    border: 1px solid $c__day-primary_base;
-    color: $c__day-primary_base;
+    border: 1px solid $day__color-primary_base;
+    color: $day__color-primary_base;
     text-decoration: none;
     border-radius: 9999px;
 
     &:hover {
-        color: $c__day-primary_light;
-        border-color: $c__day-primary_light;
+        color: $day__color-primary_light;
+        border-color: $day__color-primary_light;
     }
 
     + .index-link {
@@ -79,7 +79,7 @@
 .index-section__label {
     display: block;
     margin-bottom: $spacing__4;
-    color: $text-color__day-subdued;
+    color: $day__text-color-subdued;
 }
 
 .index-section-heading {
@@ -92,7 +92,7 @@
     max-width: $l__width;
     font-weight: $fw__normal;
     line-height: 1.4;
-    color: $text-color__day-subdued;
+    color: $day__text-color-subdued;
 
     @media screen and (min-width: $l__breakpoint-medium) {
         margin-top: 0;
@@ -101,7 +101,7 @@
 
 .index-section-body {
     max-width: 35rem;
-    color: $text-color__day-subdued;
+    color: $day__text-color-subdued;
 
     + .index-section-body {
         margin-top: $spacing__3;
@@ -112,8 +112,8 @@
     display: block;
     padding: $spacing__4;
     margin: $spacing__4 0;
-    background-color: $bg__day-dark;
-    color: $text-color__day;
+    background-color: $day__background-color-dark;
+    color: $day__text-color;
     border-radius: 4px;
 
     &:first-child {
@@ -160,7 +160,7 @@
 }
 
 .index-page-link__subtitle {
-    color: $text-color__day-subdued;
+    color: $day__text-color-subdued;
 }
 
 .index__md {
@@ -201,8 +201,8 @@
 
     pre {
         padding: $spacing__2;
-        color: $text-color__day-code_blue;
-        background-color: $bg__day-dark;
+        color: $day__text-color-code_blue;
+        background-color: $day__background-color-dark;
         border-radius: 0.25rem;
     }
 }

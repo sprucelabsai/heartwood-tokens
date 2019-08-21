@@ -3,16 +3,16 @@
 .code-snippet {
     position: relative;
     padding: $spacing__2;
-    background-color: $bg__day-dark;
+    background-color: $day__background-color-dark;
     border-radius: 4px;
 
     &:hover {
-        color: $c__day-primary_base;
+        color: $day__color-primary_base;
     }
 
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 3px rgba($c__day-primary_base, 0.3);
+        box-shadow: 0 0 0 3px rgba($day__color-primary_base, 0.3);
     }
 }
 

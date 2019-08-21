@@ -1,6 +1,6 @@
 {
-  "color": {
-    "day": {
+  "day": {
+    "color": {
       "primary": {
         "base": { "value": "#1948CB" },
         "light": { "value": "#2E62F2" },
@@ -29,8 +29,10 @@
         "dark": { "value": "#AB0029" },
         "darker": { "value": "#470011" }
       }
-    },
-    "night": {
+    }
+  },
+  "night": {
+    "color": {
       "primary": {
         "base": { "value": "#3EA6FF" },
         "light": { "value": "#70BDFF" },

@@ -3,7 +3,7 @@
 .tokens-usage {
     @extend %my-4;
     padding-top: $spacing__4;
-    border-top: 1px solid $border-color__day;
+    border-top: 1px solid $day__border-color;
 }
 
 .tokens-usage__title{

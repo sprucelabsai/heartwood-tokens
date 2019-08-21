@@ -1,6 +1,6 @@
 {
-    "text-color": {
-        "day": {
+    "day": {
+        "text-color": {
             "base": { "value": "#2C323D" },
             "subdued": { "value": "#525966" },
             "placeholder": { "value": "#7F8794" },
@@ -15,8 +15,11 @@
                 "violet": { "value": "#6019CB" },
                 "grey": { "value": "#525966" }
             }
-        },
-        "night": {
+
+        }
+    },
+    "night": {
+        "text-color": {
             "base": { "value": "#FFFFFF" },
             "subdued": { "value": "#B0B5C1" },
             "placeholder": { "value": "#7F8794" },
@@ -30,7 +33,7 @@
                 "indigo": { "value": "#82A3FF" },
                 "violet": { "value": "#CD92EA" },
                 "grey": { "value": "#B0B5C1" }
-            }
+            }  
         }
     }
 }

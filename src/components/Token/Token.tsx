@@ -54,15 +54,6 @@ const Token = (props: ITokenProps): React.ReactElement => {
   const { category } = attributes;
   let textSample = "Hello human!";
   let value = token.value;
-  let originalValue = "";
-  if (
-    token.original &&
-    token.original.value &&
-    typeof token.original.value === "string"
-  ) {
-    originalValue = getOriginalValue(token.original.value);
-    // console.log(originalValue);
-  }
   if (typeof value !== "string") {
     value = null;
   }
@@ -117,7 +108,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
       borderRadius: "2px"
     };
   }
-  if (category === "color" || category === "background-color") {
+  if (attributes.type === "color" || attributes.type === "background-color") {
     style = {
       ...style,
       backgroundColor: scssToken.value
@@ -130,27 +121,27 @@ const Token = (props: ITokenProps): React.ReactElement => {
       };
     }
   }
-  if (category === "text-color") {
+  if (attributes.type === "text-color") {
     style = {
       ...style,
       color: scssToken.value
     };
 
-    if (attributes.type === "code") {
+    if (attributes.item && attributes.item === "code") {
       style = {
         ...style,
         fontFamily: tokensScss["font-family"].code.value,
-        backgroundColor: tokensScss.color.greyscale["10"].value,
+        backgroundColor: tokensScss[category]['background-color'].dark.value,
         padding: "0.5rem 1rem"
       };
 
       textSample = "<hello human>";
     }
   }
-  if (category === "border-color") {
+  if (attributes.type === "border-color") {
     style = {
       ...style,
-      backgroundColor: tokensScss["background-color"].day.base.value,
+      backgroundColor: tokensScss.day["background-color"].base.value,
       border: `1px solid ${scssToken.value}`
     };
   }
@@ -195,7 +186,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
       ...style,
       lineHeight: scssToken.value,
       backgroundColor: tinycolor(
-        tokensScss["color"].day.primary.base.value
+        tokensScss.day["color"].primary.base.value
       ).setAlpha(0.3),
       padding: "0 1rem"
     };
@@ -248,10 +239,10 @@ const Token = (props: ITokenProps): React.ReactElement => {
         </span>
 
         <span className="token__sample">
-          {swatchCats.indexOf(category) > -1 && (
+          {attributes.type && swatchCats.indexOf(attributes.type) > -1 && (
             <div className="token__swatch" style={style} />
           )}
-          {textCats.indexOf(category) > -1 && (
+          {(textCats.indexOf(category) > -1 || (attributes.type && textCats.indexOf(attributes.type) > -1)) && (
             <p className="token__text-sample" style={style}>
               {textSample}
             </p>

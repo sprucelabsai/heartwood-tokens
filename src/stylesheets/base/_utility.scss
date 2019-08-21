@@ -4,33 +4,35 @@
 * Color classes
 */
 
+// TODO: Reword with modes
+
 // Background Colors
-@each $label, $value in $hw-background-color {
-    .bg-#{$label} {
-        background-color: $value;
-    }
-}
+// @each $label, $value in $hw-background-color {
+//     .bg-#{$label} {
+//         background-color: $value;
+//     }
+// }
 
 // Border Colors
-@each $label, $value in $hw-border-color {
-    .border-color-#{$label} {
-        border-color: $value;
-    }
-}
+// @each $label, $value in $hw-border-color {
+//     .border-color-#{$label} {
+//         border-color: $value;
+//     }
+// }
 
 // Colors
-@each $label, $value in $hw-color {
-    .color-#{$label} {
-        color: $value;
-    }
-}
+// @each $label, $value in $hw-color {
+//     .color-#{$label} {
+//         color: $value;
+//     }
+// }
 
 // Text Colors
-@each $label, $value in $hw-text-color {
-    .tc-#{$label} {
-        color: $value;
-    }
-}
+// @each $label, $value in $hw-text-color {
+//     .tc-#{$label} {
+//         color: $value;
+//     }
+// }
 
 
 /**
@@ -172,5 +174,5 @@ $sides: (
 
 .debug,
 .debug * {
-    background-color: rgba($c__day-primary_base, 0.05);
+    background-color: rgba($day__color-primary_base, 0.05);
 }

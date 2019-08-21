@@ -7,8 +7,8 @@
 body {
 	font-family: $font-family__primary;
 	line-height: $lh-body;
-    color: $text-color__day;
-    background-color: $bg__day;
+    color: $day__text-color;
+    background-color: $day__background-color;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
