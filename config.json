@@ -72,7 +72,7 @@
       ]
     },
     "ios-swift": {
-      "transformGroup": "ios-swift",
+      "transforms": ["attribute/cti", "name/cti/camel", "color/UIColorSwiftModes", "content/swift/literal", "asset/swift/literal", "size/swift/remToCGFloat", "font/swift/literal"],
       "buildPath": "build/ios-swift/",
       "files": [
         {
@@ -89,16 +89,26 @@
       ]
     },
     "ios-swift-separate-enums": {
-      "transformGroup": "ios-swift-separate",
+      "transforms": ["attribute/cti", "name/ti/camel", "color/UIColorSwiftModes", "content/swift/literal", "asset/swift/literal", "size/swift/remToCGFloat", "font/swift/literal"],
       "buildPath": "build/ios-swift/",
       "files": [
         {
-          "destination": "StyleDictionaryColor.swift",
+          "destination": "StyleDictionaryColorDay.swift",
           "format": "ios-swift/enum.swift",
           "className": "StyleDictionaryColor",
           "filter": {
             "attributes": {
-              "category": "color"
+              "category": "day"
+            }
+          }
+        },
+        {
+          "destination": "StyleDictionaryColorNight.swift",
+          "format": "ios-swift/enum.swift",
+          "className": "StyleDictionaryColor",
+          "filter": {
+            "attributes": {
+              "category": "night"
             }
           }
         },
