@@ -3,7 +3,7 @@
 .platform-switch {
     padding-top: $spacing__4;
     padding-bottom: $spacing__4;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border-color__day;
 }
 .platform-switch__label {
     display: block;
@@ -27,9 +27,9 @@
     width: 100%;
     height: 3rem;
     padding: 0 $spacing__4 0 $spacing__8;
-    background-color: $bg;
+    background-color: $bg__day;
     border: 1px solid transparent;
-    color: $text-color__copy;
+    color: $text-color__day;
     box-shadow: $layer__raised;
     cursor: pointer;
     appearance: none;
@@ -40,8 +40,8 @@
 
     &:focus {
         outline: none;
-        border-color: $c__primary;
-        box-shadow: 0 0 0 3px rgba($c__primary, 0.3);
+        border-color: $c__day-primary_base;
+        box-shadow: 0 0 0 3px rgba($c__day-primary_base, 0.3);
     }
 }
 

@@ -1,10 +1,12 @@
 {
     "border-color": {
-        "base": {
-            "value": "{color.greyscale.1.value}"
+        "day": {
+            "base": { "value": "#E1E4EB" },
+            "bold": { "value": "#C7CCD6" }
         },
-        "dark": {
-            "value": "{color.greyscale.2.value}"
+        "night": {
+            "base": { "value": "#3E4552" },
+            "bold": { "value": "#525966" }
         }
     }
 }

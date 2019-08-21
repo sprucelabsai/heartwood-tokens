@@ -5,7 +5,7 @@
     justify-content: space-between;
     padding-top: $spacing__3;
     padding-bottom: $spacing__3;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $border-color__day;
 }
 
 .token__clipboard {
@@ -17,7 +17,7 @@
     &:focus,
     &:active {
         outline: none;
-        background-color: $bg__dark;
+        background-color: $bg__day-dark;
     }
 }
 
@@ -37,10 +37,10 @@
 
 .token__name {
     font-weight: $fw__bold;
-    color: $c__primary;
+    color: $c__day-primary_base;
 
     .token__clipboard:hover & {
-        color: $c__primary-light;
+        color: $c__day-primary_light;
     }
 
     &.token__name--plain {
@@ -53,5 +53,5 @@
     display: inline-block;
     width: $spacing__8;
     height: $spacing__8;
-    background-color: rgba($c__primary, 0.5);
+    background-color: rgba($c__day-primary_base, 0.5);
 }

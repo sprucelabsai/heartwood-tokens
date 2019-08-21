@@ -5,7 +5,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: $spacing__4 0;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $border-color__day;
 }
 
 .asset__name {
@@ -36,13 +36,13 @@
 .asset__link {
   @extend %ts-code;
   font-weight: $fw__bold;
-  color: $text-color__copy;
+  color: $text-color__day;
 }
 
 .asset__link {
   text-decoration: none;
 
   &:hover {
-    color: $c__primary;
+    color: $c__day-primary_base;
   }
 }

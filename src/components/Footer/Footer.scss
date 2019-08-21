@@ -4,8 +4,8 @@
     margin-top: $spacing__10;
     padding: $spacing__4;
     @extend %ts-code;
-    background-color: $bg__dark;
-    color: $text-color__copy-light;
+    background-color: $bg__day-dark;
+    color: $text-color__day-subdued;
 
     @media screen and (min-width: $l__breakpoint-medium) {
         padding: $spacing__6;

@@ -150,7 +150,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
   if (category === "border-color") {
     style = {
       ...style,
-      backgroundColor: tokensScss["background-color"].base.value,
+      backgroundColor: tokensScss["background-color"].day.base.value,
       border: `1px solid ${scssToken.value}`
     };
   }
@@ -195,7 +195,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
       ...style,
       lineHeight: scssToken.value,
       backgroundColor: tinycolor(
-        tokensScss["color"].primary.base.value
+        tokensScss["color"].day.primary.base.value
       ).setAlpha(0.3),
       padding: "0 1rem"
     };
@@ -240,7 +240,7 @@ const Token = (props: ITokenProps): React.ReactElement => {
                 />
                 <code className="token__name">{name}</code>
               </Clipboard>
-                <code className="token__value">{originalValue || value}</code>
+                <code className="token__value">{value}</code>
             </>
           ) : (
             <code className="token__name token__name--plain">{name}</code>
