@@ -95,7 +95,7 @@
         {
           "destination": "StyleDictionaryColorDay.swift",
           "format": "ios-swift/enum.swift",
-          "className": "StyleDictionaryColor",
+          "className": "StyleDictionaryColorDay",
           "filter": {
             "attributes": {
               "category": "day"
@@ -105,7 +105,7 @@
         {
           "destination": "StyleDictionaryColorNight.swift",
           "format": "ios-swift/enum.swift",
-          "className": "StyleDictionaryColor",
+          "className": "StyleDictionaryColorNight",
           "filter": {
             "attributes": {
               "category": "night"
