@@ -28,7 +28,8 @@
         "lighter": { "value": "#FFB2C5" },
         "dark": { "value": "#AB0029" },
         "darker": { "value": "#470011" }
-      }
+      },
+      "neutral": { "value": "#FFFFFF" }
     }
   },
   "night": {
@@ -60,7 +61,8 @@
         "lighter": { "value": "#FFCFCC" },
         "dark": { "value": "#FF5457" },
         "darker": { "value": "#B23B3C" }
-      }
+      },
+      "neutral": { "value": "#000000" }
     }
   }
 }

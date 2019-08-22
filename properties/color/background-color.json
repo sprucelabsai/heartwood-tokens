@@ -3,7 +3,7 @@
         "background-color": {
             "base": { "value": "#F9FAFC" },
             "dark": { "value": "#F0F2F7" },
-            "light": { "value": "#FFFFFF" }
+            "light": { "value": "{day.color.neutral.value}" }
 
         }
     },
