@@ -1,12 +1,23 @@
+//
+//  HeartwoodTokens.swift
+//  SwiftUI Heartwood Components
+//
+//  Created by Ricky Padilla on 8/23/19.
+//  Copyright © 2019 Spruce Labs, Inc. All rights reserved.
+//
+
 import CoreText
 
-public class HeartwoodFonts: NSObject {
+public class HeartwoodTokens: NSObject {
   
-  public enum Style: CaseIterable {
+  public static let bundle = Bundle(url: Bundle(for: HeartwoodTokens.self)
+    .url(forResource: "HeartwoodTokens", withExtension: "bundle")!)!
+  
+  public enum Font: CaseIterable {
     case mono
     case regular
     case semibold
-    public var value: String {
+    public var name: String {
       switch self {
       case .mono: return "SourceCodePro-Medium"
       case .regular: return "SourceSansPro-Regular"
@@ -14,12 +25,12 @@ public class HeartwoodFonts: NSObject {
       }
     }
     public var font: UIFont {
-      return UIFont(name: self.value, size: 14) ?? UIFont.init()
+      return UIFont(name: self.name, size: 14) ?? UIFont.init()
     }
   }
   
-  public static var loadAll: () -> Void = {
-    let fontNames = Style.allCases.map { $0.value }
+  public static var loadAllFonts: () -> Void = {
+    let fontNames = Font.allCases.map { $0.name }
     for fontName in fontNames {
       loadFont(withName: fontName)
     }
@@ -28,8 +39,6 @@ public class HeartwoodFonts: NSObject {
   
   private static func loadFont(withName fontName: String) {
     guard
-      let bundleURL = Bundle(for: self).url(forResource: "HeartwoodTokens", withExtension: "bundle"),
-      let bundle = Bundle(url: bundleURL),
       let fontURL = bundle.url(forResource: fontName, withExtension: "ttf"),
       let fontData = try? Data(contentsOf: fontURL) as CFData,
       let provider = CGDataProvider(data: fontData),
