@@ -1,6 +1,6 @@
 //
 //  HeartwoodTokens.swift
-//  SwiftUI Heartwood Components
+//  HeartwoodTokens
 //
 //  Created by Ricky Padilla on 8/23/19.
 //  Copyright © 2019 Spruce Labs, Inc. All rights reserved.
