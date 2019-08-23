@@ -13,6 +13,14 @@ public class HeartwoodTokens: NSObject {
   public static let bundle = Bundle(url: Bundle(for: HeartwoodTokens.self)
     .url(forResource: "HeartwoodTokens", withExtension: "bundle")!)!
   
+  // TODO: Create a transform that will handle Icon enum
+  public enum Icon {
+    public static let accessPrivate = "ic_access_private"
+    public static let add = "ic_add"
+    public static let arrowBack = "ic_arrow_back"
+    // ...
+  }
+  
   public enum Font: CaseIterable {
     case mono
     case regular
