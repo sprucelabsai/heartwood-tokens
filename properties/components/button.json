@@ -8,7 +8,7 @@
             },
             "primary": {
                 "text-color": {
-                    "value": "#fff"
+                    "value": "{day.color.neutral.value}"
                 },
                 "text-opacity": {
                     "default": {
@@ -56,7 +56,7 @@
             },
             "destructive": {
                 "text-color": {
-                    "value": "#fff"
+                    "value": "{day.color.neutral.value}"
                 },
                 "text-opacity": {
                     "default": {

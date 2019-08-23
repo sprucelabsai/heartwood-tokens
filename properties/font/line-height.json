@@ -29,7 +29,7 @@
                 "value": "{size.font.8.value}"
             },
             "title-large": {
-                "value": "36px"
+                "value": "{size.font.9.value}"
             }
         },
         "desktop": {
@@ -46,7 +46,7 @@
                 "value": "{size.font.9.value}"
             },
             "title-large": {
-                "value": "42px"
+                "value": "{size.font.10.value}"
             }
         }
     }

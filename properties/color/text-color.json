@@ -20,11 +20,11 @@
     },
     "night": {
         "text-color": {
-            "base": { "value": "#FFFFFF" },
+            "base": { "value": "{day.color.neutral.value}" },
             "subdued": { "value": "#B0B5C1" },
             "placeholder": { "value": "#7F8794" },
             "code": {
-                "base": { "value": "#FFFFFF" },
+                "base": { "value": "{day.color.neutral.value}" },
                 "red": { "value": "#F07971" },
                 "orange": { "value": "#F78C6C" },
                 "yellow": { "value": "#FFCE6B" },
