@@ -73,24 +73,19 @@
     },
     "ios-swift": {
       "transforms": ["attribute/cti", "name/cti/camel", "color/UIColorSwiftModes", "content/swift/literal", "asset/swift/literal", "size/swift/remToCGFloat", "font/swift/literal"],
-      "buildPath": "build/ios-swift/",
+      "buildPath": "ios/build/",
       "files": [
         {
           "destination": "StyleDictionary.swift",
           "format": "ios-swift/class.swift",
           "className": "StyleDictionary",
-          "filter": {}
-        }, 
-        {
-          "destination": "../js/tokens-ios-swift.js",
-          "format": "javascript/module",
-          "filter": "tokens/ios"
+          "filter": "components"
         }
       ]
     },
     "ios-swift-separate-enums": {
       "transforms": ["attribute/cti", "name/ti/camel", "color/UIColorSwiftModes", "content/swift/literal", "asset/swift/literal", "size/swift/remToCGFloat", "font/swift/literal"],
-      "buildPath": "build/ios-swift/",
+      "buildPath": "ios/build/",
       "files": [
         {
           "destination": "StyleDictionaryColorDay.swift",

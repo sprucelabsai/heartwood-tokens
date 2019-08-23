@@ -3,7 +3,6 @@
         "card": {
             "background-color": { "value": "{day.color.neutral.value}" },
             "border-radius": { "value": 2 },
-            "layer": { "value": "{layer.raised.value}" },
             "title": {
                 "font-weight": { "value": "{font-weight.bold.value}" },
                 "font-size": {

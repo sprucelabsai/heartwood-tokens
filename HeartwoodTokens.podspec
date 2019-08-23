@@ -32,7 +32,7 @@ TODO: Add long description of the pod here.
 
   s.source           = { :git => '', :tag => s.version.to_s }
   s.platform = :ios
-  s.source_files = 'build/ios-swift/**/*.swift'
+  s.source_files = 'ios/**/*.swift'
   s.resource_bundles = {
     'HeartwoodTokens' => ['assets/**/*']
   }
