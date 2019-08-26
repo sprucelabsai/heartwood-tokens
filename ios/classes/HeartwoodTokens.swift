@@ -29,6 +29,8 @@ public class HeartwoodTokens: NSObject {
     }
   }
   
+  public typealias Icon = StyleDictionaryIcon
+  
   public static var loadAllFonts: () -> Void = {
     let fontNames = Font.allCases.map { $0.name }
     for fontName in fontNames {

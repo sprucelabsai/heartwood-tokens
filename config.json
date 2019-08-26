@@ -88,9 +88,9 @@
       "buildPath": "ios/build/",
       "files": [
         {
-          "destination": "HeartwoodIcon.swift",
+          "destination": "StyleDictionaryIcon.swift",
           "format": "ios-swift/enum.swift",
-          "className": "HeartwoodIcon",
+          "className": "StyleDictionaryIcon",
           "filter": {
             "attributes": {
               "category": "asset",
