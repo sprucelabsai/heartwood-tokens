@@ -195,6 +195,26 @@ StyleDictionary.registerTransform({
   }
 })
 
+StyleDictionary.registerTransform({
+  name: "icon/SwiftIconValues",
+  type: "value",
+  matcher: prop => prop.attributes.category === 'asset' && prop.attributes.type === 'icon',
+  transformer: prop => {
+    const iconValue = prop.value.replace('assets/icons/', '').replace('.svg', '');
+    return iconValue;
+  }
+})
+
+StyleDictionary.registerTransform({
+  name: "icon/SwiftIconNames",
+  type: "name",
+  matcher: prop => prop.attributes.category === 'asset' && prop.attributes.type === 'icon',
+  transformer: prop => {
+    const iconName = prop.name.replace('icon', '');
+    return iconName.charAt(0).toLowerCase() + iconName.slice(1);
+  }
+})
+
 /**
  * Transform Groups
  */

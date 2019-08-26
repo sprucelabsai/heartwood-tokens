@@ -84,9 +84,20 @@
       ]
     },
     "ios-swift-separate-enums": {
-      "transforms": ["attribute/cti", "name/ti/camel", "color/UIColorSwiftModes", "content/swift/literal", "asset/swift/literal", "size/swift/remToCGFloat", "font/swift/literal"],
+      "transforms": ["attribute/cti", "name/ti/camel", "icon/SwiftIconValues", "icon/SwiftIconNames", "color/UIColorSwiftModes", "content/swift/literal", "asset/swift/literal", "size/swift/remToCGFloat", "font/swift/literal"],
       "buildPath": "ios/build/",
       "files": [
+        {
+          "destination": "HeartwoodIcon.swift",
+          "format": "ios-swift/enum.swift",
+          "className": "HeartwoodIcon",
+          "filter": {
+            "attributes": {
+              "category": "asset",
+              "type": "icon"
+            }
+          }
+        },
         {
           "destination": "StyleDictionaryColorDay.swift",
           "format": "ios-swift/enum.swift",
