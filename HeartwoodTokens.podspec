@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'rickycpadilla' => 'rickycpadilla@gmail.com' }
-  s.source           = { :git => 'https://github.com/rickycpadilla/HeartwoodTokens.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/sprucelabsai/heartwood-tokens.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
@@ -34,7 +34,7 @@ TODO: Add long description of the pod here.
   s.platform = :ios
   s.source_files = 'ios/**/*.swift'
   s.resource_bundles = {
-    'HeartwoodTokens' => ['assets/**/*']
+    'HeartwoodTokens' => ['ios/assets/**/*']
   }
   
   # s.resource_bundles = {
