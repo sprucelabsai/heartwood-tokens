@@ -41,7 +41,7 @@
     "react-markdown": "^4.1.0",
     "react-scroll": "^1.7.12",
     "react-tooltip": "^3.10.0",
-    "style-dictionary": "^2.8.1",
+    "style-dictionary": "^2.8.2",
     "tinycolor2": "^1.4.1",
     "typescript": "^3.5.3",
     "webpack": "^4.36.1"
