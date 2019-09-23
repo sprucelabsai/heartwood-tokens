@@ -1,4 +1,5 @@
 import React from "react";
+import cx from 'classnames'
 import downloadIcon from "../../icons/download-icon.svg";
 import "./Asset.scss";
 
@@ -6,17 +7,18 @@ interface IAssetProps {
   name: string;
   src: string;
   canDownload: boolean;
+  isNightMode?: boolean
 }
 
 const Asset = (props: IAssetProps): React.ReactElement => {
-  const { name, src, canDownload } = props;
+  const { name, src, canDownload, isNightMode } = props;
   const style = {
     padding: '1rem',
     borderRadius: '4px',
-    backgroundColor: name.indexOf('dark') > -1 ? '#2c323d' : 'transparent'
+    backgroundColor: isNightMode ? '#2c323d' : 'transparent'
   }
   return (
-    <div className="asset" >
+    <div className="asset">
       <p className="asset__name">
         {canDownload ? (
           <a
@@ -42,5 +44,9 @@ const Asset = (props: IAssetProps): React.ReactElement => {
     </div>
   );
 };
+
+Asset.defaultProps = {
+  isNightMode: false
+}
 
 export default Asset;

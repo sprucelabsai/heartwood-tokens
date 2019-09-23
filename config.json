@@ -80,6 +80,11 @@
           "format": "ios-swift/class.swift",
           "className": "StyleDictionary",
           "filter": "components"
+        }, 
+        {
+          "destination": "../../build/js/tokens-ios-swift.js",
+          "format": "javascript/module",
+          "filter": "tokens/ios"
         }
       ]
     },

@@ -1,30 +1,34 @@
 {
     "asset": {
         "brand": {
-            "logo": { "value": "assets/images/logo.svg" },
-            "logo-black": { "value": "assets/images/logo-black.svg" },
-            "wordmark": { "value": "assets/images/wordmark.svg" },
-            "wordmark-black": { "value": "assets/images/wordmark-black.svg" },
-            "wordmark-text": { "value": "assets/images/wordmark-text.svg" },
-            "wordmark-vertical": { "value": "assets/images/wordmark-vertical.svg" },
-            "wordmark-vertical-black": { "value": "assets/images/wordmark-vertical-black.svg" },
-            "spruce-labs-wordmark": { "value": "assets/images/sl_wordmark.svg" },
-            "spruce-labs-wordmark-black": { "value": "assets/images/sl_wordmark-black.svg" },
-            "spruce-labs-wordmark-text": { "value": "assets/images/sl_wordmark-text.svg" },
-            "spruce-labs-wordmark-vertical": { "value": "assets/images/sl_wordmark-vertical.svg" },
-            "spruce-labs-wordmark-vertical-black": { "value": "assets/images/sl_wordmark-vertical-black.svg" },
-            "dark-logo": { "value": "assets/images/dark-logo.svg" },
-            "dark-logo-white": { "value": "assets/images/dark-logo-white.svg" },
-            "dark-wordmark": { "value": "assets/images/dark-wordmark.svg" },
-            "dark-wordmark-white": { "value": "assets/images/dark-wordmark-white.svg" },
-            "dark-wordmark-text": { "value": "assets/images/dark-wordmark-text.svg" },
-            "dark-wordmark-vertical": { "value": "assets/images/dark-wordmark-vertical.svg" },
-            "dark-wordmark-vertical-white": { "value": "assets/images/dark-wordmark-vertical-white.svg" },
-            "dark-spruce-labs-wordmark": { "value": "assets/images/dark-sl_wordmark.svg" },
-            "dark-spruce-labs-wordmark-white": { "value": "assets/images/dark-sl_wordmark-white.svg" },
-            "dark-spruce-labs-wordmark-text": { "value": "assets/images/dark-sl_wordmark-text.svg" },
-            "dark-spruce-labs-wordmark-vertical": { "value": "assets/images/dark-sl_wordmark-vertical.svg" },
-            "dark-spruce-labs-wordmark-vertical-white": { "value": "assets/images/dark-sl_wordmark-vertical-white.svg" }
+            "day": {
+                "logo": { "value": "assets/images/Logos/Day/Logo.svg" },
+                "logo-black": { "value": "assets/images/Logos/Day/Logo--BW.svg" },
+                "lockup": { "value": "assets/images/Logos/Day/Lockup.svg" },
+                "lockup-black": { "value": "assets/images/Logos/Day/Lockup--BW.svg" },
+                "wordmark": { "value": "assets/images/Logos/Day/Wordmark.svg" },
+                "lockup-vertical": { "value": "assets/images/Logos/Day/Lockup--Vertical.svg" },
+                "lockup-vertical-black": { "value": "assets/images/Logos/Day/Lockup--Vertical--BW.svg" },
+                "spruce-labs-lockup": { "value": "assets/images/Logos/Day/Lockup-1.svg" },
+                "spruce-labs-lockup-black": { "value": "assets/images/Logos/Day/Lockup--BW-1.svg" },
+                "spruce-labs-wordmark": { "value": "assets/images/Logos/Day/Wordmark-1.svg" },
+                "spruce-labs-lockup-vertical": { "value": "assets/images/Logos/Day/Lockup--Vertical-1.svg" },
+                "spruce-labs-lockup-vertical-black": { "value": "assets/images/Logos/Day/Lockup--Vertical--BW-1.svg" }
+            },
+            "night": {
+                "logo": { "value": "assets/images/Logos/Night/Logo.svg" },
+                "logo-black": { "value": "assets/images/Logos/Night/Logo--BW.svg" },
+                "lockup": { "value": "assets/images/Logos/Night/Lockup.svg" },
+                "lockup-black": { "value": "assets/images/Logos/Night/Lockup--BW.svg" },
+                "wordmark": { "value": "assets/images/Logos/Night/Wordmark.svg" },
+                "lockup-vertical": { "value": "assets/images/Logos/Night/Lockup--Vertical.svg" },
+                "lockup-vertical-black": { "value": "assets/images/Logos/Night/Lockup--Vertical--BW.svg" },
+                "spruce-labs-lockup": { "value": "assets/images/Logos/Night/Lockup-1.svg" },
+                "spruce-labs-lockup-black": { "value": "assets/images/Logos/Night/Lockup--BW-1.svg" },
+                "spruce-labs-wordmark": { "value": "assets/images/Logos/Night/Wordmark-1.svg" },
+                "spruce-labs-lockup-vertical": { "value": "assets/images/Logos/Night/Lockup--Vertical-1.svg" },
+                "spruce-labs-lockup-vertical-black": { "value": "assets/images/Logos/Night/Lockup--Vertical--BW-1.svg" }
+            }
         }
     }
 }
