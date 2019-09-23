@@ -3,7 +3,7 @@ import * as React from "react";
 import ReactMarkdown from 'react-markdown'
 import Layout from "../layouts/Layout/Layout";
 import readme from '../../README.md'
-import logo from "../images/spruce-logo.svg";
+import logo from "../../assets/images/Logos/Day/Logo.svg";
 import globalTokensImage from "../images/global-tokens.png";
 import assetsImage from "../images/assets.png";
 import "./index.scss";

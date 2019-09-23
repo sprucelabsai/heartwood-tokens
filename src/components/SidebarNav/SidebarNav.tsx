@@ -1,7 +1,7 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import Footer from "../Footer/Footer";
-import logo from '../../images/spruce-logo.svg'
+import logo from '../../../assets/images/Logos/Day/Logo.svg'
 import "./SidebarNav.scss";
 
 interface ISidebarNav {

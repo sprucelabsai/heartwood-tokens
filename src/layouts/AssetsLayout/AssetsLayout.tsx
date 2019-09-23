@@ -59,6 +59,7 @@ const AssetsLayout = (): React.ReactElement => {
                       {Object.keys(item).map(subitemKey => {
                         const subitem = item[subitemKey];
                         const subitemName = subitemKey.split("-").join(" ");
+                        console.log({itemKey})
 
                         return (
                           <Asset
@@ -66,6 +67,7 @@ const AssetsLayout = (): React.ReactElement => {
                             name={subitemName}
                             src={subitem.value}
                             canDownload={typeKey !== "icon"}
+                            isNightMode={itemKey === 'night'}
                           />
                         );
                       })}
